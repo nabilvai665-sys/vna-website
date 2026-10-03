@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VnA Download Manager – দ্রুত ও গোছানো ডাউনলোড</title>
+<meta name="description" content="VnA Download Manager: মাল্টি-কানেকশন ডাউনলোড, ব্রাউজার এক্সটেনশন, ব্যাচ, প্লেলিস্ট, সাইট গ্র্যাবার ও টরেন্ট সার্চ। বাংলা, English ও हिंदी।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b10;--panel:#0e151d;--line:#1b2a38;--cy:#19d3e0;--bl:#0078d4;--tx:#e8eef4;--mu:#8aa0b2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.7 'Hind Siliguri','Noto Sans Bengali','Segoe UI',system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(7,11,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:22px;height:58px}
+.logo{font-weight:700;font-size:18px;text-decoration:none;margin-right:auto}
+.logo b{color:var(--cy)}
+nav a{color:var(--mu);text-decoration:none;font-size:15px;margin-right:16px}
+nav a:hover{color:var(--tx)}
+.btn{display:inline-block;padding:9px 20px;border-radius:8px;border:1px solid var(--cy);background:rgba(25,211,224,.1);color:var(--cy);font:700 16px inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--cy);color:#04141a}
+.btn.big{padding:13px 30px;font-size:19px;background:var(--cy);color:#04141a}
+.btn.big:hover{background:#5ee8f1}
+.hero{padding:70px 0 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.25;font-weight:700;margin-bottom:16px}
+.hero p{color:var(--mu);max-width:30em;margin-bottom:26px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.note{font-size:14px;color:var(--mu)}
+.win{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.win .bar{display:flex;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--mu);align-items:center}
+.win .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.win .bd{padding:18px}
+.row{margin-bottom:18px}
+.row:last-child{margin-bottom:0}
+.row .t{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}
+.row .t span:last-child{color:var(--cy)}
+.map{display:grid;grid-template-columns:repeat(24,1fr);gap:3px}
+.map i{height:14px;border-radius:2px;background:#16222d;transition:background .4s}
+.map i.on{background:var(--cy)}
+.map i.on2{background:var(--bl)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,3.6vw,34px);line-height:1.3;margin-bottom:8px}
+.lead{color:var(--mu);margin-bottom:30px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px 44px}
+.feat h3{font-size:19px;color:var(--cy);margin-bottom:8px}
+.feat ul{list-style:none;padding:0;border-left:2px solid var(--line);padding-left:16px}
+.feat li{font-size:16px;margin-bottom:6px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tools input{flex:1 1 220px;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--tx);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{padding:5px 15px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--mu);font:inherit;font-size:15px;cursor:pointer}
+.chip[aria-pressed=true]{border-color:var(--cy);color:var(--cy)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.vid{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:0;color:inherit;font:inherit;cursor:pointer;overflow:hidden}
+.vid:hover{border-color:var(--cy)}
+.vid .th{height:96px;display:grid;place-items:center;background:linear-gradient(135deg,#0f2230,#0a1119)}
+.vid .th svg{width:34px;fill:var(--cy)}
+.vid .in{padding:10px 14px 12px}
+.vid small{color:var(--mu);font-size:13px}
+.vid span{display:block;font-size:16px;line-height:1.45}
+.empty{color:var(--mu);padding:20px 0}
+.steps{counter-reset:s;list-style:none;padding:0;max-width:40em}
+.steps li{counter-increment:s;padding-left:46px;position:relative;margin-bottom:16px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:2px;width:30px;height:30px;border:1px solid var(--cy);border-radius:50%;display:grid;place-items:center;color:var(--cy);font-weight:700;font-size:15px}
+details{border-bottom:1px solid var(--line);padding:14px 0;max-width:46em}
+summary{cursor:pointer;font-weight:500;font-size:18px}
+details p{color:var(--mu);margin-top:8px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mu);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+footer .sp{margin-right:auto}
+dialog{border:1px solid var(--line);background:var(--panel);color:var(--tx);border-radius:12px;padding:0;width:min(880px,94vw)}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+dialog .hd{display:flex;align-items:center;padding:10px 16px;gap:12px;border-bottom:1px solid var(--line)}
+dialog .hd b{margin-right:auto;font-weight:500}
+dialog .x{background:none;border:0;color:var(--mu);font-size:24px;cursor:pointer;line-height:1}
+dialog video{display:block;width:100%;max-height:72vh;background:#000}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:40px}nav{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.map i{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">VnA <b>Download Manager</b></a>
+  <nav><a href="#features">ফিচার</a><a href="#videos">ভিডিও টিউটোরিয়াল</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
+  <a class="btn" data-link="download" href="#">ডাউনলোড</a>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <h1>যেকোনো ফাইল, দ্রুত আর গুছিয়ে নামান</h1>
+    <p>একটা ফাইলকে একসাথে অনেক অংশে নামিয়ে স্পিড বাড়ায়। ব্রাউজারের ডাউনলোড নিজে ধরে, ভিডিও, প্লেলিস্ট ও টরেন্টও নামায়। বাংলা, English ও हिंदी ভাষায় চলে।</p>
+    <div class="cta">
+      <a class="btn big" data-link="download" href="#">Windows-এর জন্য ডাউনলোড</a>
+      <span class="note">৩ দিনের ফ্রি ট্রায়াল</span>
+    </div>
+  </div>
+  <div class="win" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i>&nbsp;VnA Download Manager</div>
+    <div class="bd">
+      <div class="row"><div class="t"><span>tutorial_part1.mp4</span><span id="p1">0%</span></div><div class="map" id="m1"></div></div>
+      <div class="row"><div class="t"><span>setup_pack.zip</span><span id="p2">0%</span></div><div class="map" id="m2"></div></div>
+      <div class="row"><div class="t"><span>music_album.rar</span><span id="p3">0%</span></div><div class="map" id="m3"></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="features"><div class="wrap">
+  <h2>সব ফিচার</h2>
+  <p class="lead">দরকারি সবকিছু এক অ্যাপে।</p>
+  <div class="feat">
+    <div><h3>ডাউনলোড</h3><ul>
+      <li>মাল্টি-কানেকশনে সুপার ফাস্ট ডাউনলোড (2 থেকে 32)</li>
+      <li>অটো কানেকশন ও স্পিড লিমিট</li>
+      <li>Pause, Resume ও Stop</li>
+      <li>লাইভ চাংক ম্যাপে ডাউনলোডের অংশ দেখুন</li>
+      <li>ভিডিওর কোয়ালিটি বেছে নিন, ভিডিও ও অডিও আলাদাও নামান</li>
+    </ul></div>
+    <div><h3>লিংক দেওয়ার উপায়</h3><ul>
+      <li>লিংক কপি করলেই অ্যাপ ধরে ফেলে</li>
+      <li>Batch Download: অনেক লিংক একসাথে</li>
+      <li>Playlist Download</li>
+      <li>Site Grabber: পেজের সব ফাইল খুঁজে দেয়</li>
+      <li>Torrent Search ও Download</li>
+    </ul></div>
+    <div><h3>ব্রাউজার এক্সটেনশন</h3><ul>
+      <li>Chrome, Edge, Firefox, Brave, Opera, Vivaldi</li>
+      <li>ব্রাউজারের ডাউনলোড নিজে অ্যাপে চলে আসে</li>
+      <li>ভিডিওর উপরেই ডাউনলোড বাটন</li>
+      <li>ডান-ক্লিকে Hidden/Streaming ভিডিও ডাউনলোড</li>
+      <li>লগইন লাগে এমন সাইটের ফাইলও নামে</li>
+    </ul></div>
+    <div><h3>ম্যানেজমেন্ট ও টুলস</h3><ul>
+      <li>Video, Music, Pictures, Programs, Compressed: ফাইল নিজে সাজায়</li>
+      <li>লিংকের মেয়াদ শেষ হলে Refresh Download Address</li>
+      <li>নষ্ট অংশ Repair করে ডাউনলোড সম্পূর্ণ করে</li>
+      <li>ভিডিও থেকে MP3 বানান</li>
+      <li>Checksum যাচাই ও Windows Defender স্ক্যান</li>
+      <li>Analytics Dashboard</li>
+    </ul></div>
+    <div><h3>সেটিংস</h3><ul>
+      <li>Scheduler: নির্দিষ্ট সময়ে ডাউনলোড শুরু</li>
+      <li>Global Proxy (SOCKS5 সহ) ও Test Proxy</li>
+      <li>থিম: Dark, Light, Glass</li>
+      <li>Silent Mode: পপআপ ছাড়া ডাউনলোড</li>
+      <li>English, বাংলা ও हिंदी</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="videos"><div class="wrap">
+  <h2>ভিডিও টিউটোরিয়াল</h2>
+  <p class="lead">কোনো ভিডিওতে ক্লিক করলে এখানেই চলবে।</p>
+  <div class="tools"><input id="q" type="search" placeholder="ভিডিও খুঁজুন" aria-label="ভিডিও খুঁজুন"></div>
+  <div class="chips" id="chips"></div>
+  <div class="vids" id="vids"></div>
+  <p class="empty" id="none" hidden>কোনো ভিডিও পাওয়া যায়নি। অন্য শব্দে খুঁজুন।</p>
+</div></section>
+
+<section id="extension"><div class="wrap">
+  <h2>ব্রাউজার এক্সটেনশন চালু করুন</h2>
+  <p class="lead">অ্যাপ ইনস্টলের পর ব্রাউজারে এক্সটেনশন চালু করলেই ডাউনলোড নিজে ধরা শুরু হবে।</p>
+  <ol class="steps">
+    <li>VnA Download Manager ইনস্টল করে অ্যাপ একবার খুলুন।</li>
+    <li>Chrome বা Edge খুললে Enable Extension লেখা মেসেজ আসবে। সেটা Allow করুন।</li>
+    <li>মেসেজ না এলে ব্রাউজারের স্টোর থেকে এক্সটেনশন নিজে যোগ করুন।</li>
+    <li>এক্সটেনশন কাজ না করলে অ্যাপে Menu > Fix n Update > Repair Browser Extension চাপুন।</li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>প্রশ্নোত্তর</h2>
+  <details><summary>Windows সতর্ক করছে, কী করব?</summary><p>নতুন সফটওয়্যারে Windows মাঝে মাঝে সতর্কতা দেখায়। More info চেপে Run anyway চাপুন। ইনস্টল আটকে গেলে অ্যান্টিভাইরাস অল্প সময়ের জন্য বন্ধ রেখে আবার চেষ্টা করুন।</p></details>
+  <details><summary>ইনস্টল বা আপডেটে পারমিশন এরর এলে?</summary><p>আমাদের Telegram চ্যানেল থেকে Setup ফাইল নামিয়ে নতুন করে ইনস্টল করুন।</p></details>
+  <details><summary>অ্যাপ বন্ধ থাকলে ব্রাউজারের ডাউনলোড কী হবে?</summary><p>এক্সটেনশন তখন ব্রাউজারের নিজস্ব ডাউনলোড আবার চালু করে দেয়, কিছু হারাবে না।</p></details>
+  <details><summary>লিংকের মেয়াদ শেষ হয়ে গেলে?</summary><p>ডাউনলোডে রাইট-ক্লিক করে Refresh Download Address চাপুন। পেজ খুলে ভিডিও চালালে নতুন লিংক ধরে অ্যাপ বাকিটা চালিয়ে নেয়।</p></details>
+  <details><summary>ফ্রি ট্রায়াল কত দিনের?</summary><p>৩ দিনের। এরপর Premium Key দিয়ে অ্যাপ Activate করতে হয়।</p></details>
+  <details><summary>সমস্যা হলে কোথায় জানাব?</summary><p>নিচের Telegram, ফেসবুক পেজ বা YouTube চ্যানেলে জানান।</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span class="sp">VnA Download Manager</span>
+  <a data-link="telegram" href="#">Telegram</a>
+  <a data-link="facebook" href="#">ফেসবুক পেজ</a>
+  <a data-link="youtube" href="#">YouTube</a>
+</div></footer>
+
+<dialog id="dlg" aria-label="ভিডিও প্লেয়ার">
+  <div class="hd"><b id="dt"></b><button class="x" id="dx" aria-label="বন্ধ করুন">&times;</button></div>
+  <div id="dv"></div>
+</dialog>
+
+<script>
+const LINKS = {
+  download: "https://github.com/nabilvai665-sys/vna-website/releases/download/v1.3.6/VnADownloadManager_Setup_v1.3.6_64bit.exe",
+  telegram: "https://t.me/vnadownloadmanager",
+  facebook: "PASTE_FACEBOOK_PAGE_LINK",
+  youtube: "PASTE_YOUTUBE_CHANNEL_LINK"
+};
+
+// ভিডিও যোগ করতে নিচের লাইনগুলো কপি করে শিরোনাম, বিভাগ ও ফাইলের নাম বদলান (মোট 30টি)
+const VIDEOS = [
+  { t: "লিংক পেস্ট করে ডাউনলোড শুরু", c: "শুরু করুন", f: "videos/01-paste-link.mp4" },
+  { t: "ভিডিওর কোয়ালিটি বেছে নেওয়া", c: "শুরু করুন", f: "videos/02-video-quality.mp4" },
+  { t: "ব্রাউজার এক্সটেনশন ইনস্টল", c: "এক্সটেনশন", f: "videos/03-install-extension.mp4" },
+  { t: "Hidden/Streaming ভিডিও নামানো", c: "এক্সটেনশন", f: "videos/04-hidden-video.mp4" },
+  { t: "ব্যাচ ডাউনলোড", c: "ডাউনলোড", f: "videos/05-batch.mp4" },
+  { t: "প্লেলিস্ট ডাউনলোড", c: "ডাউনলোড", f: "videos/06-playlist.mp4" },
+  { t: "Site Grabber ব্যবহার", c: "ডাউনলোড", f: "videos/07-site-grabber.mp4" },
+  { t: "টরেন্ট সার্চ ও ডাউনলোড", c: "ডাউনলোড", f: "videos/08-torrent.mp4" },
+  { t: "MP3 কনভার্ট", c: "টুলস", f: "videos/09-mp3.mp4" },
+  { t: "নষ্ট অংশ Repair", c: "টুলস", f: "videos/10-repair.mp4" },
+  { t: "Proxy সেটআপ", c: "সেটিংস", f: "videos/11-proxy.mp4" },
+  { t: "Scheduler চালু করা", c: "সেটিংস", f: "videos/12-scheduler.mp4" }
+];
+
+document.querySelectorAll("[data-link]").forEach(a => {
+  const u = LINKS[a.dataset.link];
+  if (u && !u.startsWith("PASTE_")) { a.href = u; a.target = "_blank"; a.rel = "noopener"; }
+});
+
+const chips = document.getElementById("chips"), grid = document.getElementById("vids"),
+      none = document.getElementById("none"), q = document.getElementById("q");
+let cat = "সব";
+const cats = ["সব", ...new Set(VIDEOS.map(v => v.c))];
+const play = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+
+function drawChips() {
+  chips.innerHTML = "";
+  cats.forEach(c => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = c; b.setAttribute("aria-pressed", c === cat);
+    b.onclick = () => { cat = c; drawChips(); drawVideos(); };
+    chips.appendChild(b);
+  });
+}
+function drawVideos() {
+  const s = q.value.trim().toLowerCase();
+  const list = VIDEOS.filter(v => (cat === "সব" || v.c === cat) && v.t.toLowerCase().includes(s));
+  grid.innerHTML = ""; none.hidden = list.length > 0;
+  list.forEach(v => {
+    const b = document.createElement("button");
+    b.className = "vid";
+    b.innerHTML = '<div class="th">' + play + '</div><div class="in"><small></small><span></span></div>';
+    b.querySelector("small").textContent = v.c;
+    b.querySelector("span").textContent = v.t;
+    b.onclick = () => openVid(v);
+    grid.appendChild(b);
+  });
+}
+q.addEventListener("input", drawVideos);
+
+const dlg = document.getElementById("dlg"), dv = document.getElementById("dv");
+function openVid(v) {
+  document.getElementById("dt").textContent = v.t;
+  const el = document.createElement("video");
+  el.controls = true; el.autoplay = true; el.playsInline = true; el.src = v.f;
+  dv.innerHTML = ""; dv.appendChild(el); dlg.showModal();
+}
+function closeVid() { dlg.close(); }
+dlg.addEventListener("close", () => { dv.innerHTML = ""; });
+dlg.addEventListener("click", e => { if (e.target === dlg) closeVid(); });
+document.getElementById("dx").onclick = closeVid;
+
+drawChips(); drawVideos();
+
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+[["m1", "p1", 0.9], ["m2", "p2", 0.6], ["m3", "p3", 0.35]].forEach(([mid, pid, speed], i) => {
+  const m = document.getElementById(mid), p = document.getElementById(pid), cells = [];
+  for (let k = 0; k < 24; k++) { const c = document.createElement("i"); m.appendChild(c); cells.push(c); }
+  const order = cells.map((_, k) => k).sort(() => Math.random() - .5);
+  let n = 0;
+  const paint = () => {
+    cells.forEach((c, k) => { const idx = order.indexOf(k); c.className = idx < n ? (k % 2 ? "on" : "on2") : ""; });
+    p.textContent = Math.round(n / 24 * 100) + "%";
+  };
+  if (still) { n = [24, 15, 8][i]; paint(); return; }
+  setInterval(() => { n = n >= 24 ? 0 : n + 1; paint(); }, 700 / speed);
+});
+</script>
+</body>
+</html>

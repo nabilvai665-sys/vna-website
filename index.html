@@ -32,7 +32,7 @@ header .w{display:flex;align-items:center;gap:8px;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;text-decoration:none;margin-right:auto}
 .logo img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(34,211,238,.35))}
 nav{display:flex;gap:2px;margin-right:12px}
-nav a{color:var(--mu);text-decoration:none;font-size:15px;padding:6px 13px;border-radius:8px;transition:.2s}
+nav a{color:var(--mu);text-decoration:none;font-size:15px;padding:6px 11px;border-radius:8px;transition:.2s}
 nav a:hover{color:var(--tx);background:rgba(255,255,255,.06)}
 .mb{display:none;background:none;border:1px solid var(--ln);border-radius:9px;color:var(--tx);width:40px;height:40px;cursor:pointer;font-size:20px}
 /* buttons */
@@ -79,6 +79,24 @@ h1{font-size:clamp(36px,5.4vw,58px);font-weight:800;margin-bottom:18px;letter-sp
 .facts b{display:block;font:800 34px 'Baloo Da 2',sans-serif;line-height:1.2;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
 .facts span{font-size:14.5px;color:var(--mu)}
 /* install guide */
+.topbar{display:block;text-align:center;padding:9px 16px;background:linear-gradient(90deg,#f59e0b,#fbbf24);color:#2b1a00;font-size:15px;line-height:1.5;text-decoration:none}
+.topbar:hover{filter:brightness(1.06)}
+.topbar u{font-weight:700;white-space:nowrap}
+nav a.navw{color:#fbbf24;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.35)}
+nav a.navw:hover{background:rgba(251,191,36,.2);color:#fde68a}
+.notice{background:linear-gradient(180deg,rgba(251,191,36,.13),var(--s1) 45%);border:1px solid rgba(251,191,36,.5);border-radius:22px;padding:26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7),0 0 80px -25px rgba(251,191,36,.4)}
+.notice .tag{display:inline-block;background:rgba(251,191,36,.16);color:#fbbf24;border-radius:99px;padding:3px 14px;font-weight:600;font-size:14px;margin-bottom:10px}
+.notice h2{font-size:clamp(23px,2.6vw,29px);margin-bottom:12px}
+.notice .q{background:rgba(255,255,255,.04);border:1px solid var(--ln);border-radius:12px;padding:12px 14px;font-size:15.5px;line-height:1.65;color:var(--mu);margin-bottom:14px}
+.notice .q b{color:#fbbf24;font-weight:600}
+.notice ol{list-style:none;padding:0;display:grid;gap:10px;margin-bottom:18px}
+.notice li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.55}
+.notice li i{flex:none;font-style:normal;display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--g);color:#021017;font:800 16px 'Baloo Da 2'}
+.notice li.n2 i{background:#fbbf24}.notice li.n3 i{background:var(--ok)}
+.notice li b{font-weight:600}
+.notice .btn{width:100%;padding:12px 18px}
+.call.info{border-color:rgba(34,211,238,.38);background:rgba(34,211,238,.07)}
+.call.info b{color:var(--cy)}.call.info .ic{background:rgba(34,211,238,.16)}
 .trust a{color:var(--cy)}
 code{background:var(--s2);border:1px solid var(--ln);border-radius:6px;padding:1px 7px;font:13.5px ui-monospace,Consolas,monospace;color:#cfe9f3;word-break:break-all}
 .fp{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:6px}
@@ -104,6 +122,16 @@ code{background:var(--s2);border:1px solid var(--ln);border-radius:6px;padding:1
 .isteps li.warn:before{border-color:#fbbf24;color:#fbbf24;background:rgba(251,191,36,.12)}
 .isteps li.ok{border-color:rgba(52,211,153,.45)}
 .isteps li.ok:before{border-color:var(--ok);color:var(--ok);background:rgba(52,211,153,.1)}
+.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.big3>div{position:relative;background:var(--s1);border:1px solid var(--ln);border-radius:18px;padding:26px 22px;transition:.25s}
+.big3>div:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.4)}
+.big3 i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--g);color:#021017;font:800 22px 'Baloo Da 2';margin-bottom:14px}
+.big3 .w2{border-color:rgba(251,191,36,.5);background:linear-gradient(180deg,rgba(251,191,36,.1),var(--s1))}
+.big3 .w2 i{background:#fbbf24}
+.big3 .w3 i{background:var(--ok)}
+.big3 h3{font-size:20px;margin-bottom:6px}
+.big3 p{color:var(--mu);font-size:15.5px;line-height:1.65}
+#more details{max-width:none}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 #pre{width:min(520px,94vw);padding:26px}
 #pre h3{font-size:24px;margin-bottom:8px}
@@ -190,18 +218,19 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
 nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;padding:12px 22px 18px;background:rgba(5,8,13,.97);border-bottom:1px solid var(--ln);margin:0}
 nav.open{display:flex}nav a{padding:12px 8px;font-size:17px}
 .facts .w{grid-template-columns:repeat(2,1fr)}
-.how,.panel,.fp{grid-template-columns:1fr}.isteps li{padding-left:64px}
+.how,.panel,.fp,.big3{grid-template-columns:1fr}.isteps li{padding-left:64px}
 section{padding:56px 0}
 .sticky.show{display:block}
-header .btn.p{display:none}
+header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px}nav a.navw{margin-bottom:6px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.panel div{animation:none}}
 </style>
 </head>
 <body>
+<a class="topbar" href="#install">⚠️ <b>ডাউনলোড ও ইনস্টলের আগে জরুরি জেনে নিন</b><span> &mdash; ফলস পজিটিভ (ভুল সতর্কতা) কী ও কীভাবে নিরাপদে ইনস্টল করবেন</span> <u>দেখুন →</u></a>
 <header><div class="w">
-  <a class="logo" href="#top"><img src="logo.png" alt="VnA logo" width="40" height="40">VnA Download Manager</a>
-  <nav id="nav"><a href="#install">ইনস্টল গাইড</a><a href="#features">ফিচার</a><a href="#new">নতুন কী</a><a href="#videos">ভিডিও</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
+  <a class="logo" href="#top"><img src="logo.png" alt="VnA logo" width="40" height="40" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%2322d3ee'/><path d='M16 7v12m0 0l-5-5m5 5l5-5M9 24h14' fill='none' stroke='%2304131a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>&quot;">VnA Download Manager</a>
+  <nav id="nav"><a href="#install" class="navw">⚠️ ডাউনলোডের আগে জরুরি</a><a href="#features">ফিচার</a><a href="#new">নতুন কী</a><a href="#videos">ভিডিও</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
   <a class="btn p" data-link="download" href="#">ডাউনলোড</a>
   <button class="mb" id="mb" aria-label="মেনু" aria-expanded="false">☰</button>
 </div></header>
@@ -216,8 +245,49 @@ header .btn.p{display:none}
       <a class="btn p l" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
       <a class="btn l" href="#videos">ভিডিও দেখুন</a>
     </div>
-    <p class="trust">সংস্করণ 1.3.6, 64-bit। ৩ দিন ফ্রি ট্রায়াল। Windows বা অ্যান্টিভাইরাস সতর্ক করলে ঘাবড়াবেন না, এটা ফলস পজিটিভ। <a href="#install">ইনস্টল গাইড</a> দেখে নিন।</p>
+    <p class="trust">সংস্করণ 1.3.6, 64-bit। ৩ দিন ফ্রি ট্রায়াল। ডাউনলোডের আগে <a href="#install">৩টি ছোট কাজ</a> দেখে নিন, তাহলে ইনস্টলে সমস্যা হবে না।</p>
   </div>
+  <div class="notice">
+    <span class="tag">⚠️ আগে এটা পড়ুন</span>
+    <h2>ডাউনলোড ও ইনস্টলের আগে <span class="gt">জরুরি</span> জেনে নিন</h2>
+    <div class="q"><b>ফলস পজিটিভ কী?</b> মানে <b>ভুল সতর্কতা</b>। ভালো সফটওয়্যারকেও অ্যান্টিভাইরাস ভুল করে ভাইরাস ভেবে আটকে দেয় বা মুছে ফেলে। নতুন সফটওয়্যারে এটা খুব হয়। এটা ভাইরাস নয়।</div>
+    <ol>
+      <li><i>১</i><span><b>ইনস্টলের সময়</b> অ্যান্টিভাইরাস সাময়িক বন্ধ রাখুন।</span></li>
+      <li class="n2"><i>২</i><span>শেষ পেজে <b>Finish চাপবেন না</b>। আগে ফোল্ডারটি &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন।</span></li>
+      <li class="n3"><i>৩</i><span>অ্যান্টিভাইরাস <b>আবার চালু</b> করে তারপর Finish চাপুন।</span></li>
+    </ol>
+    <a class="btn p" href="#install">Windows 10 / 11-এর ধাপে ধাপে গাইড দেখুন ↓</a>
+  </div>
+</div></div>
+
+
+
+<section id="install" style="padding-top:36px"><div class="w rv">
+  <span class="eyebrow">ডাউনলোড ও ইনস্টলের আগে</span>
+  <h2>ডাউনলোড ও ইনস্টলের আগে <span class="gt">জরুরি</span> জেনে নিন</h2>
+  <p class="lead">নতুন সফটওয়্যারে একটা সাধারণ ঝামেলা হয়, নাম <b>ফলস পজিটিভ</b>। নিচে একদম সহজ করে বুঝিয়ে দিলাম।</p>
+  <div class="call info" style="margin:0 0 20px"><div class="ic">❓</div><div><b>ফলস পজিটিভ কী?</b> মানে <b>ভুল সতর্কতা</b>। অ্যান্টিভাইরাস ভালো সফটওয়্যারকেও ভুল করে ভাইরাস ভেবে আটকে দেয় বা মুছে ফেলে। নতুন কাউকে দেখলে নিরাপত্তারক্ষী যেমন আগে থামিয়ে দেয়, অ্যান্টিভাইরাসও নতুন সফটওয়্যারকে তেমন আগে সন্দেহ করে। বেশি মানুষ ব্যবহার করলে এটা কমে যায়। তাই ইনস্টলের সময় নিচের ৩টি কাজ করুন।</div></div>
+  <div class="big3">
+    <div><i>১</i><h3>অ্যান্টিভাইরাস সাময়িক বন্ধ রাখুন</h3><p>শুধু ইনস্টল করার সময়টুকুর জন্য।</p></div>
+    <div class="w2"><i>২</i><h3>শেষ পেজে &ldquo;Finish&rdquo; চাপবেন না</h3><p>উইন্ডো খোলা রেখে অ্যাপের ফোল্ডারটি অ্যান্টিভাইরাসের &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন।</p></div>
+    <div class="w3"><i>৩</i><h3>সুরক্ষা চালু করে তারপর Finish</h3><p>অ্যান্টিভাইরাস আবার চালু করে তারপর &ldquo;Finish&rdquo; চাপুন।</p></div>
+  </div>
+  <div class="cta" style="margin-top:22px">
+    <a class="btn p l" data-link="download" data-skip="1" href="#">বুঝেছি, ডাউনলোড করি</a>
+    <a class="btn l" href="#guide">ধাপে ধাপে বিস্তারিত গাইড ↓</a>
+  </div>
+  <div class="call ok"><div class="ic">🛡️</div><div><b>নিরাপদ থাকতে:</b> এই পদ্ধতি শুধু এই সাইটের ডাউনলোড বাটন থেকে নামানো ফাইলের জন্য। অন্য কোথাও থেকে পাওয়া ফাইলের জন্য সুরক্ষা বন্ধ করবেন না। আর ইনস্টল শেষ হলে সুরক্ষা অবশ্যই আবার চালু করবেন।</div></div>
+
+  <h3 class="gh" id="guide">ধাপে ধাপে ইনস্টল গাইড</h3>
+  <p class="hint">আপনার Windows কোনটা? Start → Settings → System → About দেখুন। &ldquo;Windows 11&rdquo; লেখা থাকলে Windows 11 ট্যাব বেছে নিন।</p>
+  <div class="tabs" id="osTabs" role="tablist"></div>
+  <ol class="isteps" id="isteps"></ol>
+
+  <h3 class="gh" style="font-size:22px">কোথাও আটকে গেলে</h3>
+  <div id="more"></div>
+</div></section>
+<section style="padding:10px 0 50px"><div class="w rv">
+  <div style="max-width:780px;margin:0 auto">
   <div class="app" aria-hidden="true">
     <div class="dots"><i></i><i></i><i></i></div>
     <div class="tb"><span>Home</span><span>Sidebar</span><span>Resume</span><span>Stop</span><span>Delete</span><span>Settings</span></div>
@@ -227,7 +297,8 @@ header .btn.p{display:none}
     <div class="dl"><b>music_album.rar</b><em>0%</em><div class="bar"><i></i></div></div>
     <div class="map" id="map"></div>
   </div>
-</div></div>
+  </div>
+</div></section>
 
 <div class="facts"><div class="w">
   <div class="rv"><b>৩২</b><span>পর্যন্ত একসাথে কানেকশন</span></div>
@@ -245,34 +316,6 @@ header .btn.p{display:none}
     <div><h3>লিংক দিন</h3><p>লিংক কপি করুন বা ব্রাউজারে ভিডিওর উপরের বাটন চাপুন।</p></div>
     <div><h3>কোয়ালিটি বেছে নামান</h3><p>ফাইল নিজে সঠিক ফোল্ডারে সাজানো হয়ে যায়।</p></div>
   </div>
-</div></section>
-
-<section id="install" class="sec"><div class="w rv">
-  <span class="eyebrow">ইনস্টলের আগে পড়ুন</span>
-  <h2>Windows সতর্ক করলে ঘাবড়াবেন না</h2>
-  <p class="lead">নতুন সফটওয়্যারে এটা খুব সাধারণ ঘটনা। একে বলে <b>ফলস পজিটিভ (False Positive)</b>। নিচের ধাপগুলো মেনে চললে ইনস্টল নির্বিঘ্নে হবে।</p>
-  <div class="fp">
-    <div class="card">
-      <h3>ফলস পজিটিভ মানে কী?</h3>
-      <p>অ্যান্টিভাইরাস প্রতিটি ফাইলের ভেতরটা পুরো বুঝে না। সে ফাইলের আচরণ, কতজন নামিয়েছে আর পাবলিশার কতটা পরিচিত, এসব দেখে আন্দাজ করে। তাই নতুন ও কম পরিচিত সফটওয়্যারকে মাঝে মাঝে ভুল করে &ldquo;সন্দেহজনক&rdquo; ধরে ফেলে। সফটওয়্যারটি ঠিক থাকলেও এমন হয়, একেই ফলস পজিটিভ বলে।</p>
-    </div>
-    <div class="card">
-      <h3>VnA-কে কেন ধরতে পারে?</h3>
-      <ul>
-        <li><b>নতুন ফাইল:</b> ডাউনলোড সংখ্যা কম, তাই Windows-এর কাছে এর রেপুটেশন এখনো তৈরি হয়নি।</li>
-        <li><b>ব্রাউজারের সাথে কাজ:</b> ব্রাউজারের ডাউনলোড ধরতে একটি সহায়ক ফাইল (<code>vna_host.exe</code>) ও রেজিস্ট্রি এন্ট্রি লাগে। এই আচরণ কিছু ক্ষতিকর প্রোগ্রামের সাথে মেলে।</li>
-        <li><b>প্যাকেজিং পদ্ধতি:</b> Python থেকে তৈরি এক্সিকিউটেবল ফাইলকে অনেক অ্যান্টিভাইরাস ভুল করে ধরে।</li>
-      </ul>
-    </div>
-  </div>
-  <div class="call"><div class="ic">⚠️</div><div><b>কী ঘটতে পারে:</b> ইনস্টলের পর অ্যান্টিভাইরাস <code>vna_host.exe</code> মুছে বা কোয়ারেন্টিনে পাঠাতে পারে। তখন অ্যাপে <b>App Offline</b> দেখায়। সমাধান: Windows Security-র <b>Protection history</b> থেকে ফাইলটি Restore করুন, তারপর অ্যাপের Settings থেকে <b>Repair Extension</b> চাপুন।</div></div>
-  <div class="call ok"><div class="ic">🛡️</div><div><b>নিরাপদ থাকতে:</b> এই পদ্ধতি শুধু এই সাইট বা আমাদের অফিশিয়াল GitHub Releases থেকে নামানো ফাইলের জন্য। অন্য কোথাও থেকে পাওয়া ফাইলের জন্য সুরক্ষা বন্ধ করবেন না। সুরক্ষা বন্ধ থাকবে শুধু ইনস্টলের সময়টুকু, শেষে অবশ্যই আবার চালু করবেন।</div></div>
-
-  <h3 class="gh">ধাপে ধাপে ইনস্টল গাইড</h3>
-  <p class="hint">আপনার Windows কোনটা? Start → Settings → System → About দেখুন, &ldquo;Windows 11&rdquo; লেখা থাকলে Windows 11 ট্যাব বেছে নিন।</p>
-  <div class="tabs" id="osTabs" role="tablist"></div>
-  <ol class="isteps" id="isteps"></ol>
-  <div class="call"><div class="ic">💡</div><div><b>সংক্ষেপে মনে রাখুন:</b> সুরক্ষা সাময়িক বন্ধ → ইনস্টল → <b>Finish না চেপে</b> অপেক্ষা → ফোল্ডার Exclusions-এ যোগ → সুরক্ষা আবার চালু → তারপর Finish।</div></div>
 </div></section>
 
 <section id="features" class="sec"><div class="w rv">
@@ -324,9 +367,9 @@ header .btn.p{display:none}
 <section id="faq" class="sec"><div class="w rv">
   <span class="eyebrow">FAQ</span>
   <h2>প্রশ্নোত্তর</h2><p class="lead"></p>
-  <details><summary>Windows বা অ্যান্টিভাইরাস সতর্ক করছে, এটা কি ভাইরাস?</summary><p>নতুন সফটওয়্যারে এমন সতর্কতা সাধারণ, একে ফলস পজিটিভ বলে। <b>More info</b> চেপে <b>Run anyway</b> চাপুন। ইনস্টল আটকে গেলে <a href="#install" style="color:var(--cy)">ইনস্টল গাইড</a> অনুযায়ী অ্যান্টিভাইরাস সাময়িক বন্ধ রেখে ফোল্ডারটি Exclusions-এ যোগ করুন।</p></details>
-  <details><summary>ইনস্টলের পর App Offline দেখাচ্ছে, কী করব?</summary><p>অ্যান্টিভাইরাস সম্ভবত <code>vna_host.exe</code> মুছে ফেলেছে। Windows Security &gt; Virus &amp; threat protection &gt; Protection history থেকে ফাইলটি Restore করুন, অ্যাপ ফোল্ডার Exclusions-এ যোগ করুন, তারপর অ্যাপের Settings থেকে Repair Extension চাপুন।</p></details>
-  <details><summary>Windows 10 আর Windows 11-এর ইনস্টলে পার্থক্য কী?</summary><p>Windows 11-এ Defender-এর পাশাপাশি SmartScreen (আর কিছু ভার্সনে Smart App Control) ইনস্টলার আটকাতে পারে। তাই Windows 11-এর গাইডে সেগুলোর ধাপও আছে।</p></details>
+  <details><summary>ফলস পজিটিভ কী? Windows বা অ্যান্টিভাইরাস সতর্ক করছে কেন?</summary><p>ফলস পজিটিভ মানে ভুল সতর্কতা। নতুন সফটওয়্যারকে অ্যান্টিভাইরাস অনেক সময় ভুল করে আটকে দেয়, এটা ভাইরাস নয়। <b>More info</b> চেপে <b>Run anyway</b> চাপুন। এরপরেও আটকে গেলে <a href="#install" style="color:var(--cy)">ইনস্টল গাইডের</a> ধাপগুলো মেনে চলুন।</p></details>
+  <details><summary>ইনস্টলের পর অ্যাপ ঠিকমতো চলছে না বা App Offline দেখাচ্ছে, কী করব?</summary><p>অ্যান্টিভাইরাস হয়তো অ্যাপের একটা ফাইল সরিয়ে ফেলেছে। Windows Security &gt; Virus &amp; threat protection &gt; Protection history-তে গিয়ে VnA-র ফাইলটি Restore করুন, তারপর অ্যাপের Settings থেকে Repair Extension চাপুন।</p></details>
+  <details><summary>Windows 10 আর Windows 11-এর ইনস্টলে পার্থক্য কী?</summary><p>Windows 11-এ একটা বাড়তি সুরক্ষা (SmartScreen) ইনস্টলার আটকাতে পারে। তাই Windows 11-এর গাইডে সেটা বন্ধ করার ধাপও আছে।</p></details>
   <details><summary>কোন Windows-এর জন্য?</summary><p>এই Setup 64-bit Windows-এর জন্য।</p></details>
   <details><summary>ইনস্টল বা আপডেটে পারমিশন এরর এলে?</summary><p>আমাদের Telegram চ্যানেল থেকে Setup ফাইল নামিয়ে নতুন করে ইনস্টল করুন।</p></details>
   <details><summary>অ্যাপ বন্ধ থাকলে ব্রাউজারের ডাউনলোড কী হবে?</summary><p>এক্সটেনশন তখন ব্রাউজারের নিজস্ব ডাউনলোড আবার চালু করে দেয়, কিছু হারাবে না।</p></details>
@@ -343,23 +386,23 @@ header .btn.p{display:none}
 </main>
 
 <footer><div class="w">
-  <span class="sp fl"><img src="logo.png" alt="" width="28" height="28">VnA Download Manager</span>
+  <span class="sp fl"><img src="logo.png" alt="" width="28" height="28" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%2322d3ee'/><path d='M16 7v12m0 0l-5-5m5 5l5-5M9 24h14' fill='none' stroke='%2304131a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>&quot;">VnA Download Manager</span>
   <a data-link="telegram" href="#">Telegram</a><a data-link="facebook" href="#">ফেসবুক পেজ</a><a data-link="youtube" href="#">YouTube</a>
 </div></footer>
 
 <div class="sticky" id="sticky"><a class="btn p l" data-link="download" href="#">ডাউনলোড করুন</a></div>
 
 <dialog id="pre" aria-label="ডাউনলোডের আগে জরুরি তথ্য">
-  <h3>ডাউনলোডের আগে ১ মিনিট ⚠️</h3>
-  <p>নতুন সফটওয়্যার বলে Windows Defender বা অ্যান্টিভাইরাস একে ভুল করে (ফলস পজিটিভ) আটকে দিতে পারে। এটা সাধারণ ঘটনা।</p>
+  <h3>ডাউনলোড ও ইনস্টলের আগে জরুরি ⚠️</h3>
+  <p><b>ফলস পজিটিভ</b> মানে ভুল সতর্কতা। নতুন সফটওয়্যারকে অ্যান্টিভাইরাস ভুল করে আটকে দিতে পারে, এটা ভাইরাস নয়। তাই:</p>
   <ol>
     <li>ইনস্টলের সময় অ্যান্টিভাইরাস সাময়িক বন্ধ রাখুন।</li>
-    <li>ইনস্টলারের শেষ পেজে <b>Finish চাপার আগে</b> থামুন, অ্যাপ ফোল্ডার Exclusions-এ যোগ করুন।</li>
+    <li>শেষ পেজে <b>Finish চাপবেন না</b>। আগে অ্যাপের ফোল্ডার &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন।</li>
     <li>অ্যান্টিভাইরাস আবার চালু করে তারপর Finish চাপুন।</li>
   </ol>
   <div class="row">
-    <a class="btn" href="#install" id="preGuide">ইনস্টল গাইড দেখুন</a>
-    <a class="btn p" id="preGo" data-link="download" href="#">বুঝেছি, ডাউনলোড করুন</a>
+    <a class="btn" href="#install" id="preGuide">গাইডটা দেখি</a>
+    <a class="btn p" id="preGo" data-link="download" href="#">বুঝেছি, ডাউনলোড করি</a>
   </div>
 </dialog>
 
@@ -435,22 +478,24 @@ const FEATS = [
 
 // ইনস্টল গাইডের ধাপ। t = শিরোনাম, d = বিবরণ, k = "warn" (সতর্কতা) বা "ok" (শেষ ধাপ)
 const PATH = "<code>C:\\Program Files\\VnA Download Manager</code>";
-const S_DL = { t: "সেটআপ ফাইল নামান", d: "শুধু এই সাইটের ডাউনলোড বাটন বা অফিশিয়াল GitHub Releases থেকে নামান। ব্রাউজার <b>Keep</b> বা <b>Keep anyway</b> জিজ্ঞেস করলে সেটা চাপুন, কারণ নতুন ফাইলকে ব্রাউজার অপরিচিত ধরে।" };
-const S_RT = { t: "Windows Defender-এর Real-time protection বন্ধ করুন", d: "Start চেপে <b>Windows Security</b> লিখে খুলুন → <b>Virus &amp; threat protection</b> → <b>Manage settings</b> → <b>Real-time protection</b> বাটন <b>Off</b> করুন, Yes চাপুন। চাইলে <b>Cloud-delivered protection</b>-ও সাময়িক Off করতে পারেন।" };
-const S_AV = { t: "অন্য অ্যান্টিভাইরাস থাকলে সেটাও বন্ধ করুন", d: "Avast, AVG, Kaspersky, Bitdefender, Norton, Quick Heal, ESET ইত্যাদি থাকলে তার <b>Real-time / Shield / Auto-Protect</b> সাময়িক বন্ধ করুন। সিস্টেম ট্রে আইকনে ডান-ক্লিক করলে সাধারণত Pause বা Disable for 10 minutes অপশন পাবেন। একটিও চালু থাকলে সেটি ফাইল মুছে দিতে পারে।" };
-const S_RUN = { t: "Setup চালান", d: "ফাইলে ডান-ক্লিক করে <b>Run as administrator</b> চাপুন। &ldquo;Windows protected your PC&rdquo; এলে <b>More info</b> → <b>Run anyway</b>। তারপর Next দিয়ে সাধারণ নিয়মে ইনস্টল করুন।" };
-const S_WAIT = { k: "warn", t: "শেষ পেজে থামুন, Finish চাপবেন না", d: "ইনস্টল শেষে &ldquo;Completing the Setup&rdquo; পেজ আসবে। <b>Finish চাপবেন না</b>, Launch অপশনও খুলবেন না। উইন্ডোটি যেমন আছে তেমন খোলা রাখুন। Finish চাপলে অ্যাপ চালু হয়ে যায় আর অ্যান্টিভাইরাস ফাইল স্ক্যান করে মুছে দিতে পারে।" };
-const S_EX = { t: "অ্যাপ ফোল্ডার Exclusions-এ যোগ করুন", d: "Windows Security → Virus &amp; threat protection → Manage settings → একদম নিচে <b>Exclusions</b> → <b>Add or remove exclusions</b> → <b>+ Add an exclusion</b> → <b>Folder</b> → " + PATH + " সিলেক্ট করুন। অন্য অ্যান্টিভাইরাসেও (Exceptions / Exclusions / Trusted) একই ফোল্ডার যোগ করুন।" };
-const S_HIS = { t: "কোনো ফাইল মুছে গেছে কিনা দেখুন", d: "Windows Security → Virus &amp; threat protection → <b>Protection history</b>। VnA-র কোনো ফাইল (যেমন <code>vna_host.exe</code>) Quarantined বা Removed থাকলে খুলে <b>Actions → Restore</b> বা <b>Allow on device</b> দিন। ফিরিয়ে আনা না গেলে Exclusion যোগ থাকা অবস্থায় Setup আবার চালান।" };
-const S_FIN = { k: "ok", t: "এবার ইনস্টলারে Finish চাপুন", d: "ইনস্টলার উইন্ডোতে ফিরে <b>Finish</b> চাপুন। অ্যাপ খুললে ব্রাউজারে Enable Extension মেসেজ এলে Allow করুন।" };
+const S_DL = { t: "ফাইলটি নামান", d: "এই সাইটের ডাউনলোড বাটন থেকে নামান। ব্রাউজার <b>Keep</b> বা <b>Keep anyway</b> জিজ্ঞেস করলে সেটা চাপুন।" };
+const S_RT = { t: "Windows-এর সুরক্ষা সাময়িক বন্ধ করুন", d: "Start চেপে <b>Windows Security</b> লিখে খুলুন → <b>Virus &amp; threat protection</b> → <b>Manage settings</b> → <b>Real-time protection</b> বাটনটি <b>Off</b> করুন, তারপর Yes চাপুন।" };
+const S_SS = { t: "SmartScreen বন্ধ করুন", d: "Windows Security → <b>App &amp; browser control</b> → <b>Reputation-based protection settings</b> → <b>Check apps and files</b> আর <b>SmartScreen for Microsoft Edge</b> দুটোই <b>Off</b> করুন।" };
+const S_AV = { t: "অন্য অ্যান্টিভাইরাস থাকলে সেটাও বন্ধ করুন", d: "Avast, Kaspersky, Bitdefender, Norton, Quick Heal ইত্যাদি থাকলে তার সুরক্ষাও সাময়িক বন্ধ করুন। ঘড়ির পাশের ছোট আইকনে ডান-ক্লিক করলে সাধারণত <b>Pause</b> বা <b>Disable</b> অপশন পাবেন। একটা অ্যান্টিভাইরাসও চালু থাকলে সেটা আটকে দিতে পারে।" };
+const S_RUN = { t: "ইনস্টল শুরু করুন", d: "সেটআপ ফাইলে ডান-ক্লিক করে <b>Run as administrator</b> চাপুন। &ldquo;Windows protected your PC&rdquo; এলে <b>More info</b> → <b>Run anyway</b> চাপুন। তারপর Next দিয়ে ইনস্টল করুন।" };
+const S_WAIT = { k: "warn", t: "শেষ পেজে থামুন, Finish চাপবেন না", d: "ইনস্টল শেষে &ldquo;Completing the Setup&rdquo; লেখা পেজ আসবে। <b>Finish চাপবেন না</b> আর অ্যাপও খুলবেন না। উইন্ডোটা যেমন আছে তেমনি খোলা রেখে দিন। Finish চাপলে অ্যাপ চালু হয়, আর তখনই অ্যান্টিভাইরাস ভুল করে ফাইল সরিয়ে ফেলতে পারে।" };
+const S_EX = { t: "অ্যাপের ফোল্ডার &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন", d: "Windows Security → Virus &amp; threat protection → Manage settings → একদম নিচে <b>Exclusions</b> → <b>Add or remove exclusions</b> → <b>+ Add an exclusion</b> → <b>Folder</b> চাপুন। তারপর এই ফোল্ডারটি বেছে নিন: " + PATH + "। অন্য অ্যান্টিভাইরাস থাকলে সেখানেও একই ফোল্ডার যোগ করুন (Exceptions বা Trusted লেখা অপশনে)।" };
+const S_FIN = { k: "ok", t: "এবার Finish চাপুন", d: "ইনস্টলার উইন্ডোতে ফিরে <b>Finish</b> চাপুন। অ্যাপ খুললে ব্রাউজারে এক্সটেনশন চালুর মেসেজ এলে <b>Allow</b> করুন। ব্যস, শেষ!" };
 const OS = [
-  { n: "Windows 10", s: [S_DL, S_RT, S_AV, S_RUN, S_WAIT, S_EX, S_HIS,
-    { k: "ok", t: "সুরক্ষা আবার চালু করুন", d: "Real-time protection আবার <b>On</b> করুন (Cloud-delivered protection বন্ধ করলে সেটাও), আর অন্য অ্যান্টিভাইরাসও চালু করুন। Exclusion যোগ থাকায় আর সমস্যা হবে না।" }, S_FIN] },
-  { n: "Windows 11", s: [S_DL, S_RT,
-    { t: "SmartScreen বন্ধ করুন", d: "Windows Security → <b>App &amp; browser control</b> → <b>Reputation-based protection settings</b> → <b>Check apps and files</b> আর <b>SmartScreen for Microsoft Edge</b> দুটোই <b>Off</b> করুন। <b>Potentially unwanted app blocking</b> থাকলে সেটাও সাময়িক Off করুন।" },
-    { t: "Smart App Control থাকলে (শুধু দরকার হলে)", d: "ইনস্টলার &ldquo;Smart App Control blocked&rdquo; বললে Windows Security → App &amp; browser control → <b>Smart App Control settings</b> → <b>Off</b>। সাবধান: অনেক Windows 11 ভার্সনে এটা একবার Off করলে আবার On করতে সিস্টেম রিসেট লাগে। তাই Run anyway দিয়ে কাজ না হলেই শুধু করুন।" },
-    S_AV, S_RUN, S_WAIT, S_EX, S_HIS,
-    { k: "ok", t: "সব সুরক্ষা আবার চালু করুন", d: "<b>Real-time protection</b>, <b>Check apps and files</b>, <b>SmartScreen for Microsoft Edge</b> আর অন্য অ্যান্টিভাইরাস আবার <b>On</b> করুন। Exclusion যোগ থাকায় আর সমস্যা হবে না।" }, S_FIN] }
+  { n: "Windows 10", s: [S_DL, S_RT, S_AV, S_RUN, S_WAIT, S_EX,
+    { k: "ok", t: "সুরক্ষা আবার চালু করুন", d: "<b>Real-time protection</b> আবার <b>On</b> করুন, আর অন্য অ্যান্টিভাইরাস থাকলে সেটাও চালু করুন। ফোল্ডার অনুমোদিত তালিকায় থাকায় আর সমস্যা হবে না।" }, S_FIN] },
+  { n: "Windows 11", s: [S_DL, S_RT, S_SS, S_AV, S_RUN, S_WAIT, S_EX,
+    { k: "ok", t: "সব সুরক্ষা আবার চালু করুন", d: "<b>Real-time protection</b>, <b>Check apps and files</b> আর <b>SmartScreen for Microsoft Edge</b> আবার <b>On</b> করুন। অন্য অ্যান্টিভাইরাস থাকলে সেটাও চালু করুন।" }, S_FIN] }
+];
+const MORE = [
+  ["ইনস্টলার &ldquo;Smart App Control&rdquo; লিখে আটকে দিলে (Windows 11)", "Windows Security → App &amp; browser control → <b>Smart App Control settings</b> → <b>Off</b> করুন। সাবধান: অনেক Windows 11-এ এটা একবার বন্ধ করলে আবার চালু করতে Windows রিসেট লাগে। তাই &ldquo;Run anyway&rdquo; দিয়ে কাজ না হলেই শুধু এটা করুন।"],
+  ["ইনস্টলের পর অ্যাপ ঠিকমতো চলছে না বা &ldquo;App Offline&rdquo; দেখাচ্ছে", "অ্যান্টিভাইরাস অ্যাপের কোনো ফাইল সরিয়ে ফেলেছে। Windows Security → Virus &amp; threat protection → <b>Protection history</b> খুলুন। VnA Download Manager-এর ফাইল পেলে সেটা খুলে <b>Actions → Restore</b> (বা <b>Allow on device</b>) চাপুন। তারপর অ্যাপের Settings থেকে <b>Repair Extension</b> চাপুন।"],
+  ["ইনস্টলের সময়ই ফাইল মুছে গেলে বা ইনস্টল আটকে গেলে", "ফোল্ডারটি অনুমোদিত তালিকায় যোগ করুন, সুরক্ষা বন্ধ আছে কিনা দেখে নিন, তারপর সেটআপ আবার চালান। এরপরেও না হলে আমাদের Telegram বা ফেসবুক পেজে জানান।"]
 ];
 const osTabs = document.getElementById("osTabs"), isteps = document.getElementById("isteps");
 function showOS(k) {
@@ -470,6 +515,8 @@ function showOS(k) {
   });
 }
 showOS(0);
+const more = document.getElementById("more");
+MORE.forEach(([q, a]) => { const d = document.createElement("details"); d.innerHTML = "<summary>" + q + "</summary><p>" + a + "</p>"; more.appendChild(d); });
 (async () => {
   try {
     const u = navigator.userAgentData;
@@ -484,7 +531,7 @@ showOS(0);
 const pre = document.getElementById("pre");
 let ack = false;
 document.querySelectorAll('[data-link="download"]').forEach(a => a.addEventListener("click", e => {
-  if (a.id === "preGo") { ack = true; setTimeout(() => pre.close(), 150); return; }
+  if (a.id === "preGo" || a.dataset.skip) { ack = true; setTimeout(() => pre.close(), 150); return; }
   if (!ack) { e.preventDefault(); pre.showModal(); }
 }));
 document.getElementById("preGuide").onclick = () => pre.close();

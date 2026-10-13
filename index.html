@@ -8,130 +8,186 @@
 <meta property="og:title" content="VnA Download Manager">
 <meta property="og:description" content="দ্রুত, গোছানো ও ঝামেলাহীন ডাউনলোড ম্যানেজার (Windows)">
 <meta property="og:type" content="website">
+<meta property="og:image" content="logo-512.png">
 <meta name="theme-color" content="#060a0f">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;800&family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
-:root{--bg:#060a0f;--s1:#0d141c;--s2:#131e2a;--ln:#1e2d3c;--cy:#22d3ee;--bl:#3b82f6;--ok:#34d399;--tx:#e6edf3;--mu:#8b9db0}
+:root{--bg:#05080d;--s1:#0c131b;--s2:#121c27;--ln:#1c2b3a;--cy:#22d3ee;--bl:#3b82f6;--vi:#8b5cf6;--ok:#34d399;--tx:#eef3f8;--mu:#8fa3b8;--g:linear-gradient(135deg,#22d3ee,#3b82f6)}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--bg);color:var(--tx);font:400 17px/1.75 'Hind Siliguri','Noto Sans Bengali','Segoe UI',system-ui,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.75 'Hind Siliguri','Noto Sans Bengali','Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3,.logo{font-family:'Baloo Da 2','Hind Siliguri',system-ui,sans-serif;line-height:1.25}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--cy);outline-offset:3px}
-.w{max-width:1120px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:20;background:rgba(6,10,15,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
-header .w{display:flex;align-items:center;gap:22px;height:60px}
+.w{max-width:1160px;margin:0 auto;padding:0 22px}
+.gt{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(5,8,13,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.06)}
+header .w{display:flex;align-items:center;gap:8px;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;text-decoration:none;margin-right:auto}
-.logo svg{width:30px;height:30px}
-nav a{color:var(--mu);text-decoration:none;font-size:15px;margin-right:18px}
-nav a:hover{color:var(--tx)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:9px;border:1px solid var(--cy);background:none;color:var(--cy);font:500 16px 'Hind Siliguri',sans-serif;text-decoration:none;cursor:pointer}
-.btn:hover{background:rgba(34,211,238,.12)}
-.btn.p{background:var(--cy);color:#031318;font-weight:700}
-.btn.p:hover{background:#67e8f9}
-.btn.l{padding:14px 30px;font-size:19px}
-.hero{padding:64px 0 48px;display:grid;grid-template-columns:1fr 1.15fr;gap:46px;align-items:center}
-h1{font-size:clamp(34px,5.2vw,56px);font-weight:800;margin-bottom:16px}
-.hero p{color:var(--mu);font-size:18px;max-width:28em;margin-bottom:26px}
+.logo img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(34,211,238,.35))}
+nav{display:flex;gap:2px;margin-right:12px}
+nav a{color:var(--mu);text-decoration:none;font-size:15px;padding:6px 13px;border-radius:8px;transition:.2s}
+nav a:hover{color:var(--tx);background:rgba(255,255,255,.06)}
+.mb{display:none;background:none;border:1px solid var(--ln);border-radius:9px;color:var(--tx);width:40px;height:40px;cursor:pointer;font-size:20px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:9px 20px;border-radius:10px;border:1px solid var(--ln);background:rgba(255,255,255,.03);color:var(--tx);font:500 16px 'Hind Siliguri',sans-serif;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{border-color:var(--cy);background:rgba(34,211,238,.1)}
+.btn.p{background:var(--g);border-color:transparent;color:#021017;font-weight:700;box-shadow:0 8px 28px -8px rgba(34,211,238,.6)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 12px 34px -8px rgba(34,211,238,.8);filter:brightness(1.08)}
+.btn.l{padding:14px 30px;font-size:18px;border-radius:12px}
+.btn svg{width:20px;height:20px}
+/* hero */
+.hero-bg{position:relative;overflow:hidden}
+.hero-bg:before,.hero-bg:after{content:"";position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;pointer-events:none}
+.hero-bg:before{width:520px;height:520px;background:var(--cy);top:-200px;left:-120px}
+.hero-bg:after{width:480px;height:480px;background:var(--vi);top:60px;right:-160px;opacity:.22}
+.hero{position:relative;z-index:1;padding:76px 0 64px;display:grid;grid-template-columns:1fr 1.12fr;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border:1px solid var(--ln);border-radius:99px;background:rgba(255,255,255,.04);font-size:14px;color:var(--mu);margin-bottom:20px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(52,211,153,.2)}
+h1{font-size:clamp(36px,5.4vw,58px);font-weight:800;margin-bottom:18px;letter-spacing:-.5px}
+.hero p{color:var(--mu);font-size:18.5px;max-width:28em;margin-bottom:28px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
-.trust{margin-top:14px;font-size:14px;color:var(--mu);max-width:32em}
-.app{background:var(--s1);border:1px solid var(--ln);border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.55)}
-.tb{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--ln);background:var(--s2)}
-.tb span{font-size:12.5px;padding:3px 10px;border:1px solid var(--ln);border-radius:6px;color:var(--mu)}
-.tb span:first-child{border-color:var(--cy);color:var(--cy)}
-.url{margin:14px;padding:8px 12px;border:1px solid var(--ln);border-radius:8px;font-size:13px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dl{display:grid;grid-template-columns:1fr 70px;gap:4px 12px;padding:9px 14px;border-top:1px solid var(--ln);font-size:13.5px}
+.hero p.trust{margin:16px 0 0;font-size:14px;max-width:32em;opacity:.9}
+/* app mock */
+.app{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid rgba(255,255,255,.09);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -10px rgba(0,0,0,.7),0 0 0 1px rgba(34,211,238,.06),0 0 90px -30px rgba(34,211,238,.35)}
+.dots{display:flex;gap:7px;padding:12px 14px 0}
+.dots i{width:11px;height:11px;border-radius:50%;background:#2a3b4d}
+.dots i:nth-child(1){background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.tb{display:flex;gap:6px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--ln)}
+.tb span{font-size:12.5px;padding:3px 11px;border:1px solid var(--ln);border-radius:7px;color:var(--mu)}
+.tb span:first-child{border-color:var(--cy);color:var(--cy);background:rgba(34,211,238,.08)}
+.url{margin:14px;padding:9px 13px;border:1px solid var(--ln);border-radius:9px;background:rgba(0,0,0,.25);font-size:13px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dl{display:grid;grid-template-columns:1fr 70px;gap:5px 12px;padding:10px 14px;border-top:1px solid var(--ln);font-size:13.5px}
 .dl b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dl em{font-style:normal;text-align:right;color:var(--cy)}
 .dl.ok em{color:var(--ok)}
 .bar{grid-column:1/-1;height:6px;border-radius:4px;background:var(--s2);overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--cy);border-radius:4px}
+.bar i{display:block;height:100%;width:0;background:var(--g);border-radius:4px;transition:width .4s}
 .dl.ok .bar i{background:var(--ok)}
 .map{display:grid;grid-template-columns:repeat(32,1fr);gap:3px;padding:14px;border-top:1px solid var(--ln)}
-.map i{height:12px;border-radius:2px;background:var(--s2)}
-.map i.on{background:var(--cy)}
-.map i.on2{background:var(--bl)}
-.facts{border-block:1px solid var(--ln);background:var(--s1)}
-.facts .w{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-block:22px}
-.facts div{text-align:center}
-.facts b{display:block;font:800 30px 'Baloo Da 2',sans-serif;color:var(--cy);line-height:1.2}
+.map i{height:12px;border-radius:3px;background:var(--s2)}
+.map i.on{background:var(--cy)}.map i.on2{background:var(--bl)}
+/* facts */
+.facts .w{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-block:6px 24px}
+.facts div{text-align:center;padding:20px 12px;border:1px solid var(--ln);border-radius:16px;background:linear-gradient(180deg,var(--s1),transparent)}
+.facts b{display:block;font:800 34px 'Baloo Da 2',sans-serif;line-height:1.2;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
 .facts span{font-size:14.5px;color:var(--mu)}
-section{padding:68px 0}
-h2{font-size:clamp(27px,3.8vw,38px);font-weight:800;margin-bottom:8px}
-.lead{color:var(--mu);margin-bottom:34px;max-width:36em}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.how div{border-top:3px solid var(--cy);padding-top:14px}
+/* sections */
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-size:13.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cy);margin-bottom:8px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:10px;letter-spacing:-.3px}
+.lead{color:var(--mu);margin-bottom:38px;max-width:36em}
+.sec{border-top:1px solid var(--ln)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:h}
+.how div{counter-increment:h;position:relative;background:var(--s1);border:1px solid var(--ln);border-radius:16px;padding:26px 24px;transition:.25s}
+.how div:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.4)}
+.how div:before{content:counter(h);display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--g);color:#021017;font:800 18px 'Baloo Da 2';margin-bottom:14px}
 .how h3{font-size:21px;margin-bottom:4px}
 .how p{color:var(--mu);font-size:16px}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.tab{padding:7px 18px;border-radius:99px;border:1px solid var(--ln);background:none;color:var(--mu);font:inherit;font-size:15.5px;cursor:pointer}
-.tab[aria-selected=true]{background:var(--cy);border-color:var(--cy);color:#031318;font-weight:700}
-.panel{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:28px}
-.panel h3{grid-column:1/-1;font-size:23px}
-.panel div b{display:block;color:var(--cy);font-weight:500}
-.panel div span{color:var(--mu);font-size:16px}
-.new{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px 30px;list-style:none;padding:0}
-.new li{padding-left:26px;position:relative}
-.new li:before{content:"";position:absolute;left:0;top:11px;width:12px;height:6px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
-.tools{display:flex;flex-wrap:wrap;gap:10px 16px;margin-bottom:16px}
-.tools input{flex:1 1 240px;padding:11px 16px;background:var(--s1);border:1px solid var(--ln);border-radius:9px;color:var(--tx);font:inherit}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.chip{padding:5px 15px;border-radius:99px;border:1px solid var(--ln);background:none;color:var(--mu);font:inherit;font-size:15px;cursor:pointer}
-.chip[aria-pressed=true]{border-color:var(--cy);color:var(--cy)}
-.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.vid{text-align:left;background:var(--s1);border:1px solid var(--ln);border-radius:12px;padding:0;color:inherit;font:inherit;cursor:pointer;overflow:hidden}
-.vid:hover{border-color:var(--cy)}
-.th{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#102333,#0a1119);display:grid;place-items:center}
-.th video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.th svg{position:relative;width:46px;height:46px;padding:12px;border-radius:50%;background:rgba(6,10,15,.7);fill:#fff}
-.in{padding:10px 14px 13px}
-.in small{color:var(--cy);font-size:13px}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border:1px solid var(--ln);border-radius:14px;background:var(--s1);margin-bottom:24px}
+.tab{padding:8px 20px;border-radius:10px;border:0;background:none;color:var(--mu);font:inherit;font-size:15.5px;cursor:pointer;transition:.2s}
+.tab:hover{color:var(--tx)}
+.tab[aria-selected=true]{background:var(--g);color:#021017;font-weight:700}
+.panel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.panel h3{grid-column:1/-1;font-size:25px;margin-bottom:4px}
+.panel div{background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:20px;transition:.25s;animation:up .4s both}
+.panel div:hover{border-color:rgba(34,211,238,.4);transform:translateY(-3px)}
+.panel div b{display:block;color:var(--tx);font-weight:600;font-size:17px;margin-bottom:4px}
+.panel div b:before{content:"";display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;background:var(--g);vertical-align:middle}
+.panel div span{color:var(--mu);font-size:15.5px;line-height:1.65}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.new{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;list-style:none;padding:0}
+.new li{padding:14px 16px 14px 48px;position:relative;background:var(--s1);border:1px solid var(--ln);border-radius:12px}
+.new li:before{content:"";position:absolute;left:18px;top:21px;width:12px;height:6px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
+.tools{margin-bottom:16px}
+.tools input{width:100%;max-width:460px;padding:13px 18px;background:var(--s1);border:1px solid var(--ln);border-radius:12px;color:var(--tx);font:inherit;transition:.2s}
+.tools input:focus{outline:0;border-color:var(--cy);box-shadow:0 0 0 4px rgba(34,211,238,.12)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{padding:5px 16px;border-radius:99px;border:1px solid var(--ln);background:none;color:var(--mu);font:inherit;font-size:15px;cursor:pointer;transition:.2s}
+.chip:hover{color:var(--tx)}
+.chip[aria-pressed=true]{border-color:var(--cy);color:var(--cy);background:rgba(34,211,238,.1)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.vid{text-align:left;background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:0;color:inherit;font:inherit;cursor:pointer;overflow:hidden;transition:.25s}
+.vid:hover{border-color:rgba(34,211,238,.5);transform:translateY(-4px);box-shadow:0 18px 40px -16px rgba(34,211,238,.35)}
+.th{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#102333,#0a1119);display:grid;place-items:center;overflow:hidden}
+.th video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.vid:hover .th video{transform:scale(1.06)}
+.th svg{position:relative;width:52px;height:52px;padding:14px 12px 14px 16px;border-radius:50%;background:rgba(5,8,13,.65);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);fill:#fff;transition:.25s}
+.vid:hover .th svg{background:var(--cy);fill:#021017;transform:scale(1.1)}
+.in{padding:12px 16px 15px}
+.in small{color:var(--cy);font-size:13px;font-weight:500}
 .in span{display:block;font-size:16px;line-height:1.45}
 .empty{color:var(--mu)}
-.steps{counter-reset:s;list-style:none;padding:0;max-width:42em}
-.steps li{counter-increment:s;padding-left:48px;position:relative;margin-bottom:16px}
-.steps li:before{content:counter(s);position:absolute;left:0;top:2px;width:32px;height:32px;border:1px solid var(--cy);border-radius:50%;display:grid;place-items:center;color:var(--cy);font-weight:700}
-details{border-bottom:1px solid var(--ln);padding:15px 0;max-width:46em}
-summary{cursor:pointer;font-weight:500;font-size:18px}
-details p{color:var(--mu);margin-top:8px}
-.end{text-align:center;background:var(--s1);border-block:1px solid var(--ln)}
-.end p{color:var(--mu);margin:0 auto 24px}
-footer{padding:34px 0 90px;color:var(--mu);font-size:15px}
-footer .w{display:flex;flex-wrap:wrap;gap:12px 28px}
-footer .sp{margin-right:auto}
-.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(6,10,15,.96);border-top:1px solid var(--ln)}
-.sticky .btn{width:100%;justify-content:center}
-dialog{border:1px solid var(--ln);background:var(--s1);color:var(--tx);border-radius:12px;padding:0;width:min(900px,94vw)}
-dialog::backdrop{background:rgba(0,0,0,.78)}
-.hd{display:flex;align-items:center;padding:10px 16px;gap:12px;border-bottom:1px solid var(--ln)}
+.steps{counter-reset:s;list-style:none;padding:0;max-width:44em;display:grid;gap:12px}
+.steps li{counter-increment:s;padding:16px 18px 16px 68px;position:relative;background:var(--s1);border:1px solid var(--ln);border-radius:14px}
+.steps li:before{content:counter(s);position:absolute;left:18px;top:14px;width:34px;height:34px;border-radius:10px;background:rgba(34,211,238,.1);border:1px solid var(--cy);display:grid;place-items:center;color:var(--cy);font-weight:700}
+details{border:1px solid var(--ln);background:var(--s1);border-radius:14px;padding:4px 20px;max-width:48em;margin-bottom:10px;transition:.2s}
+details[open]{border-color:rgba(34,211,238,.4)}
+summary{cursor:pointer;font-weight:500;font-size:18px;padding:13px 0;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:26px;line-height:1;color:var(--cy);transition:.2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--mu);padding-bottom:14px}
+.end{padding:34px 0}
+.end .w{text-align:center;padding:64px 22px;border:1px solid rgba(34,211,238,.25);border-radius:26px;background:radial-gradient(600px 240px at 50% 0,rgba(34,211,238,.16),transparent),var(--s1)}
+.end p{color:var(--mu);margin:0 auto 26px}
+footer{padding:40px 0 100px;color:var(--mu);font-size:15px;border-top:1px solid var(--ln);margin-top:34px}
+footer .w{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+footer .sp{margin-right:auto;font-weight:500;color:var(--tx)}
+footer .fl{display:flex;align-items:center;gap:10px}footer .fl img{border-radius:50%}
+footer a{text-decoration:none;transition:.2s}footer a:hover{color:var(--cy)}
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(5,8,13,.92);backdrop-filter:blur(12px);border-top:1px solid var(--ln)}
+.sticky .btn{width:100%}
+dialog{border:1px solid var(--ln);background:var(--s1);color:var(--tx);border-radius:16px;padding:0;width:min(920px,94vw);margin:auto;overflow:hidden}
+dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
+.hd{display:flex;align-items:center;padding:12px 18px;gap:12px;border-bottom:1px solid var(--ln)}
 .hd b{margin-right:auto;font-weight:500}
-.x{background:none;border:0;color:var(--mu);font-size:26px;cursor:pointer;line-height:1}
+.x{background:none;border:0;color:var(--mu);font-size:28px;cursor:pointer;line-height:1}.x:hover{color:var(--tx)}
 dialog video{display:block;width:100%;max-height:72vh;background:#000}
-@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:36px}nav{display:none}.facts .w{grid-template-columns:repeat(2,1fr)}.how,.panel{grid-template-columns:1fr}section{padding:48px 0}.sticky.show{display:block}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.js .rv.vis{opacity:1;transform:none}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;padding-top:40px;gap:36px}
+.mb{display:block}
+nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;padding:12px 22px 18px;background:rgba(5,8,13,.97);border-bottom:1px solid var(--ln);margin:0}
+nav.open{display:flex}nav a{padding:12px 8px;font-size:17px}
+.facts .w{grid-template-columns:repeat(2,1fr)}
+.how,.panel{grid-template-columns:1fr}
+section{padding:56px 0}
+.sticky.show{display:block}
+header .btn.p{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.panel div{animation:none}}
 </style>
 </head>
 <body>
 <header><div class="w">
-  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0d141c" stroke="#22d3ee"/><path d="M16 7v12m0 0l-5-5m5 5l5-5M9 24h14" fill="none" stroke="#22d3ee" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>VnA Download Manager</a>
-  <nav><a href="#features">ফিচার</a><a href="#new">নতুন কী</a><a href="#videos">ভিডিও</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
+  <a class="logo" href="#top"><img src="logo.png" alt="VnA logo" width="40" height="40">VnA Download Manager</a>
+  <nav id="nav"><a href="#features">ফিচার</a><a href="#new">নতুন কী</a><a href="#videos">ভিডিও</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
   <a class="btn p" data-link="download" href="#">ডাউনলোড</a>
+  <button class="mb" id="mb" aria-label="মেনু" aria-expanded="false">☰</button>
 </div></header>
 
 <main id="top">
-<div class="w hero">
+<div class="hero-bg"><div class="w hero">
   <div>
-    <h1>ডাউনলোড হোক দ্রুত, গোছানো আর ঝামেলাহীন</h1>
+    <span class="badge"><i></i>সংস্করণ 1.3.6 · Windows</span>
+    <h1>ডাউনলোড হোক <span class="gt">দ্রুত, গোছানো</span> আর ঝামেলাহীন</h1>
     <p>একটা ফাইলকে একসাথে অনেক অংশে নামিয়ে স্পিড বাড়ায়। ব্রাউজারের ডাউনলোড নিজে ধরে, ভিডিও, প্লেলিস্ট আর টরেন্টও নামায়।</p>
     <div class="cta" id="heroCta">
-      <a class="btn p l" data-link="download" href="#">Windows-এর জন্য ডাউনলোড</a>
+      <a class="btn p l" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
       <a class="btn l" href="#videos">ভিডিও দেখুন</a>
     </div>
     <p class="trust">সংস্করণ 1.3.6, 64-bit। ৩ দিন ফ্রি ট্রায়াল। Windows সতর্ক করলে More info চেপে Run anyway চাপুন।</p>
   </div>
   <div class="app" aria-hidden="true">
+    <div class="dots"><i></i><i></i><i></i></div>
     <div class="tb"><span>Home</span><span>Sidebar</span><span>Resume</span><span>Stop</span><span>Delete</span><span>Settings</span></div>
     <div class="url">https://example.com/video/tutorial.mp4</div>
     <div class="dl"><b>tutorial_part1.mp4</b><em>0%</em><div class="bar"><i></i></div></div>
@@ -139,16 +195,17 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
     <div class="dl"><b>music_album.rar</b><em>0%</em><div class="bar"><i></i></div></div>
     <div class="map" id="map"></div>
   </div>
-</div>
-
-<div class="facts"><div class="w">
-  <div><b>৩২</b><span>পর্যন্ত একসাথে কানেকশন</span></div>
-  <div><b>৬</b><span>ব্রাউজারে এক্সটেনশন</span></div>
-  <div><b>৩</b><span>ভাষা: বাংলা, English, हिंदी</span></div>
-  <div><b>৩ দিন</b><span>ফ্রি ট্রায়াল</span></div>
 </div></div>
 
-<section><div class="w">
+<div class="facts"><div class="w">
+  <div class="rv"><b>৩২</b><span>পর্যন্ত একসাথে কানেকশন</span></div>
+  <div class="rv"><b>৬</b><span>ব্রাউজারে এক্সটেনশন</span></div>
+  <div class="rv"><b>৩</b><span>ভাষা: বাংলা, English, हिंदी</span></div>
+  <div class="rv"><b>৩ দিন</b><span>ফ্রি ট্রায়াল</span></div>
+</div></div>
+
+<section><div class="w rv">
+  <span class="eyebrow">শুরু করুন</span>
   <h2>তিন ধাপেই শুরু</h2>
   <p class="lead">জটিল সেটআপ নেই।</p>
   <div class="how">
@@ -158,14 +215,16 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
   </div>
 </div></section>
 
-<section id="features" style="border-top:1px solid var(--ln)"><div class="w">
+<section id="features" class="sec"><div class="w rv">
+  <span class="eyebrow">ফিচার</span>
   <h2>সব ফিচার</h2>
   <p class="lead">বিভাগ বেছে দেখুন কী কী পাবেন।</p>
   <div class="tabs" id="tabs" role="tablist"></div>
   <div class="panel" id="panel" role="tabpanel"></div>
 </div></section>
 
-<section id="new" style="border-top:1px solid var(--ln)"><div class="w">
+<section id="new" class="sec"><div class="w rv">
+  <span class="eyebrow">আপডেট</span>
   <h2>সংস্করণ 1.3.6-এ নতুন কী</h2>
   <p class="lead">সবচেয়ে সাম্প্রতিক আপডেটে যা যোগ হয়েছে।</p>
   <ul class="new">
@@ -175,7 +234,8 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
   </ul>
 </div></section>
 
-<section id="videos" style="border-top:1px solid var(--ln)"><div class="w">
+<section id="videos" class="sec"><div class="w rv">
+  <span class="eyebrow">টিউটোরিয়াল</span>
   <h2>ভিডিও টিউটোরিয়াল</h2>
   <p class="lead">কার্ডে ক্লিক করলে এখানেই চলবে।</p>
   <div class="tools"><input id="q" type="search" placeholder="কী খুঁজছেন? যেমন: ব্যাচ, প্রক্সি" aria-label="ভিডিও খুঁজুন"></div>
@@ -184,7 +244,8 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
   <p class="empty" id="none" hidden>কোনো ভিডিও পাওয়া যায়নি। অন্য শব্দে খুঁজুন।</p>
 </div></section>
 
-<section id="extension" style="border-top:1px solid var(--ln)"><div class="w">
+<section id="extension" class="sec"><div class="w rv">
+  <span class="eyebrow">এক্সটেনশন</span>
   <h2>ব্রাউজার এক্সটেনশন চালু করুন</h2>
   <p class="lead">চালু হলে ব্রাউজারের ডাউনলোড নিজে অ্যাপে চলে আসবে।</p>
   <ol class="steps">
@@ -195,7 +256,8 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
   </ol>
 </div></section>
 
-<section id="faq" style="border-top:1px solid var(--ln)"><div class="w">
+<section id="faq" class="sec"><div class="w rv">
+  <span class="eyebrow">FAQ</span>
   <h2>প্রশ্নোত্তর</h2><p class="lead"></p>
   <details><summary>Windows সতর্ক করছে, কী করব?</summary><p>নতুন সফটওয়্যারে Windows মাঝে মাঝে সতর্কতা দেখায়। More info চেপে Run anyway চাপুন। ইনস্টল আটকে গেলে অ্যান্টিভাইরাস অল্প সময়ের জন্য বন্ধ রেখে আবার চেষ্টা করুন।</p></details>
   <details><summary>কোন Windows-এর জন্য?</summary><p>এই Setup 64-bit Windows-এর জন্য।</p></details>
@@ -206,15 +268,15 @@ dialog video{display:block;width:100%;max-height:72vh;background:#000}
   <details><summary>সমস্যা হলে কোথায় জানাব?</summary><p>নিচের Telegram, ফেসবুক পেজ বা YouTube চ্যানেলে জানান।</p></details>
 </div></section>
 
-<section class="end"><div class="w">
-  <h2>আজই চেষ্টা করুন</h2>
+<section class="end"><div class="w rv">
+  <h2>আজই <span class="gt">চেষ্টা করুন</span></h2>
   <p>৩ দিন পুরো ফিচারসহ ফ্রি ট্রায়াল।</p>
   <a class="btn p l" data-link="download" href="#">Windows-এর জন্য ডাউনলোড</a>
 </div></section>
 </main>
 
 <footer><div class="w">
-  <span class="sp">VnA Download Manager</span>
+  <span class="sp fl"><img src="logo.png" alt="" width="28" height="28">VnA Download Manager</span>
   <a data-link="telegram" href="#">Telegram</a><a data-link="facebook" href="#">ফেসবুক পেজ</a><a data-link="youtube" href="#">YouTube</a>
 </div></footer>
 
@@ -292,6 +354,10 @@ document.querySelectorAll("[data-link]").forEach(a => {
   if (u && !u.startsWith("PASTE_")) { a.href = u; a.target = "_blank"; a.rel = "noopener"; }
 });
 
+const nav = document.getElementById("nav"), mb = document.getElementById("mb");
+mb.onclick = () => { const o = nav.classList.toggle("open"); mb.setAttribute("aria-expanded", o); mb.textContent = o ? "✕" : "☰"; };
+nav.addEventListener("click", e => { if (e.target.tagName === "A") { nav.classList.remove("open"); mb.textContent = "☰"; } });
+
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel");
 function showTab(k) {
   tabs.innerHTML = "";
@@ -303,9 +369,9 @@ function showTab(k) {
   const f = FEATS[k];
   panel.innerHTML = "";
   const h = document.createElement("h3"); h.textContent = f.t; panel.appendChild(h);
-  f.i.forEach(([a, d]) => {
+  f.i.forEach(([a, d], n) => {
     const x = document.createElement("div");
-    x.innerHTML = "<b></b><span></span>";
+    x.innerHTML = "<b></b><span></span>"; x.style.animationDelay = n * 50 + "ms";
     x.firstChild.textContent = a; x.lastChild.textContent = d; panel.appendChild(x);
   });
 }
@@ -381,6 +447,9 @@ if (!still) setInterval(() => {
 
 const sticky = document.getElementById("sticky");
 new IntersectionObserver(([e]) => sticky.classList.toggle("show", !e.isIntersecting)).observe(document.getElementById("heroCta"));
+
+const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("vis"); rv.unobserve(e.target); } }), { threshold: .08 });
+document.querySelectorAll(".rv").forEach(el => rv.observe(el));
 </script>
 </body>
 </html>

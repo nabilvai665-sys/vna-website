@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="bn">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VnA Download Manager | আপনার ডাউনলোড, আপনার নিয়ন্ত্রণে</title>
-<meta name="description" content="VnA Download Manager দিয়ে ভিডিও, গান, বড় ফাইল ও একাধিক লিংক সহজে ডাউনলোড করুন। থামান, আবার চালান, পছন্দের মান বেছে নিন এবং ফাইল গুছিয়ে রাখুন। Windows-এর জন্য ৭ দিনের ফ্রি ট্রায়াল।">
+<title>VnA Download Manager – দ্রুত, গোছানো ডাউনলোড ম্যানেজার</title>
+<meta name="description" content="মাল্টি-কানেকশন ডাউনলোড, ব্রাউজার এক্সটেনশন, ব্যাচ, প্লেলিস্ট, সাইট গ্র্যাবার ও টরেন্ট সার্চ। বাংলা, English ও हिंदी। ৩ দিন ফ্রি ট্রায়াল।">
 <meta property="og:title" content="VnA Download Manager">
-<meta property="og:description" content="ভিডিও, গান ও ফাইল ডাউনলোড করুন নিজের মতো—এক জায়গায়, আপনার নিয়ন্ত্রণে।">
+<meta property="og:description" content="দ্রুত, গোছানো ও ঝামেলাহীন ডাউনলোড ম্যানেজার (Windows)">
 <meta property="og:type" content="website">
 <meta property="og:image" content="logo-512.png">
 <meta name="theme-color" content="#04070c">
@@ -43,487 +44,369 @@ a{color:inherit}
 .gt{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
 ::selection{background:rgba(34,211,238,.3)}
 
-#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g);z-index:60;box-shadow:0 0 14px rgba(34,211,238,.7)}
+#prog{position;top:0;left:0;height:3px;width:0;background(--g);z-index:60;box-shadow:0 0 14px rgba(34,211,238,.7)}
 
-.topbar{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;padding:9px 16px;background:linear-gradient(90deg,rgba(251,191,36,.16),rgba(251,191,36,.07),rgba(251,191,36,.16));border-bottom:1px solid rgba(251,191,36,.28);color:#fde68a;font-size:14.5px;line-height:1.5;text-decoration:none;transition:.2s}
-.topbar:hover{background:rgba(251,191,36,.2)}
+.topbar{display;align-items;justify-content;gap:10px;text-align;padding:9px 16px;background(90deg,rgba(251,191,36,.16),rgba(251,191,36,.07),rgba(251,191,36,.16));border-bottom:1px solid rgba(251,191,36,.28);color:#fde68a;font-size:14.5px;line-height:1.5;text-decoration;transition:.2s}
+.topbar{background(251,191,36,.2)}
 .topbar b{font-weight:600;color:#fcd34d}
-.topbar u{font-weight:700;white-space:nowrap;color:#fff;text-decoration:none;background:rgba(251,191,36,.25);padding:1px 10px;border-radius:99px}
+.topbar u{font-weight:700;white-space;color:#fff;text-decoration;background(251,191,36,.25);padding:1px 10px;border-radius:99px}
 
-header{position:sticky;top:0;z-index:50;background:rgba(4,7,12,.6);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);border-bottom:1px solid transparent;transition:.3s}
-header.sc{background:rgba(4,7,12,.86);border-bottom-color:var(--ln);box-shadow:0 10px 40px -20px #000}
-header .w{display:flex;align-items:center;gap:8px;height:68px}
-.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;text-decoration:none;margin-right:auto;letter-spacing:-.2px}
-.logo img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(34,211,238,.45))}
-nav{display:flex;gap:2px;margin-right:14px;padding:4px;border:1px solid var(--ln);border-radius:14px;background:rgba(255,255,255,.03)}
-nav a{color:var(--mu);text-decoration:none;font-size:14.5px;padding:6px 13px;border-radius:10px;transition:.2s;white-space:nowrap}
-nav a:hover,nav a.act{color:var(--tx);background:rgba(255,255,255,.07)}
-nav a.navw{color:#fcd34d;background:rgba(251,191,36,.1)}
-nav a.navw:hover{background:rgba(251,191,36,.22)}
-.mb{display:none;background:rgba(255,255,255,.04);border:1px solid var(--ln);border-radius:11px;color:var(--tx);width:42px;height:42px;cursor:pointer;font-size:19px}
+header{position;top:0;z-index:50;background(4,7,12,.6);backdrop-filter(18px) saturate(1.5);-webkit-backdrop-filter(18px) saturate(1.5);border-bottom:1px solid transparent;transition:.3s}
+header.sc{background(4,7,12,.86);border-bottom-color(--ln);box-shadow:0 10px 40px -20px #000}
+header .w{display;align-items;gap:8px;height:68px}
+.logo{display;align-items;gap:11px;font-weight:800;font-size:20px;text-decoration;margin-right;letter-spacing:-.2px}
+.logo img{width:38px;height:38px;object-fit;filter(0 4px 14px rgba(34,211,238,.45))}
+nav{display;gap:2px;margin-right:14px;padding:4px;border:1px solid var(--ln);border-radius:14px;background(255,255,255,.03)}
+nav a{color(--mu);text-decoration;font-size:14.5px;padding:6px 13px;border-radius:10px;transition:.2s;white-space}
+nav a,nav a.act{color(--tx);background(255,255,255,.07)}
+nav a.navw{color:#fcd34d;background(251,191,36,.1)}
+nav a.navw{background(251,191,36,.22)}
+.mb{display;background(255,255,255,.04);border:1px solid var(--ln);border-radius:11px;color(--tx);width:42px;height:42px;cursor;font-size:19px}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:10px 22px;border-radius:12px;border:1px solid var(--ln2);background:rgba(255,255,255,.04);color:var(--tx);font:500 16px 'Hind Siliguri',sans-serif;text-decoration:none;cursor:pointer;transition:.25s;position:relative}
-.btn:hover{border-color:rgba(34,211,238,.6);background:rgba(34,211,238,.09);transform:translateY(-1px)}
-.btn.p{background:var(--g);border-color:transparent;color:#03121a;font-weight:700;box-shadow:0 10px 30px -10px rgba(34,211,238,.7),inset 0 1px 0 rgba(255,255,255,.35)}
-.btn.p:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(59,130,246,.85),inset 0 1px 0 rgba(255,255,255,.4);filter:brightness(1.07)}
+.btn{display;align-items;justify-content;gap:9px;padding:10px 22px;border-radius:12px;border:1px solid var(--ln2);background(255,255,255,.04);color(--tx);font:500 16px 'Hind Siliguri',sans-serif;text-decoration;cursor;transition:.25s;position}
+.btn{border-color(34,211,238,.6);background(34,211,238,.09);transform(-1px)}
+.btn.p{background(--g);border-color;color:#03121a;font-weight:700;box-shadow:0 10px 30px -10px rgba(34,211,238,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn.p{transform(-2px);box-shadow:0 16px 40px -10px rgba(59,130,246,.85),inset 0 1px 0 rgba(255,255,255,.4);filter(1.07)}
 .btn.l{padding:15px 32px;font-size:18px;border-radius:14px}
 .btn svg{width:20px;height:20px}
-.btn.go{overflow:hidden;gap:12px;animation:glow 2.8s ease-in-out infinite}
-.btn.go:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.2s infinite}
-.btn.go svg{animation:bob 1.6s ease-in-out infinite}
+.btn.go{overflow;gap:12px;animation 2.8s ease-in-out infinite}
+.btn.go{content:"";position;top:0;left:-60%;width:40%;height:100%;background(100deg,transparent,rgba(255,255,255,.55),transparent);transform(-20deg);animation 3.2s infinite}
+.btn.go svg{animation 1.6s ease-in-out infinite}
 @keyframes shine{0%{left:-60%}55%,100%{left:130%}}
 @keyframes glow{50%{box-shadow:0 14px 46px -6px rgba(34,211,238,.95),inset 0 1px 0 rgba(255,255,255,.4)}}
-@keyframes bob{50%{transform:translateY(3px)}}
-.dlmeta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:14.5px;color:var(--mu)}
-.dlmeta span{display:inline-flex;align-items:center;gap:8px}
-.dlmeta span:before{content:"✓";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:rgba(52,211,153,.18);color:var(--ok);font-size:11px;font-weight:700}
+@keyframes bob{50%{transform(3px)}}
+.dlmeta{display;flex-wrap;gap:8px 20px;margin-top:20px;font-size:14.5px;color(--mu)}
+.dlmeta span{display;align-items;gap:8px}
+.dlmeta span{content:"✓";display;place-items;width:19px;height:19px;border-radius:50%;background(52,211,153,.18);color(--ok);font-size:11px;font-weight:700}
 
-.hero{position:relative;padding:48px 0 64px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:9px;padding:6px 16px 6px 12px;border:1px solid var(--ln2);border-radius:99px;background:rgba(255,255,255,.04);font-size:14px;color:var(--mu);margin-bottom:22px;backdrop-filter:blur(8px)}
-.badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(52,211,153,.18),0 0 14px var(--ok);animation:pulse 2s infinite}
+.hero{position;padding:48px 0 64px;display;grid-template-columns:1.05fr .95fr;gap:48px;align-items}
+.badge{display;align-items;gap:9px;padding:6px 16px 6px 12px;border:1px solid var(--ln2);border-radius:99px;background(255,255,255,.04);font-size:14px;color(--mu);margin-bottom:22px;backdrop-filter(8px)}
+.badge i{width:8px;height:8px;border-radius:50%;background(--ok);box-shadow:0 0 0 4px rgba(52,211,153,.18),0 0 14px var(--ok);animation 2s infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 7px rgba(52,211,153,.05),0 0 14px var(--ok)}}
-h1{font-size:clamp(34px,4.2vw,54px);font-weight:800;margin-bottom:18px;letter-spacing:-.8px;line-height:1.16}
-.hero p.sub{color:var(--mu);font-size:18.5px;max-width:29em;margin-bottom:28px}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero p.trust{margin:20px 0 0;font-size:14.5px;max-width:34em;color:var(--mu2)}
-.trust a{color:var(--cy);text-underline-offset:3px}
-.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.pills span{font-size:13.5px;padding:4px 13px;border:1px solid var(--ln);border-radius:99px;color:var(--mu);background:rgba(255,255,255,.025)}
+h1{font-size(34px,4.2vw,54px);font-weight:800;margin-bottom:18px;letter-spacing:-.8px;line-height:1.16}
+.hero p.sub{color(--mu);font-size:18.5px;max-width:29em;margin-bottom:28px}
+.cta{display;flex-wrap;gap:12px}
+.hero p.trust{margin:20px 0 0;font-size:14.5px;max-width:34em;color(--mu2)}
+.trust a{color(--cy);text-underline-offset:3px}
+.pills{display;flex-wrap;gap:8px;margin-top:26px}
+.pills span{font-size:13.5px;padding:4px 13px;border:1px solid var(--ln);border-radius:99px;color(--mu);background(255,255,255,.025)}
 
-.stage{position:relative}
-.stage:before{content:"";position:absolute;inset:-8% -6%;background:radial-gradient(closest-side,rgba(34,211,238,.28),rgba(139,92,246,.16) 55%,transparent);filter:blur(40px);z-index:-1}
-.app{background:linear-gradient(180deg,rgba(22,34,47,.95),rgba(11,18,27,.95));border:1px solid var(--ln2);border-radius:18px;overflow:hidden;box-shadow:var(--sh),0 0 0 1px rgba(34,211,238,.06);transform:perspective(1400px) rotateY(-6deg) rotateX(3deg);transition:transform .6s}
-.stage:hover .app{transform:perspective(1400px) rotateY(0) rotateX(0)}
-.dots{display:flex;gap:7px;padding:13px 15px 0}
+.stage{position}
+.stage{content:"";position;inset:-8% -6%;background(closest-side,rgba(34,211,238,.28),rgba(139,92,246,.16) 55%,transparent);filter(40px);z-index:-1}
+.app{background(180deg,rgba(22,34,47,.95),rgba(11,18,27,.95));border:1px solid var(--ln2);border-radius:18px;overflow;box-shadow(--sh),0 0 0 1px rgba(34,211,238,.06);transform(1400px) rotateY(-6deg) rotateX(3deg);transition .6s}
+.stage .app{transform(1400px) rotateY(0) rotateX(0)}
+.dots{display;gap:7px;padding:13px 15px 0}
 .dots i{width:11px;height:11px;border-radius:50%;background:#2a3b4d}
-.dots i:nth-child(1){background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
-.tb{display:flex;gap:6px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid var(--ln)}
-.tb span{font-size:12.5px;padding:3px 11px;border:1px solid var(--ln);border-radius:8px;color:var(--mu)}
-.tb span:first-child{border-color:rgba(34,211,238,.6);color:var(--cy);background:rgba(34,211,238,.09)}
-.url{margin:14px 15px;padding:10px 14px;border:1px solid var(--ln);border-radius:10px;background:rgba(0,0,0,.3);font:13px ui-monospace,Consolas,monospace;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dl{display:grid;grid-template-columns:1fr 70px;gap:6px 12px;padding:12px 15px;border-top:1px solid var(--ln);font-size:13.5px}
-.dl b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.dl em{font-style:normal;text-align:right;color:var(--cy);font-variant-numeric:tabular-nums}
-.dl.ok em{color:var(--ok)}
-.bar{grid-column:1/-1;height:6px;border-radius:4px;background:var(--s3);overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--g);border-radius:4px;transition:width .45s}
-.dl.ok .bar i{background:var(--ok)}
-.map{display:grid;grid-template-columns:repeat(32,1fr);gap:3px;padding:15px;border-top:1px solid var(--ln)}
-.map i{height:12px;border-radius:3px;background:var(--s3)}
-.map i.on{background:var(--cy)}.map i.on2{background:var(--bl)}
-.float{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:14px;background:rgba(16,26,38,.82);border:1px solid var(--ln2);backdrop-filter:blur(14px);box-shadow:var(--sh);font-size:14px;font-weight:500;animation:fl 6s ease-in-out infinite}
+.dots i(1){background:#ff5f57}.dots i(2){background:#febc2e}.dots i(3){background:#28c840}
+.tb{display;gap:6px;flex-wrap;padding:13px 15px;border-bottom:1px solid var(--ln)}
+.tb span{font-size:12.5px;padding:3px 11px;border:1px solid var(--ln);border-radius:8px;color(--mu)}
+.tb span{border-color(34,211,238,.6);color(--cy);background(34,211,238,.09)}
+.url{margin:14px 15px;padding:10px 14px;border:1px solid var(--ln);border-radius:10px;background(0,0,0,.3);font:13px ui-monospace,Consolas,monospace;color(--mu);white-space;overflow;text-overflow}
+.dl{display;grid-template-columns:1fr 70px;gap:6px 12px;padding:12px 15px;border-top:1px solid var(--ln);font-size:13.5px}
+.dl b{font-weight:500;overflow;text-overflow;white-space}
+.dl em{font-style;text-align;color(--cy);font-variant-numeric}
+.dl.ok em{color(--ok)}
+.bar{grid-column:1/-1;height:6px;border-radius:4px;background(--s3);overflow}
+.bar i{display;height:100%;width:0;background(--g);border-radius:4px;transition .45s}
+.dl.ok .bar i{background(--ok)}
+.map{display;grid-template-columns(32,1fr);gap:3px;padding:15px;border-top:1px solid var(--ln)}
+.map i{height:12px;border-radius:3px;background(--s3)}
+.map i.on{background(--cy)}.map i.on2{background(--bl)}
+.float{position;display;align-items;gap:10px;padding:10px 16px;border-radius:14px;background(16,26,38,.82);border:1px solid var(--ln2);backdrop-filter(14px);box-shadow(--sh);font-size:14px;font-weight:500;animation 6s ease-in-out infinite}
 .float b{font:800 20px 'Baloo Da 2',sans-serif;line-height:1}
-.float small{display:block;color:var(--mu);font-size:12px;line-height:1.3}
+.float small{display;color(--mu);font-size:12px;line-height:1.3}
 .float.a{left:18px;bottom:-28px}
 .float.b{right:16px;top:-26px;animation-delay:-3s}
-.float .ic{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(34,211,238,.14);font-size:17px}
-.float.b .ic{background:rgba(52,211,153,.15)}
-@keyframes fl{50%{transform:translateY(-9px)}}
+.float .ic{display;place-items;width:34px;height:34px;border-radius:10px;background(34,211,238,.14);font-size:17px}
+.float.b .ic{background(52,211,153,.15)}
+@keyframes fl{50%{transform(-9px)}}
 
 section{padding:96px 0}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cy);margin-bottom:12px}
-.eyebrow:before{content:"";width:22px;height:2px;background:var(--g);border-radius:2px}
-h2{font-size:clamp(30px,4.2vw,46px);font-weight:800;margin-bottom:12px;letter-spacing:-.6px}
-.lead{color:var(--mu);margin-bottom:44px;max-width:36em;font-size:18px}
+.eyebrow{display;align-items;gap:8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform;color(--cy);margin-bottom:12px}
+.eyebrow{content:"";width:22px;height:2px;background(--g);border-radius:2px}
+h2{font-size(30px,4.2vw,46px);font-weight:800;margin-bottom:12px;letter-spacing:-.6px}
+.lead{color(--mu);margin-bottom:44px;max-width:36em;font-size:18px}
 .sec{border-top:1px solid var(--ln)}
 
-.facts .w{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-block:20px 10px}
-.facts div{text-align:center;padding:26px 14px;border:1px solid var(--ln);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:.3s}
-.facts div:hover{border-color:rgba(34,211,238,.35);transform:translateY(-4px)}
-.facts b{display:block;font:800 40px 'Baloo Da 2',sans-serif;line-height:1.2;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-.facts span{font-size:14.5px;color:var(--mu)}
+.facts .w{display;grid-template-columns(4,1fr);gap:16px;padding-block:20px 10px}
+.facts div{text-align;padding:26px 14px;border:1px solid var(--ln);border-radius(--r);background(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:.3s}
+.facts div{border-color(34,211,238,.35);transform(-4px)}
+.facts b{display;font:800 40px 'Baloo Da 2',sans-serif;line-height:1.2;background(--g);-webkit-background-clip;background-clip;color}
+.facts span{font-size:14.5px;color(--mu)}
 
-.call{display:flex;gap:15px;padding:18px 20px;border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.06);border-radius:16px;margin-top:18px;color:var(--mu);font-size:16px}
-.call b{color:var(--am);font-weight:600}
-.call .ic{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(251,191,36,.16);font-size:19px}
-.call.ok{border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.06)}
-.call.ok b{color:var(--ok)}.call.ok .ic{background:rgba(52,211,153,.16)}
-.call.info{border-color:rgba(34,211,238,.32);background:rgba(34,211,238,.06)}
-.call.info b{color:var(--cy)}.call.info .ic{background:rgba(34,211,238,.16)}
+.call{display;gap:15px;padding:18px 20px;border:1px solid rgba(251,191,36,.35);background(251,191,36,.06);border-radius:16px;margin-top:18px;color(--mu);font-size:16px}
+.call b{color(--am);font-weight:600}
+.call .ic{flex;width:38px;height:38px;border-radius:11px;display;place-items;background(251,191,36,.16);font-size:19px}
+.call.ok{border-color(52,211,153,.35);background(52,211,153,.06)}
+.call.ok b{color(--ok)}.call.ok .ic{background(52,211,153,.16)}
+.call.info{border-color(34,211,238,.32);background(34,211,238,.06)}
+.call.info b{color(--cy)}.call.info .ic{background(34,211,238,.16)}
 .call div{min-width:0}
 .call p+p{margin-top:8px}
-code{background:var(--s3);border:1px solid var(--ln);border-radius:7px;padding:1px 8px;font:13.5px ui-monospace,Consolas,monospace;color:#bae6fd;word-break:break-all}
+code{background(--s3);border:1px solid var(--ln);border-radius:7px;padding:1px 8px;font:13.5px ui-monospace,Consolas,monospace;color:#bae6fd;word-break}
 
-.install-wrap{position:relative;padding:34px;border:1px solid rgba(251,191,36,.28);border-radius:28px;background:linear-gradient(180deg,rgba(251,191,36,.07),rgba(11,18,27,.75) 38%);box-shadow:var(--sh),0 0 90px -40px rgba(251,191,36,.35)}
-.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
-.big3>div{position:relative;background:rgba(11,18,27,.9);border:1px solid var(--ln);border-radius:18px;padding:26px 22px;transition:.3s;overflow:hidden}
-.big3>div:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--g2)}
-.big3>div:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.4)}
-.big3 i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--g2);color:#03121a;font:800 22px 'Baloo Da 2';margin-bottom:14px}
-.big3 .w2:before{background:var(--am)}
-.big3 .w2{border-color:rgba(251,191,36,.4)}
-.big3 .w2 i{background:var(--am)}
-.big3 .w3:before{background:var(--ok)}
-.big3 .w3 i{background:var(--ok)}
+.install-wrap{position;padding:34px;border:1px solid rgba(251,191,36,.28);border-radius:28px;background(180deg,rgba(251,191,36,.07),rgba(11,18,27,.75) 38%);box-shadow(--sh),0 0 90px -40px rgba(251,191,36,.35)}
+.big3{display;grid-template-columns(3,1fr);gap:16px;margin-top:20px}
+.big3>div{position;background(11,18,27,.9);border:1px solid var(--ln);border-radius:18px;padding:26px 22px;transition:.3s;overflow}
+.big3>div{content:"";position;left:0;top:0;right:0;height:3px;background(--g2)}
+.big3>div{transform(-5px);border-color(34,211,238,.4)}
+.big3 i{font-style;display;place-items;width:44px;height:44px;border-radius:13px;background(--g2);color:#03121a;font:800 22px 'Baloo Da 2';margin-bottom:14px}
+.big3 .w2{background(--am)}
+.big3 .w2{border-color(251,191,36,.4)}
+.big3 .w2 i{background(--am)}
+.big3 .w3{background(--ok)}
+.big3 .w3 i{background(--ok)}
 .big3 h3{font-size:20px;margin-bottom:6px}
-.big3 p{color:var(--mu);font-size:15.5px;line-height:1.65}
+.big3 p{color(--mu);font-size:15.5px;line-height:1.65}
 .gh{margin:50px 0 6px;font-size:27px}
-.hint{color:var(--mu);font-size:15px;margin-bottom:16px}
-.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;padding:5px;border:1px solid var(--ln);border-radius:15px;background:rgba(255,255,255,.03);margin-bottom:24px}
-.tab{padding:9px 22px;border-radius:11px;border:0;background:none;color:var(--mu);font:inherit;font-size:15.5px;cursor:pointer;transition:.2s}
-.tab:hover{color:var(--tx)}
-.tab[aria-selected=true]{background:var(--g2);color:#03121a;font-weight:700;box-shadow:0 6px 20px -8px rgba(34,211,238,.7)}
-.isteps{list-style:none;padding:0;counter-reset:i;display:grid;gap:12px;position:relative}
-.isteps li{counter-increment:i;position:relative;padding:18px 20px 18px 78px;background:rgba(11,18,27,.9);border:1px solid var(--ln);border-radius:16px;animation:up .45s both}
-.isteps li:before{content:counter(i);position:absolute;left:20px;top:17px;width:40px;height:40px;border-radius:12px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.6);color:var(--cy);display:grid;place-items:center;font-weight:700}
-.isteps b.t{display:block;font-size:18px;font-weight:600;margin-bottom:3px}
-.isteps span{display:block;color:var(--mu);font-size:15.5px;line-height:1.7}
-.isteps span b{color:var(--tx);font-weight:600}
-.isteps li.warn{border-color:rgba(251,191,36,.5);background:linear-gradient(180deg,rgba(251,191,36,.1),rgba(11,18,27,.9))}
-.isteps li.warn:before{border-color:var(--am);color:var(--am);background:rgba(251,191,36,.12)}
-.isteps li.ok{border-color:rgba(52,211,153,.45)}
-.isteps li.ok:before{border-color:var(--ok);color:var(--ok);background:rgba(52,211,153,.1)}
-@keyframes up{from{opacity:0;transform:translateY(12px)}}
+.hint{color(--mu);font-size:15px;margin-bottom:16px}
+.tabs{display;flex-wrap;gap:4px;padding:5px;border:1px solid var(--ln);border-radius:15px;background(255,255,255,.03);margin-bottom:24px}
+.tab{padding:9px 22px;border-radius:11px;border:0;background;color(--mu);font;font-size:15.5px;cursor;transition:.2s}
+.tab{color(--tx)}
+.tab[aria-selected=true]{background(--g2);color:#03121a;font-weight:700;box-shadow:0 6px 20px -8px rgba(34,211,238,.7)}
+.isteps{list-style;padding:0;counter-reset;display;gap:12px;position}
+.isteps li{counter-increment;position;padding:18px 20px 18px 78px;background(11,18,27,.9);border:1px solid var(--ln);border-radius:16px;animation .45s both}
+.isteps li{content(i);position;left:20px;top:17px;width:40px;height:40px;border-radius:12px;background(34,211,238,.1);border:1px solid rgba(34,211,238,.6);color(--cy);display;place-items;font-weight:700}
+.isteps b.t{display;font-size:18px;font-weight:600;margin-bottom:3px}
+.isteps span{display;color(--mu);font-size:15.5px;line-height:1.7}
+.isteps span b{color(--tx);font-weight:600}
+.isteps li.warn{border-color(251,191,36,.5);background(180deg,rgba(251,191,36,.1),rgba(11,18,27,.9))}
+.isteps li.warn{border-color(--am);color(--am);background(251,191,36,.12)}
+.isteps li.ok{border-color(52,211,153,.45)}
+.isteps li.ok{border-color(--ok);color(--ok);background(52,211,153,.1)}
+@keyframes up{from{opacity:0;transform(12px)}}
 
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:h;position:relative}
-.how div{counter-increment:h;position:relative;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--ln);border-radius:var(--r);padding:30px 26px;transition:.3s;overflow:hidden}
-.how div:after{content:counter(h);position:absolute;right:18px;top:4px;font:800 92px 'Baloo Da 2';color:rgba(255,255,255,.04);line-height:1}
-.how div:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.4)}
-.how div:before{content:"";display:block;width:44px;height:44px;border-radius:13px;background:var(--g2);margin-bottom:16px;box-shadow:0 10px 26px -10px rgba(34,211,238,.7)}
+.how{display;grid-template-columns(3,1fr);gap:20px;counter-reset;position}
+.how div{counter-increment;position;background(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--ln);border-radius(--r);padding:30px 26px;transition:.3s;overflow}
+.how div{content(h);position;right:18px;top:4px;font:800 92px 'Baloo Da 2';color(255,255,255,.04);line-height:1}
+.how div{transform(-5px);border-color(34,211,238,.4)}
+.how div{content:"";display;width:44px;height:44px;border-radius:13px;background(--g2);margin-bottom:16px;box-shadow:0 10px 26px -10px rgba(34,211,238,.7)}
 .how h3{font-size:22px;margin-bottom:6px}
-.how p{color:var(--mu);font-size:16px}
+.how p{color(--mu);font-size:16px}
 
-.panel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.panel{display;grid-template-columns(3,1fr);gap:16px}
 .panel h3{grid-column:1/-1;font-size:27px;margin-bottom:6px}
-.panel div{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--ln);border-radius:18px;padding:22px;transition:.3s;animation:up .45s both;overflow:hidden}
-.panel div:hover{border-color:rgba(34,211,238,.4);transform:translateY(-4px);box-shadow:0 20px 44px -24px rgba(34,211,238,.4)}
-.panel .fi{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);font-size:19px;margin-bottom:12px}
-.panel b{display:block;color:var(--tx);font-weight:600;font-size:17.5px;margin-bottom:4px}
-.panel span.d{color:var(--mu);font-size:15.5px;line-height:1.65;display:block}
+.panel div{position;background(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--ln);border-radius:18px;padding:22px;transition:.3s;animation .45s both;overflow}
+.panel div{border-color(34,211,238,.4);transform(-4px);box-shadow:0 20px 44px -24px rgba(34,211,238,.4)}
+.panel .fi{display;place-items;width:42px;height:42px;border-radius:12px;background(34,211,238,.1);border:1px solid rgba(34,211,238,.25);font-size:19px;margin-bottom:12px}
+.panel b{display;color(--tx);font-weight:600;font-size:17.5px;margin-bottom:4px}
+.panel span.d{color(--mu);font-size:15.5px;line-height:1.65;display}
 
-.new{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;list-style:none;padding:0}
-.new li{padding:15px 18px 15px 52px;position:relative;background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;transition:.25s}
-.new li:hover{border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.05)}
-.new li:before{content:"";position:absolute;left:19px;top:23px;width:13px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
+.new{display;grid-template-columns(auto-fit,minmax(260px,1fr));gap:12px;list-style;padding:0}
+.new li{padding:15px 18px 15px 52px;position;background(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;transition:.25s}
+.new li{border-color(52,211,153,.4);background(52,211,153,.05)}
+.new li{content:"";position;left:19px;top:23px;width:13px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform(-45deg)}
 
 .tools{margin-bottom:16px}
-.tools input{width:100%;max-width:480px;padding:14px 20px;background:rgba(255,255,255,.04);border:1px solid var(--ln);border-radius:14px;color:var(--tx);font:inherit;transition:.2s}
-.tools input::placeholder{color:var(--mu2)}
-.tools input:focus{outline:0;border-color:var(--cy);box-shadow:0 0 0 4px rgba(34,211,238,.12)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
-.chip{padding:6px 18px;border-radius:99px;border:1px solid var(--ln);background:rgba(255,255,255,.03);color:var(--mu);font:inherit;font-size:15px;cursor:pointer;transition:.2s}
-.chip:hover{color:var(--tx);border-color:var(--ln2)}
-.chip[aria-pressed=true]{border-color:rgba(34,211,238,.7);color:var(--cy);background:rgba(34,211,238,.1)}
-.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-.vid{text-align:left;background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:18px;padding:0;color:inherit;font:inherit;cursor:pointer;overflow:hidden;transition:.3s}
-.vid:hover{border-color:rgba(34,211,238,.5);transform:translateY(-5px);box-shadow:0 22px 46px -20px rgba(34,211,238,.4)}
-.th{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#102333,#0a1119);display:grid;place-items:center;overflow:hidden}
-.th:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(4,7,12,.55))}
-.th video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.vid:hover .th video{transform:scale(1.07)}
-.th svg{position:relative;z-index:1;width:54px;height:54px;padding:15px 13px 15px 17px;border-radius:50%;background:rgba(4,7,12,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);fill:#fff;transition:.25s}
-.vid:hover .th svg{background:var(--cy);fill:#03121a;transform:scale(1.12)}
+.tools input{width:100%;max-width:480px;padding:14px 20px;background(255,255,255,.04);border:1px solid var(--ln);border-radius:14px;color(--tx);font;transition:.2s}
+.tools input::placeholder{color(--mu2)}
+.tools input{outline:0;border-color(--cy);box-shadow:0 0 0 4px rgba(34,211,238,.12)}
+.chips{display;flex-wrap;gap:8px;margin-bottom:26px}
+.chip{padding:6px 18px;border-radius:99px;border:1px solid var(--ln);background(255,255,255,.03);color(--mu);font;font-size:15px;cursor;transition:.2s}
+.chip{color(--tx);border-color(--ln2)}
+.chip[aria-pressed=true]{border-color(34,211,238,.7);color(--cy);background(34,211,238,.1)}
+.vids{display;grid-template-columns(auto-fill,minmax(260px,1fr));gap:20px}
+.vid{text-align;background(255,255,255,.03);border:1px solid var(--ln);border-radius:18px;padding:0;color;font;cursor;overflow;transition:.3s}
+.vid{border-color(34,211,238,.5);transform(-5px);box-shadow:0 22px 46px -20px rgba(34,211,238,.4)}
+.th{position;aspect-ratio:16/9;background(135deg,#102333,#0a1119);display;place-items;overflow}
+.th{content:"";position;inset:0;background(180deg,transparent 50%,rgba(4,7,12,.55))}
+.th video{position;inset:0;width:100%;height:100%;object-fit;transition .5s}
+.vid .th video{transform(1.07)}
+.th svg{position;z-index:1;width:54px;height:54px;padding:15px 13px 15px 17px;border-radius:50%;background(4,7,12,.6);backdrop-filter(6px);border:1px solid rgba(255,255,255,.3);fill:#fff;transition:.25s}
+.vid .th svg{background(--cy);fill:#03121a;transform(1.12)}
 .in{padding:14px 18px 17px}
-.in small{color:var(--cy);font-size:13px;font-weight:500}
-.in span{display:block;font-size:16.5px;line-height:1.45}
-.empty{color:var(--mu)}
+.in small{color(--cy);font-size:13px;font-weight:500}
+.in span{display;font-size:16.5px;line-height:1.45}
+.empty{color(--mu)}
 
-.ext{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start}
-.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px}
-.steps li{counter-increment:s;padding:17px 20px 17px 70px;position:relative;background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:16px}
-.steps li:before{content:counter(s);position:absolute;left:20px;top:15px;width:36px;height:36px;border-radius:11px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.6);display:grid;place-items:center;color:var(--cy);font-weight:700}
-.storebox{padding:28px;border:1px solid var(--ln);border-radius:var(--r);background:linear-gradient(180deg,rgba(139,92,246,.1),rgba(255,255,255,.02))}
+.ext{display;grid-template-columns:1.15fr .85fr;gap:30px;align-items}
+.steps{counter-reset;list-style;padding:0;display;gap:12px}
+.steps li{counter-increment;padding:17px 20px 17px 70px;position;background(255,255,255,.03);border:1px solid var(--ln);border-radius:16px}
+.steps li{content(s);position;left:20px;top:15px;width:36px;height:36px;border-radius:11px;background(34,211,238,.1);border:1px solid rgba(34,211,238,.6);display;place-items;color(--cy);font-weight:700}
+.storebox{padding:28px;border:1px solid var(--ln);border-radius(--r);background(180deg,rgba(139,92,246,.1),rgba(255,255,255,.02))}
 .storebox h3{font-size:22px;margin-bottom:6px}
-.storebox p{color:var(--mu);font-size:15.5px;margin-bottom:16px}
-.stores{display:grid;gap:10px}
-.stores .btn{justify-content:flex-start}
+.storebox p{color(--mu);font-size:15.5px;margin-bottom:16px}
+.stores{display;gap:10px}
+.stores .btn{justify-content}
 
-details{border:1px solid var(--ln);background:rgba(255,255,255,.03);border-radius:16px;padding:4px 22px;max-width:52em;margin-bottom:10px;transition:.25s}
-details:hover{border-color:var(--ln2)}
-details[open]{border-color:rgba(34,211,238,.45);background:rgba(34,211,238,.04)}
-summary{cursor:pointer;font-weight:500;font-size:18px;padding:15px 0;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:26px;line-height:1;color:var(--cy);transition:.25s;flex:none}
-details[open] summary:after{transform:rotate(45deg)}
-details p{color:var(--mu);padding-bottom:16px}
-details p a{color:var(--cy)}
-#more details{max-width:none}
+details{border:1px solid var(--ln);background(255,255,255,.03);border-radius:16px;padding:4px 22px;max-width:52em;margin-bottom:10px;transition:.25s}
+details{border-color(--ln2)}
+details[open]{border-color(34,211,238,.45);background(34,211,238,.04)}
+summary{cursor;font-weight:500;font-size:18px;padding:15px 0;list-style;display;justify-content;gap:14px;align-items}
+summary::-webkit-details-marker{display}
+summary{content:"+";font-size:26px;line-height:1;color(--cy);transition:.25s;flex}
+details[open] summary{transform(45deg)}
+details p{color(--mu);padding-bottom:16px}
+details p a{color(--cy)}
+#more details{max-width}
 
 .end{padding:40px 0}
-.end .w{position:relative;text-align:center;padding:76px 24px;border:1px solid rgba(34,211,238,.25);border-radius:32px;overflow:hidden;background:radial-gradient(700px 260px at 50% 0,rgba(34,211,238,.2),transparent),radial-gradient(500px 240px at 90% 100%,rgba(139,92,246,.18),transparent),var(--s1)}
-.end h2{font-size:clamp(32px,4.6vw,52px)}
-.end p{color:var(--mu);margin:0 auto 22px;font-size:18px;max-width:30em}
-.end .gl img{margin-bottom:14px;filter:drop-shadow(0 8px 24px rgba(34,211,238,.5))}
-.ticks{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;margin:0 auto 30px;color:var(--mu);font-size:15.5px}
-.ticks li:before{content:"✓";color:var(--ok);font-weight:700;margin-right:8px}
-.end small{display:block;margin-top:18px;color:var(--mu2);font-size:14px}
+.end .w{position;text-align;padding:76px 24px;border:1px solid rgba(34,211,238,.25);border-radius:32px;overflow;background(700px 260px at 50% 0,rgba(34,211,238,.2),transparent),radial-gradient(500px 240px at 90% 100%,rgba(139,92,246,.18),transparent),var(--s1)}
+.end h2{font-size(32px,4.6vw,52px)}
+.end p{color(--mu);margin:0 auto 22px;font-size:18px;max-width:30em}
+.end .gl img{margin-bottom:14px;filter(0 8px 24px rgba(34,211,238,.5))}
+.ticks{list-style;padding:0;display;flex-wrap;justify-content;gap:10px 24px;margin:0 auto 30px;color(--mu);font-size:15.5px}
+.ticks li{content:"✓";color(--ok);font-weight:700;margin-right:8px}
+.end small{display;margin-top:18px;color(--mu2);font-size:14px}
 
-footer{padding:44px 0 110px;color:var(--mu);font-size:15px;border-top:1px solid var(--ln);margin-top:40px}
-footer .w{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
-footer .sp{margin-right:auto;font-weight:500;color:var(--tx)}
-footer .fl{display:flex;align-items:center;gap:10px}footer .fl img{border-radius:50%}
-footer a{text-decoration:none;transition:.2s}footer a:hover{color:var(--cy)}
+footer{padding:44px 0 110px;color(--mu);font-size:15px;border-top:1px solid var(--ln);margin-top:40px}
+footer .w{display;flex-wrap;gap:14px 28px;align-items}
+footer .sp{margin-right;font-weight:500;color(--tx)}
+footer .fl{display;align-items;gap:10px}footer .fl img{border-radius:50%}
+footer a{text-decoration;transition:.2s}footer a{color(--cy)}
 
-.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(4,7,12,.92);backdrop-filter:blur(14px);border-top:1px solid var(--ln)}
+.sticky{display;position;left:0;right:0;bottom:0;z-index:45;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background(4,7,12,.92);backdrop-filter(14px);border-top:1px solid var(--ln)}
 .sticky .btn{width:100%}
 
-dialog{border:1px solid var(--ln2);background:var(--s1);color:var(--tx);border-radius:20px;padding:0;width:min(940px,94vw);margin:auto;overflow:hidden;box-shadow:0 40px 100px -20px #000}
-dialog::backdrop{background:rgba(2,4,8,.85);backdrop-filter:blur(6px)}
-.hd{display:flex;align-items:center;padding:13px 20px;gap:12px;border-bottom:1px solid var(--ln)}
-.hd b{margin-right:auto;font-weight:500}
-.x{background:none;border:0;color:var(--mu);font-size:30px;cursor:pointer;line-height:1}.x:hover{color:var(--tx)}
-dialog video{display:block;width:100%;max-height:72vh;background:#000}
-#pre{width:min(540px,94vw);padding:30px}
+dialog{border:1px solid var(--ln2);background(--s1);color(--tx);border-radius:20px;padding:0;width(940px,94vw);margin;overflow;box-shadow:0 40px 100px -20px #000}
+dialog::backdrop{background(2,4,8,.85);backdrop-filter(6px)}
+.hd{display;align-items;padding:13px 20px;gap:12px;border-bottom:1px solid var(--ln)}
+.hd b{margin-right;font-weight:500}
+.x{background;border:0;color(--mu);font-size:30px;cursor;line-height:1}.x{color(--tx)}
+dialog video{display;width:100%;max-height:72vh;background:#000}
+#pre{width(540px,94vw);padding:30px}
 #pre h3{font-size:25px;margin-bottom:10px}
-#pre p,#pre li{color:var(--mu);font-size:16px}
-#pre ol{padding-left:22px;margin:14px 0 22px;display:grid;gap:7px}
-#pre .row{display:flex;flex-wrap:wrap;gap:10px}
+#pre p,#pre li{color(--mu);font-size:16px}
+#pre ol{padding-left:22px;margin:14px 0 22px;display;gap:7px}
+#pre .row{display;flex-wrap;gap:10px}
 
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .75s,transform .75s}
-.js .rv.vis{opacity:1;transform:none}
+.js .rv{opacity:0;transform(24px);transition .75s,transform .75s}
+.js .rv.vis{opacity:1;transform}
 
 @media(max-width:980px){
 .hero{grid-template-columns:1fr;padding-top:44px;gap:48px}
-.app{transform:none}.float.a{left:6px}.float.b{right:6px}
+.app{transform}.float.a{left:6px}.float.b{right:6px}
 .ext{grid-template-columns:1fr}
 }
 @media(max-width:900px){
-.mb{display:block}
-nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;padding:12px 24px 18px;background:rgba(4,7,12,.97);border:0;border-bottom:1px solid var(--ln);border-radius:0;margin:0}
-nav.open{display:flex}nav a{padding:13px 8px;font-size:17px}
-.facts .w{grid-template-columns:repeat(2,1fr)}
+.mb{display}
+nav{display;position;top:68px;left:0;right:0;flex-direction;padding:12px 24px 18px;background(4,7,12,.97);border:0;border-bottom:1px solid var(--ln);border-radius:0;margin:0}
+nav.open{display}nav a{padding:13px 8px;font-size:17px}
+.facts .w{grid-template-columns(2,1fr)}
 .how,.panel,.big3{grid-template-columns:1fr}
 .isteps li{padding-left:68px}
 section{padding:60px 0}
 .install-wrap{padding:22px 16px;border-radius:22px}
-.sticky.show{display:block}
-header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex-wrap:wrap}
-.float{display:none}
+.sticky.show{display}
+header .btn.p{display}.topbar span{display}.topbar{font-size:14px;flex-wrap}
+.float{display}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.panel div,.isteps li,.float,.badge i,.btn.go,.btn.go:after,.btn.go svg{animation:none}.app{transition:none}}
-
-/* Premium polish: calmer contrast, clearer hierarchy, and more comfortable reading. */
-:root{
-  --bg:#07101c;--bg2:#0a1422;--s1:#0d1928;--s2:#122235;--s3:#192c40;
-  --ln:rgba(226,238,255,.09);--ln2:rgba(226,238,255,.16);
-  --cy:#78e2d2;--bl:#5b9cff;--vi:#9a8bff;--ok:#66d9a9;--am:#f2c879;--rd:#ff8796;
-  --tx:#f4f7fb;--mu:#b0bdcc;--mu2:#7f91a7;
-  --g:linear-gradient(120deg,#78e2d2 0%,#75a8ff 58%,#a99aff 100%);
-  --g2:linear-gradient(120deg,#78e2d2,#75a8ff);
-  --r:22px;--sh:0 24px 70px -28px rgba(0,0,0,.72)
-}
-body:before{
-  background:radial-gradient(900px 520px at 12% -8%,rgba(120,226,210,.105),transparent 62%),
-  radial-gradient(820px 540px at 95% 6%,rgba(117,168,255,.11),transparent 62%),
-  radial-gradient(700px 480px at 50% 110%,rgba(169,154,255,.075),transparent 62%),var(--bg)
-}
-body:after{opacity:.20;background-size:64px 64px}
-.w{max-width:1220px}
-.topbar{background:rgba(120,226,210,.07);border-bottom:1px solid rgba(120,226,210,.16);color:#c8fff4}
-.topbar:hover{background:rgba(120,226,210,.12)}
-.topbar b{color:#e7fffa}.topbar u{background:rgba(120,226,210,.13);color:#edfffc}
-nav a.navw{color:#bdf7eb;background:rgba(120,226,210,.08)}
-nav a.navw:hover{background:rgba(120,226,210,.15)}
-.logo img{filter:drop-shadow(0 4px 12px rgba(120,226,210,.22))}
-.btn{border-radius:13px;font-weight:600}
-.btn.p{color:#07151b;box-shadow:0 9px 28px -14px rgba(120,226,210,.65),inset 0 1px 0 rgba(255,255,255,.35)}
-.btn.go{animation:none}.btn.go:after{display:none}.btn.go svg{animation:none}
-.btn:hover{transform:translateY(-2px)}
-.hero{padding-top:68px;padding-bottom:78px;gap:54px}
-.badge{border-color:rgba(120,226,210,.22);background:rgba(120,226,210,.055);color:#d2e0ec}
-.badge i{box-shadow:0 0 0 4px rgba(102,217,169,.12)}
-h1{letter-spacing:-1px;line-height:1.13}
-.hero p.sub{color:#bdcad8;line-height:1.8}
-.dlmeta{color:#b0bdcc}
-.app{border-radius:22px;box-shadow:0 30px 80px -32px rgba(0,0,0,.8),0 0 0 1px rgba(120,226,210,.045)}
-.stage:before{background:radial-gradient(closest-side,rgba(120,226,210,.19),rgba(117,168,255,.10) 55%,transparent);filter:blur(48px)}
-section{padding:88px 0}
-h2{letter-spacing:-.7px}
-.eyebrow{letter-spacing:.06em;color:var(--cy)}
-.facts div,.how div,.panel div,.vid,.storebox,details{box-shadow:0 12px 34px -28px rgba(0,0,0,.8)}
-.facts div:hover,.how div:hover,.panel div:hover,.vid:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(120,226,210,.22)}
-.call{border-color:rgba(120,226,210,.18);background:rgba(120,226,210,.045);color:#bac8d8}
-.call b{color:#c7fff4}
-.call .ic{background:rgba(120,226,210,.10)}
-.call.ok{border-color:rgba(102,217,169,.22);background:rgba(102,217,169,.045)}
-.call.ok b{color:#9cf0c8}
-.call.ok .ic{background:rgba(102,217,169,.11)}
-.call.info{border-color:rgba(120,226,210,.20);background:rgba(120,226,210,.045)}
-.call.info b{color:#c7fff4}.call.info .ic{background:rgba(120,226,210,.1)}
-.install-wrap{border-color:rgba(120,226,210,.12);background:linear-gradient(160deg,rgba(17,34,51,.94),rgba(9,19,32,.94))}
-.big3>div{border-color:var(--ln);background:rgba(255,255,255,.022)}
-.big3 i{background:rgba(120,226,210,.1);border-color:rgba(120,226,210,.32);color:var(--cy)}
-.isteps li:before,.steps li:before{background:rgba(120,226,210,.075);border-color:rgba(120,226,210,.3);color:var(--cy)}
-.new li:hover{border-color:rgba(102,217,169,.25);background:rgba(102,217,169,.035)}
-.chip[aria-pressed=true]{border-color:rgba(120,226,210,.48);color:#c7fff4;background:rgba(120,226,210,.08)}
-.in small{color:#a0f1e3}
-.end .w{border-color:rgba(120,226,210,.18);background:radial-gradient(700px 280px at 50% 0,rgba(120,226,210,.12),transparent),radial-gradient(500px 240px at 90% 100%,rgba(169,154,255,.10),transparent),var(--s1)}
-.end .gl img{filter:drop-shadow(0 8px 24px rgba(120,226,210,.22))}
-.sticky{background:rgba(7,16,28,.94)}
-#pre{padding:30px}
-#pre h3{font-size:25px;margin-bottom:10px}
-#pre p,#pre li{color:var(--mu);font-size:16px;line-height:1.8}
-#pre ol{padding-left:22px;margin:14px 0 22px;display:grid;gap:8px}
-@media(max-width:900px){
-  .hero{padding-top:42px;padding-bottom:62px}
-  section{padding:64px 0}
-}
-@media(prefers-reduced-motion:reduce){.btn:hover,.facts div:hover,.how div:hover,.panel div:hover,.vid:hover{transform:none}}
-
-
-
-/* Responsive sizing fixes: keep every section inside the screen. */
-html, body { width:100%; max-width:100%; }
-body { overflow-x:clip; }
-img, video, iframe, svg { max-width:100%; }
-.w { width:100%; max-width:1180px; margin-inline:auto; padding-inline:24px; }
-.hero { grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(28px,4vw,48px); }
-.hero > div, .stage, .app { min-width:0; max-width:100%; }
-.stage:before { inset:-4% 0; }
-.app, .stage:hover .app { transform:none; }
-.float.a { left:10px; }
-.float.b { right:10px; }
-.btn { max-width:100%; }
-
-/* Give the navigation room before it can push the page wider than the viewport. */
-@media (max-width:1120px) {
-  .mb { display:block; flex:0 0 auto; }
-  header .btn.p { display:none; }
-  nav { display:none; position:absolute; top:68px; left:0; right:0; flex-direction:column; padding:12px 24px 18px; background:rgba(7,16,28,.98); border:0; border-bottom:1px solid var(--ln); border-radius:0; margin:0; max-width:100%; }
-  nav.open { display:flex; }
-  nav a { padding:13px 8px; font-size:17px; }
-  .logo { min-width:0; }
-}
-@media (max-width:980px) {
-  .hero { grid-template-columns:minmax(0,1fr); padding-top:42px; padding-bottom:62px; gap:36px; }
-  .stage { width:100%; max-width:760px; margin-inline:auto; }
-  .app { transform:none; }
-}
-@media (max-width:600px) {
-  .w { padding-inline:18px; }
-  .hero { padding-top:34px; padding-bottom:48px; gap:30px; }
-  h1 { font-size:clamp(31px,8.4vw,42px); letter-spacing:-.6px; overflow-wrap:anywhere; }
-  .hero p.sub { font-size:16.5px; line-height:1.75; }
-  .cta { align-items:stretch; }
-  .cta .btn { width:100%; justify-content:center; white-space:normal; text-align:center; }
-  .dlmeta { gap:8px 12px; }
-  .facts .w { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-  .facts div { min-width:0; padding:20px 10px; }
-  .facts b { font-size:32px; }
-  .facts span { font-size:13.5px; }
-  .call { padding:15px; gap:10px; }
-  .install-wrap { padding:22px 16px; }
-  .end .w { padding:44px 18px; border-radius:22px; }
-  .btn.l { font-size:16px; padding:13px 18px; }
-  .topbar { padding-inline:12px; }
-  .logo { font-size:17px; gap:8px; }
-  .logo img { width:34px; height:34px; }
-  .tb { gap:5px; padding-inline:10px; }
-  .tb span { padding-inline:8px; font-size:11.5px; }
-  .map { gap:2px; padding:12px; }
-  .map i { height:9px; }
-}
-@media (max-width:360px) {
-  .w { padding-inline:14px; }
-  .logo { font-size:15px; }
-  .badge { font-size:12px; padding-right:10px; max-width:100%; white-space:normal; }
-  .url { margin-inline:10px; }
-}
-
+@media(prefers-reduced-motion){html{scroll-behavior}.js .rv{opacity:1;transform;transition}.panel div,.isteps li,.float,.badge i,.btn.go,.btn.go,.btn.go svg{animation}.app{transition}}
 </style>
+
 </head>
 <body>
 <div id="prog"></div>
-<a class="topbar" href="#features"><b>আপনার ডাউনলোড আরও গুছিয়ে নিন</b><span> &mdash; কাজের ফিচারগুলো এক নজরে দেখে নিন</span> <u>ফিচার দেখুন →</u></a>
+<a class="topbar" href="#install">⚠️ <b>ডাউনলোড ও ইনস্টলের আগে জরুরি জেনে নিন</b><span> &mdash; ফলস পজিটিভ (ভুল সতর্কতা) কী ও কীভাবে নিরাপদে ইনস্টল করবেন</span> <u>দেখুন →</u></a>
 <header id="hdr"><div class="w">
   <a class="logo" href="#top"><img src="logo.png" alt="VnA logo" width="38" height="38" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%2322d3ee'/><path d='M16 7v12m0 0l-5-5m5 5l5-5M9 24h14' fill='none' stroke='%2304131a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>&quot;">VnA Download Manager</a>
-  <nav id="nav"><a href="#install" class="navw">শুরু করার গাইড</a><a href="#features">সুবিধা</a><a href="#new">নতুন আপডেট</a><a href="#videos">টিউটোরিয়াল</a><a href="#extension">ব্রাউজার</a><a href="#faq">প্রশ্নোত্তর</a></nav>
-  <a class="btn p" data-link="download" href="#">ফ্রি ট্রায়াল নিন</a>
+  <nav id="nav"><a href="#install" class="navw">⚠️ ডাউনলোডের আগে জরুরি</a><a href="#features">ফিচার</a><a href="#new">নতুন কী</a><a href="#videos">ভিডিও</a><a href="#extension">এক্সটেনশন</a><a href="#faq">প্রশ্নোত্তর</a></nav>
+  <a class="btn p" data-link="download" href="#">ডাউনলোড</a>
   <button class="mb" id="mb" aria-label="মেনু" aria-expanded="false">☰</button>
 </div></header>
 
 <main id="top">
 <div class="w hero">
   <div>
-    <span class="badge"><i></i>Version 1.3.8 · Windows 10 / 11 (64-bit)</span>
-    <h1>আপনার সব ডাউনলোড <span class="gt">এক জায়গায়</span>, নিয়ন্ত্রণও আপনার হাতে</h1>
-    <p class="sub">ভিডিও, গান, বড় ফাইল বা অনেকগুলো লিংক—সব ডাউনলোড গুছিয়ে রাখুন এক জায়গায়। প্রয়োজনে থামান, পরে আবার চালান, পছন্দের ভিডিওর মান বেছে নিন এবং নিজের মতো করে ডাউনলোড সামলান।</p>
+    <span class="badge"><i></i>Version 1.3.8 · Windows 64-bit</span>
+    <h1>ডাউনলোড হোক <span class="gt">দ্রুত, গোছানো</span> আর ঝামেলাহীন</h1>
+    <p class="sub">একটা ফাইলকে একসাথে অনেক অংশে নামিয়ে স্পিড বাড়ায়। ব্রাউজারের ডাউনলোড নিজে ধরে, ভিডিও, প্লেলিস্ট আর টরেন্টও নামায়।</p>
     <div class="cta" id="heroCta">
-      <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>৭ দিনের ফ্রি ট্রায়াল নিন</a>
-      <a class="btn l" href="#features">সুবিধাগুলো দেখুন</a>
+      <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
+      <a class="btn l" href="#videos">▶ ভিডিও দেখুন</a>
     </div>
-    <div class="dlmeta"><span>৭ দিনের পূর্ণ ফিচারের ফ্রি ট্রায়াল</span><span>ডাউনলোড থামান, আবার চালান</span><span>৬টি জনপ্রিয় ব্রাউজারে ব্যবহার</span></div>
-    <p class="trust">Windows 10 ও Windows 11-এর ৬৪-বিট সংস্করণের জন্য। <a href="#install">সহজ শুরুর গাইড</a> দেখে কয়েক ধাপেই শুরু করুন।</p>
+    <div class="dlmeta"><span>৩ দিন পুরো ফিচারসহ ফ্রি ট্রায়াল</span><span>৩২ কানেকশনে দ্রুত ডাউনলোড</span><span>Chrome, Edge, Firefox সহ ৬ ব্রাউজার</span></div>
+    <p class="trust">ডাউনলোডের আগে <a href="#install">৩টি ছোট কাজ</a> দেখে নিন, তাহলে ইনস্টলে কোনো সমস্যা হবে না।</p>
   </div>
   <div class="stage">
     <div class="app" aria-hidden="true">
       <div class="dots"><i></i><i></i><i></i></div>
-      <div class="tb"><span>সব ডাউনলোড</span><span>চালিয়ে যান</span><span>থামান</span><span>সরান</span><span>সেটিংস</span></div>
-      <div class="url" style="font-family:inherit">আপনার পছন্দের ফাইল এখানে যোগ করুন</div>
+      <div class="tb"><span>Home</span><span>Sidebar</span><span>Resume</span><span>Stop</span><span>Delete</span><span>Settings</span></div>
+      <div class="url">https://example.com/video/tutorial.mp4</div>
       <div class="dl"><b>tutorial_part1.mp4</b><em>0%</em><div class="bar"><i></i></div></div>
       <div class="dl"><b>setup_pack.zip</b><em>0%</em><div class="bar"><i></i></div></div>
       <div class="dl"><b>music_album.rar</b><em>0%</em><div class="bar"><i></i></div></div>
       <div class="map" id="map"></div>
     </div>
-    <div class="float a" aria-hidden="true"><span class="ic">⚡</span><div><b class="gt">৩২ পর্যন্ত</b><small>একসঙ্গে ডাউনলোড সংযোগ</small></div></div>
-    <div class="float b" aria-hidden="true"><span class="ic">✓</span><div><b style="color:var(--ok)">গুছানো</b><small>ফাইল সহজে খুঁজে পান</small></div></div>
+    <div class="float a" aria-hidden="true"><span class="ic">⚡</span><div><b class="gt">৩২x</b><small>মাল্টি-কানেকশন</small></div></div>
+    <div class="float b" aria-hidden="true"><span class="ic">✓</span><div><b style="color:var(--ok)">সম্পন্ন</b><small>অটো ফোল্ডারে সাজানো</small></div></div>
   </div>
 </div>
 
 <section id="install" style="padding-top:20px"><div class="w rv">
   <div class="install-wrap">
-    <span class="eyebrow">সহজভাবে শুরু করুন</span>
-    <h2>প্রথমবার ব্যবহার? <span class="gt">শুরু করুন নিশ্চিন্তে</span></h2>
-    <p class="lead" style="margin-bottom:24px">সেটআপ সহজ রাখতে এই তিনটি ধাপ অনুসরণ করুন। Windows-এর সুরক্ষা কমানোর দরকার নেই।</p>
+    <span class="eyebrow" style="color:var(--am)">ডাউনলোড ও ইনস্টলের আগে</span>
+    <h2>ডাউনলোড ও ইনস্টলের আগে <span class="gt">জরুরি</span> জেনে নিন</h2>
+    <p class="lead" style="margin-bottom:24px">নতুন সফটওয়্যারে একটা সাধারণ ঝামেলা হয়, নাম <b>ফলস পজিটিভ</b>। নিচে একদম সহজ করে বুঝিয়ে দিলাম।</p>
+    <div class="call info" style="margin:0 0 20px"><div class="ic">❓</div><div><b>ফলস পজিটিভ কী?</b> মানে <b>ভুল সতর্কতা</b>। অ্যান্টিভাইরাস ভালো সফটওয়্যারকেও ভুল করে ভাইরাস ভেবে আটকে দেয় বা মুছে ফেলে। নতুন কাউকে দেখলে নিরাপত্তারক্ষী যেমন আগে থামিয়ে দেয়, অ্যান্টিভাইরাসও নতুন সফটওয়্যারকে তেমন আগে সন্দেহ করে। বেশি মানুষ ব্যবহার করলে এটা কমে যায়। তাই ইনস্টলের সময় নিচের ৩টি কাজ করুন।</div></div>
     <div class="big3">
-      <div><i>১</i><h3>অফিশিয়াল পেজ থেকেই নামান</h3><p>VnA-এর এই পেজের ডাউনলোড বাটন ব্যবহার করুন। অচেনা সাইট বা শেয়ার করা ফাইল এড়িয়ে চলুন।</p></div>
-      <div><i>২</i><h3>স্ক্রিনে দেখানো ধাপ অনুসরণ করুন</h3><p>সেটআপ চালিয়ে নির্দেশনা অনুযায়ী ইনস্টল শেষ করুন। আপনার পছন্দের ফোল্ডারটি মনে রাখুন।</p></div>
-      <div><i>৩</i><h3>ব্রাউজার যুক্ত করে শুরু করুন</h3><p>অ্যাপটি একবার খুলুন, এরপর Chrome, Edge বা Firefox-এর জন্য অফিসিয়াল এক্সটেনশন যোগ করুন।</p></div>
+      <div><i>১</i><h3>অ্যান্টিভাইরাস সাময়িক বন্ধ রাখুন</h3><p>শুধু ইনস্টল করার সময়টুকুর জন্য।</p></div>
+      <div class="w2"><i>২</i><h3>শেষ পেজে &ldquo;Finish&rdquo; চাপবেন না</h3><p>উইন্ডো খোলা রেখে অ্যাপের ফোল্ডারটি অ্যান্টিভাইরাসের &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন।</p></div>
+      <div class="w3"><i>৩</i><h3>সুরক্ষা চালু করে তারপর Finish</h3><p>অ্যান্টিভাইরাস আবার চালু করে তারপর &ldquo;Finish&rdquo; চাপুন।</p></div>
     </div>
-    <div class="call ok"><div class="ic">🛡️</div><div><b>ইন্সটল করার ভিডিওটি দেখে ইন্সটল করুন</b><p>ইনস্টল করার জন্য অ্যান্টিভাইরাস বা Windows-এর সুরক্ষা বন্ধ করা, অথবা সতর্কতা এড়িয়ে যাওয়া আমরা সুপারিশ করি না। সতর্কতা দেখালে আগে ডাউনলোডের উৎস ও প্রকাশকের তথ্য যাচাই করুন। নিশ্চিত না হলে ইনস্টল বন্ধ রেখে আমাদের সহায়তা চ্যানেলে জানান।</p></div></div>
-    <h3 class="gh" id="guide">দ্রুত শুরু করার গাইড</h3>
-    <ol class="steps">
-      <li>উপরের <b>৭ দিনের ফ্রি ট্রায়াল</b> বাটন থেকে সেটআপ ফাইল নামান।</li>
-      <li>ফাইলটি খুলে স্ক্রিনে দেখানো নির্দেশনা অনুসরণ করুন। Windows কোনো নিরাপত্তা সতর্কতা দেখালে সেটি যাচাই না করে এগিয়ে যাবেন না।</li>
-      <li>ইনস্টল শেষ হলে VnA Download Manager খুলুন এবং আপনার ব্রাউজারের জন্য এক্সটেনশন যোগ করুন।</li>
-      <li>কোনো সমস্যায় পড়লে নিচের প্রশ্নোত্তর দেখুন অথবা Telegram-এ সহায়তা নিন।</li>
-    </ol>
-    <div class="call info"><div class="ic">💡</div><div><b>একটি বিষয় মনে রাখুন</b><p>ডাউনলোডের গতি আপনার ইন্টারনেট, যে ওয়েবসাইট থেকে ফাইল নিচ্ছেন এবং সেই ফাইলের উপলভ্যতার ওপর নির্ভর করে। সব ওয়েবসাইট বা ভিডিও একইভাবে কাজ নাও করতে পারে।</p></div></div>
+    <div class="cta" style="margin-top:24px">
+      <a class="btn p l" data-link="download" data-skip="1" href="#">বুঝেছি, ডাউনলোড করি</a>
+      <a class="btn l" href="#guide">ধাপে ধাপে বিস্তারিত গাইড ↓</a>
+    </div>
+    <div class="call ok"><div class="ic">🛡️</div><div><b>নিরাপদ থাকতে:</b> এই পদ্ধতি শুধু এই সাইটের ডাউনলোড বাটন থেকে নামানো ফাইলের জন্য। অন্য কোথাও থেকে পাওয়া ফাইলের জন্য সুরক্ষা বন্ধ করবেন না। আর ইনস্টল শেষ হলে সুরক্ষা অবশ্যই আবার চালু করবেন।</div></div>
+
+<div class="call info"><div class="ic">💡</div><div><b>অ্যান্টিভাইরাস কেন সাময়িক বন্ধ করতে বলছি?</b>
+  <p>VnA একটা নতুন ও কম পরিচিত সফটওয়্যার। অ্যান্টিভাইরাস কোনো সফটওয়্যারকে ভরসা করে মূলত কতজন সেটা ব্যবহার করছে তা দেখে। তার ওপর ডাউনলোড ম্যানেজার ব্রাউজারের ডাউনলোড ধরে, একসাথে অনেক কানেকশন খোলে আর ব্রাউজারে এক্সটেনশন বসায়। এই কাজগুলো ক্ষতিকর প্রোগ্রামও করে, তাই অ্যান্টিভাইরাস ভুল করে সন্দেহ করে। এটাই ফলস পজিটিভ।</p>
+  <p>ইনস্টলের মাঝখানে অ্যান্টিভাইরাস কোনো ফাইল সরিয়ে ফেললে অ্যাপ অর্ধেক ইনস্টল হয়ে ভেঙে যায়। তাই মাত্র কয়েক মিনিটের জন্য সুরক্ষা বন্ধ রাখতে বলছি। অ্যাপের ফোল্ডার অনুমোদিত তালিকায় যোগ করে সুরক্ষা আবার চালু করলে বাকি সবকিছুর জন্য আপনার পিসি আগের মতোই সুরক্ষিত থাকবে।</p></div></div>
+
+<h3 class="gh" id="guide">ধাপে ধাপে ইনস্টল গাইড</h3>
+<p class="hint">আপনার Windows কোনটা? Start → Settings → System → About দেখুন। &ldquo;Windows 11&rdquo; লেখা থাকলে Windows 11 ট্যাব বেছে নিন।</p>
+<div class="tabs" id="osTabs" role="tablist"></div>
+<ol class="isteps" id="isteps"></ol>
+
+<h3 class="gh" style="font-size:22px">কোথাও আটকে গেলে</h3>
+<div id="more"></div>
+
   </div>
 </div></section>
 
 <div class="facts"><div class="w">
-  <div class="rv"><b>৩২</b><span>পর্যন্ত একসঙ্গে ডাউনলোড সংযোগ</span></div>
-  <div class="rv"><b>৬</b><span>জনপ্রিয় ব্রাউজারে ব্যবহার</span></div>
+  <div class="rv"><b>৩২</b><span>পর্যন্ত একসাথে কানেকশন</span></div>
+  <div class="rv"><b>৬</b><span>ব্রাউজারে এক্সটেনশন</span></div>
   <div class="rv"><b>৩</b><span>ভাষা: বাংলা, English, हिंदी</span></div>
-  <div class="rv"><b>৭ দিন</b><span>সব ফিচারসহ ফ্রি ট্রায়াল</span></div>
+  <div class="rv"><b>৩ দিন</b><span>ফ্রি ট্রায়াল</span></div>
 </div></div>
 
 <section><div class="w rv">
-  <span class="eyebrow">সহজ ব্যবহার</span>
-  <h2>ডাউনলোড করুন <span class="gt">নিজের মতো</span></h2>
-  <p class="lead">কিছু সহজ ধাপেই আপনার ফাইলগুলো এক জায়গায় সামলান।</p>
+  <span class="eyebrow">শুরু করুন</span>
+  <h2>তিন ধাপেই <span class="gt">শুরু</span></h2>
+  <p class="lead">জটিল সেটআপ নেই।</p>
   <div class="how">
-    <div><h3>একবার সেটআপ করুন</h3><p>অ্যাপ ইনস্টল করে খুলুন। এরপর আপনার পছন্দের ব্রাউজার যুক্ত করুন।</p></div>
-    <div><h3>যা দরকার যোগ করুন</h3><p>লিংক পেস্ট করুন, একাধিক লিংক দিন অথবা সমর্থিত ভিডিওতে থাকা ডাউনলোডের সুবিধা ব্যবহার করুন।</p></div>
-    <div><h3>নিজের মতো সামলান</h3><p>পছন্দের মান বেছে নিন, প্রয়োজনে থামান বা আবার চালান, আর ফাইলগুলো গুছিয়ে রাখুন।</p></div>
+    <div><h3>ইনস্টল করুন</h3><p>Setup ফাইল নামিয়ে চালান। ব্রাউজারে এক্সটেনশনও চালু হয়ে যায়।</p></div>
+    <div><h3>লিংক দিন</h3><p>লিংক কপি করুন বা ব্রাউজারে ভিডিওর উপরের বাটন চাপুন।</p></div>
+    <div><h3>কোয়ালিটি বেছে নামান</h3><p>ফাইল নিজে সঠিক ফোল্ডারে সাজানো হয়ে যায়।</p></div>
   </div>
 </div></section>
 
 <section id="features" class="sec"><div class="w rv">
   <span class="eyebrow">ফিচার</span>
-  <h2>দরকারি সব সুবিধা, <span class="gt">এক জায়গায়</span></h2>
-  <p class="lead">আপনার দৈনন্দিন ডাউনলোডের কাজ সহজ করতে যে সুবিধাগুলো পাবেন, সেগুলো দেখুন।</p>
+  <h2>সব ফিচার, <span class="gt">এক জায়গায়</span></h2>
+  <p class="lead">বিভাগ বেছে দেখুন কী কী পাবেন।</p>
   <div class="tabs" id="tabs" role="tablist"></div>
   <div class="panel" id="panel" role="tabpanel"></div>
 </div></section>
 
 <section id="new" class="sec"><div class="w rv">
   <span class="eyebrow">আপডেট</span>
-  <h2>Version 1.3.8-এ <span class="gt">যা আরও ভালো হয়েছে</span></h2>
-  <p class="lead">দৈনন্দিন ডাউনলোডের কাজ আরও সহজ ও গোছানো করার জন্য কয়েকটি গুরুত্বপূর্ণ উন্নতি।</p>
+  <h2>Version 1.3.7-এ <span class="gt">নতুন কী</span></h2>
+  <p class="lead">সবচেয়ে সাম্প্রতিক আপডেটে যা যোগ হয়েছে।</p>
   <ul class="new">
-    <li>প্লেলিস্টে পছন্দের ভিডিওর মান ঠিকভাবে বেছে নেওয়ার উন্নতি</li><li>Facebook-সহ বিভিন্ন সাইটে ফাইলের নাম ঠিক রাখার উন্নতি</li><li>ভিডিও চলার সময় উপলভ্য মান দেখে বেছে নেওয়া সহজ</li>
-    <li>একসঙ্গে অনেক ফাইল ও প্লেলিস্ট নামানোর অভিজ্ঞতায় উন্নতি</li><li>সমর্থিত ভিডিওতে উপলভ্য থাকলে 8K পর্যন্ত মান বেছে নেওয়ার সুযোগ</li><li>“Download This Media” ব্যবহারে উন্নতি</li>
-    <li>সমস্যা বুঝতে সাহায্য করার জন্য ঐচ্ছিক রিপোর্ট পাঠানোর সুবিধা</li><li>গতি, স্থিতিশীলতা ও ছোটখাটো সমস্যার সমাধান</li>
+    <li>টরেন্ট সার্চ</li><li>SOCKS5 সহ Global Proxy ও Test Proxy</li><li>Analytics Dashboard</li>
+    <li>আরও ভালো Batch, Playlist ও Site Grabber</li><li>বাংলা, English ও हिंदी-তে সহজ এরর মেসেজ</li><li>MP3 কনভার্ট ও নষ্ট অংশ Repair</li>
+    <li>সফটওয়্যার আপডেট চেক অপশন</li><li>বাগ ফিক্স ও উন্নতি</li>
   </ul>
 </div></section>
 
 <section id="videos" class="sec"><div class="w rv">
   <span class="eyebrow">টিউটোরিয়াল</span>
   <h2>ভিডিও <span class="gt">টিউটোরিয়াল</span></h2>
-  <p class="lead">কাজ শুরু করা, ভিডিও বেছে নেওয়া ও দরকারি সুবিধা ব্যবহার করার ছোট গাইড।</p>
-  <div class="tools"><input id="q" type="search" placeholder="কী শিখতে চান? যেমন: ভিডিও, প্লেলিস্ট" aria-label="ভিডিও খুঁজুন"></div>
+  <p class="lead">কার্ডে ক্লিক করলে এখানেই চলবে।</p>
+  <div class="tools"><input id="q" type="search" placeholder="🔍  কী খুঁজছেন? যেমন: ব্যাচ, প্রক্সি" aria-label="ভিডিও খুঁজুন"></div>
   <div class="chips" id="chips"></div>
   <div class="vids" id="vids"></div>
   <p class="empty" id="none" hidden>কোনো ভিডিও পাওয়া যায়নি। অন্য শব্দে খুঁজুন।</p>
@@ -531,18 +414,18 @@ img, video, iframe, svg { max-width:100%; }
 
 <section id="extension" class="sec"><div class="w rv">
   <span class="eyebrow">এক্সটেনশন</span>
-  <h2>ব্রাউজার থেকেই <span class="gt">ডাউনলোড সামলান</span></h2>
-  <p class="lead">ব্রাউজার যুক্ত করলে সমর্থিত ডাউনলোডগুলো সহজে VnA-তে পাঠিয়ে এক জায়গায় রাখতে পারবেন।</p>
+  <h2>ব্রাউজার এক্সটেনশন <span class="gt">চালু করুন</span></h2>
+  <p class="lead">চালু হলে ব্রাউজারের ডাউনলোড নিজে অ্যাপে চলে আসবে।</p>
   <div class="ext">
     <ol class="steps">
-      <li>VnA Download Manager ইনস্টল করে অ্যাপটি একবার খুলুন।</li>
-      <li>আপনার ব্রাউজারের স্টোর থেকে VnA Download Manager যোগ করুন।</li>
-      <li>ব্রাউজার অনুমতি চাইলে নির্দেশনা পড়ে বুঝে অনুমতি দিন।</li>
-      <li>কাজ না করলে অ্যাপ ও ব্রাউজার দুটোই বন্ধ করে আবার খুলুন। এরপরও সমস্যা হলে সহায়তা নিন।</li>
+      <li>VnA Download Manager ইনস্টল করে অ্যাপ একবার খুলুন।</li>
+      <li>Chrome বা Edge খুললে Enable Extension মেসেজ আসবে। সেটা Allow করুন।</li>
+      <li>মেসেজ না এলে ব্রাউজারের স্টোর থেকে এক্সটেনশন নিজে যোগ করুন।</li>
+      <li>কাজ না করলে অ্যাপে Menu &gt; Fix n Update &gt; Repair Browser Extension চাপুন।</li>
     </ol>
     <div class="storebox">
-      <h3>আপনার ব্রাউজার বেছে নিন</h3>
-      <p>বিশ্বস্ত অফিসিয়াল স্টোর থেকেই এক্সটেনশন যোগ করুন।</p>
+      <h3>স্টোর থেকে যোগ করুন</h3>
+      <p>আপনার ব্রাউজার অনুযায়ী লিংক বেছে নিন।</p>
       <div class="stores">
         <a class="btn" data-link="chrome" href="#">🟢 Chrome Web Store</a>
         <a class="btn" data-link="edge" href="#">🔵 Edge Add-ons</a>
@@ -553,50 +436,48 @@ img, video, iframe, svg { max-width:100%; }
 </div></section>
 
 <section id="faq" class="sec"><div class="w rv">
-  <span class="eyebrow">সহায়তা</span>
-  <h2>আপনার সাধারণ <span class="gt">প্রশ্নের উত্তর</span></h2>
-  <p class="lead">শুরু করার আগে বা ব্যবহার করার সময় যে বিষয়গুলো জানা কাজে আসবে।</p>
-  <details><summary>VnA Download Manager কী কাজে লাগে?</summary><p>ভিডিও, গান, বড় ফাইল ও একাধিক লিংকের ডাউনলোড এক জায়গায় সামলাতে সাহায্য করে। ডাউনলোড থামানো, আবার চালানো, উপলভ্য ভিডিওর মান বেছে নেওয়া এবং ফাইল গুছিয়ে রাখার সুবিধা রয়েছে।</p></details>
-  <details><summary>এটি কি সব ওয়েবসাইটে কাজ করবে?</summary><p>না, সব সাইট বা সব ভিডিওর জন্য একই ফলের নিশ্চয়তা নেই। ওয়েবসাইটের নিয়ম, ফাইলের ধরন এবং ডাউনলোডের অনুমতির ওপর সুবিধাগুলো নির্ভর করে। কেবল আপনার ডাউনলোড করার অধিকার আছে এমন কনটেন্ট ব্যবহার করুন।</p></details>
-  <details><summary>ডাউনলোড কি সব সময় অনেক দ্রুত হবে?</summary><p>VnA একাধিক সংযোগ ব্যবহার করে কিছু ফাইলে ডাউনলোডের অভিজ্ঞতা উন্নত করতে পারে। তবে গতি আপনার ইন্টারনেট, ওয়েবসাইটের সার্ভার ও ফাইলের উপলভ্যতার ওপর নির্ভর করে। নির্দিষ্ট গতি বা গুণিতক বৃদ্ধির নিশ্চয়তা দেওয়া যায় না।</p></details>
-  <details><summary>ডাউনলোড থামিয়ে পরে আবার চালাতে পারব?</summary><p>হ্যাঁ, অ্যাপে Pause ও Resume সুবিধা আছে। তবে কিছু ওয়েবসাইটের লিংক মেয়াদ শেষ হলে বা উৎস চালিয়ে যাওয়া সমর্থন না করলে নতুন করে শুরু করতে হতে পারে।</p></details>
-  <details><summary>কোন Windows-এ ব্যবহার করা যাবে?</summary><p>এই সংস্করণটি Windows 10 ও Windows 11-এর ৬৪-বিট সংস্করণের জন্য।</p></details>
-  <details><summary>কোন কোন ব্রাউজারে ব্যবহার করা যায়?</summary><p>Chrome, Edge, Firefox, Brave, Opera ও Vivaldi-এর জন্য এক্সটেনশন রয়েছে। ব্রাউজারের সংস্করণ ও সাইটভেদে কিছু সুবিধা আলাদা হতে পারে।</p></details>
-  <details><summary>ফ্রি ট্রায়াল কত দিনের?</summary><p>৭ দিনের জন্য সব ফিচারসহ ট্রায়াল ব্যবহার করতে পারবেন। ট্রায়াল শেষে চালিয়ে যেতে Premium Key প্রয়োজন হবে। মূল্য ও কেনার তথ্যের জন্য আমাদের অফিসিয়াল চ্যানেল দেখুন।</p></details>
-  <details><summary>Windows বা অ্যান্টিভাইরাস সতর্কতা দেখালে কী করব?</summary><p>সতর্কতা উপেক্ষা করবেন না এবং অ্যান্টিভাইরাস বা Windows-এর সুরক্ষা বন্ধ করবেন না। ডাউনলোডের উৎস ও প্রকাশকের তথ্য যাচাই করুন। নিশ্চিত না হলে ইনস্টল বন্ধ রাখুন এবং আমাদের Telegram চ্যানেলে জানান।</p></details>
-  <details><summary>ব্রাউজারের সঙ্গে যুক্ত হচ্ছে না—কী করব?</summary><p>VnA অ্যাপটি খুলে রাখুন, ব্রাউজার বন্ধ করে আবার চালু করুন এবং অফিসিয়াল স্টোরে এক্সটেনশনটি চালু আছে কি না দেখুন। এরপরও সমস্যা হলে Telegram-এ সমস্যার বিবরণ পাঠান।</p></details>
-  <details><summary>সমস্যা হলে কোথায় যোগাযোগ করব?</summary><p>নিচের Telegram চ্যানেলে সমস্যার বিবরণ দিন। সাহায্য করতে আপনার Windows সংস্করণ ও সমস্যার স্ক্রিনশট কাজে লাগতে পারে—ব্যক্তিগত তথ্য বা পাসওয়ার্ড পাঠাবেন না।</p></details>
+  <span class="eyebrow">FAQ</span>
+  <h2>প্রশ্নোত্তর</h2><p class="lead"></p>
+  <details><summary>ফলস পজিটিভ কী? Windows বা অ্যান্টিভাইরাস সতর্ক করছে কেন?</summary><p>ফলস পজিটিভ মানে ভুল সতর্কতা। নতুন সফটওয়্যারকে অ্যান্টিভাইরাস অনেক সময় ভুল করে আটকে দেয়, এটা ভাইরাস নয়। <b>More info</b> চেপে <b>Run anyway</b> চাপুন। এরপরেও আটকে গেলে <a href="#install">ইনস্টল গাইডের</a> ধাপগুলো মেনে চলুন।</p></details>
+  <details><summary>ইনস্টলের সময় অ্যান্টিভাইরাস বন্ধ করতে বলা হচ্ছে কেন? এটা কি নিরাপদ?</summary><p>নতুন সফটওয়্যারকে অ্যান্টিভাইরাস অনেক সময় ভুল করে সন্দেহ করে এবং ইনস্টলের মাঝখানে ফাইল সরিয়ে ফেলে। তাতে অ্যাপ ভেঙে যায়। তাই শুধু ইনস্টলের কয়েক মিনিট সুরক্ষা বন্ধ রাখতে হয়। অ্যাপের ফোল্ডার অনুমোদিত তালিকায় যোগ করে সুরক্ষা আবার চালু করলে আর সমস্যা হয় না। শুধু এই সাইটের ডাউনলোড বাটন থেকে নামানো ফাইলের জন্যই এটা করবেন।</p></details>
+  <details><summary>ইনস্টলের পর অ্যাপ ঠিকমতো চলছে না বা App Offline দেখাচ্ছে, কী করব?</summary><p>অ্যান্টিভাইরাস হয়তো অ্যাপের একটা ফাইল সরিয়ে ফেলেছে। Windows Security &gt; Virus &amp; threat protection &gt; Protection history-তে গিয়ে VnA-র ফাইলটি Restore করুন, তারপর অ্যাপের Settings থেকে Repair Extension চাপুন।</p></details>
+  <details><summary>Windows 10 আর Windows 11-এর ইনস্টলে পার্থক্য কী?</summary><p>Windows 11-এ একটা বাড়তি সুরক্ষা (SmartScreen) ইনস্টলার আটকাতে পারে। তাই Windows 11-এর গাইডে সেটা বন্ধ করার ধাপও আছে।</p></details>
+  <details><summary>কোন Windows-এর জন্য?</summary><p>এই Setup 64-bit Windows-এর জন্য।</p></details>
+  <details><summary>ইনস্টল বা আপডেটে পারমিশন এরর এলে?</summary><p>আমাদের Telegram চ্যানেল থেকে Setup ফাইল নামিয়ে নতুন করে ইনস্টল করুন।</p></details>
+  <details><summary>অ্যাপ বন্ধ থাকলে ব্রাউজারের ডাউনলোড কী হবে?</summary><p>এক্সটেনশন তখন ব্রাউজারের নিজস্ব ডাউনলোড আবার চালু করে দেয়, কিছু হারাবে না।</p></details>
+  <details><summary>লিংকের মেয়াদ শেষ হয়ে গেলে?</summary><p>ডাউনলোডে রাইট-ক্লিক করে Refresh Download Address চাপুন। পেজ খুলে ভিডিও চালালে অ্যাপ নতুন লিংক ধরে বাকিটা চালিয়ে নেয়।</p></details>
+  <details><summary>ফ্রি ট্রায়াল কত দিনের?</summary><p>৩ দিনের। এরপর Premium Key দিয়ে অ্যাপ Activate করতে হয়।</p></details>
+  <details><summary>সমস্যা হলে কোথায় জানাব?</summary><p>নিচের Telegram, ফেসবুক পেজ বা YouTube চ্যানেলে জানান।</p></details>
 </div></section>
 
 <section class="end"><div class="w rv">
   <div class="gl"><img src="logo.png" alt="" width="76" height="76" onerror="this.style.display='none'"></div>
-  <h2>ডাউনলোডকে <span class="gt">আরও গুছিয়ে নিন</span></h2>
-  <p>৭ দিনের ফ্রি ট্রায়ালে সুবিধাগুলো নিজেই দেখে নিন। ভালো লাগলে Premium Key দিয়ে ব্যবহার চালিয়ে যেতে পারবেন।</p>
-  <ul class="ticks"><li>ফাইল ও লিংক এক জায়গায়</li><li>থামান, আবার চালান, মান বেছে নিন</li><li>বাংলা, English ও हिंदी</li></ul>
-  <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>৭ দিনের ফ্রি ট্রায়াল নিন</a>
-  <small>Version 1.3.8 · Windows 10 / 11 (64-bit)</small>
+  <h2>আজই <span class="gt">চেষ্টা করুন</span></h2>
+  <p>৩ দিন পুরো ফিচারসহ ফ্রি ট্রায়াল। পছন্দ হলে Premium Key দিয়ে চালিয়ে যান।</p>
+  <ul class="ticks"><li>মাল্টি-কানেকশনে দ্রুত ডাউনলোড</li><li>ব্রাউজার, ভিডিও, প্লেলিস্ট ও টরেন্ট</li><li>বাংলা, English ও हिंदी</li></ul>
+  <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
+  <small>Version 1.3.7 · Windows 64-bit</small>
 </div></section>
 </main>
 
 <footer><div class="w">
   <span class="sp fl"><img src="logo.png" alt="" width="28" height="28" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%2322d3ee'/><path d='M16 7v12m0 0l-5-5m5 5l5-5M9 24h14' fill='none' stroke='%2304131a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>&quot;">VnA Download Manager</span>
   <a data-link="telegram" href="#">Telegram</a><a data-link="facebook" href="#">ফেসবুক পেজ</a><a data-link="youtube" href="#">YouTube</a>
-  <span style="flex-basis:100%;font-size:13.5px;color:var(--mu2);padding-top:10px">© <span id="year">2026</span> VnA Download Manager · আপনার ডাউনলোড করার অধিকার আছে এমন ফাইলই ব্যবহার করুন।</span>
 </div></footer>
 
-<div class="sticky" id="sticky"><a class="btn p l" data-link="download" href="#">ফ্রি ট্রায়াল নিন</a></div>
+<div class="sticky" id="sticky"><a class="btn p l" data-link="download" href="#">ডাউনলোড করুন</a></div>
 
-<dialog id="pre" aria-label="ডাউনলোডের আগে কিছু তথ্য">
-  <h3>ডাউনলোডের আগে ছোট্ট একটি কথা</h3>
-  <p>আপনার পিসির নিরাপত্তা অক্ষুণ্ণ রাখাই গুরুত্বপূর্ণ। VnA কেবল এই পেজের অফিসিয়াল ডাউনলোড লিংক থেকে নামান।</p>
+<dialog id="pre" aria-label="ডাউনলোডের আগে জরুরি তথ্য">
+  <h3>ডাউনলোড ও ইনস্টলের আগে জরুরি ⚠️</h3>
+  <p><b>ফলস পজিটিভ</b> মানে ভুল সতর্কতা। নতুন সফটওয়্যারকে অ্যান্টিভাইরাস ভুল করে আটকে দিতে পারে, এটা ভাইরাস নয়। তাই:</p>
   <ol>
-    <li>Windows বা অ্যান্টিভাইরাস সতর্কতা দেখালে সেটি যাচাই না করে এড়িয়ে যাবেন না।</li>
-    <li>ইনস্টল করার জন্য অ্যান্টিভাইরাস, SmartScreen বা অন্য সুরক্ষা বন্ধ করবেন না।</li>
-    <li>নিশ্চিত না হলে ইনস্টল বন্ধ রাখুন এবং আমাদের Telegram চ্যানেলে সাহায্য চান।</li>
+    <li>ইনস্টলের সময় অ্যান্টিভাইরাস সাময়িক বন্ধ রাখুন।</li>
+    <li>শেষ পেজে <b>Finish চাপবেন না</b>। আগে অ্যাপের ফোল্ডার &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন।</li>
+    <li>অ্যান্টিভাইরাস আবার চালু করে তারপর Finish চাপুন।</li>
   </ol>
   <div class="row">
-    <a class="btn" href="#install" id="preGuide">শুরুর গাইড দেখুন</a>
-    <a class="btn p" id="preGo" data-link="download" href="#">অফিশিয়াল ফাইল খুলুন</a>
+    <a class="btn" href="#install" id="preGuide">গাইডটা দেখি</a>
+    <a class="btn p" id="preGo" data-link="download" href="#">বুঝেছি, ডাউনলোড করি</a>
   </div>
 </dialog>
 
@@ -616,60 +497,107 @@ const LINKS = {
   firefox: "https://addons.mozilla.org/en-US/firefox/addon/vna-download-manager/"
 };
 const VIDEOS = [
-  { t: "Windows 10 ও Windows 11-এ VnA ইনস্টল করার সম্পূর্ণ নিয়ম", c: "শুরু করুন", youtube: "CV7h-UPExnY" },
   { t: "Windows 10 ও Windows 11-এ VnA ইনস্টল করার সম্পূর্ণ গাইড", c: "ইনস্টলেশন", youtube: "CV7h-UPExnY" },
-  { t: "লিংক দিয়ে ডাউনলোড শুরু করুন", c: "শুরু করুন", f: "videos/01-paste-link.mp4" },
-  { t: "ভিডিওর মান বেছে নিন", c: "শুরু করুন", f: "videos/02-video-quality.mp4" },
-  { t: "ব্রাউজার যুক্ত করুন", c: "ব্রাউজার", f: "videos/03-install-extension.mp4" },
-  { t: "সমর্থিত অনলাইন ভিডিও নামান", c: "ব্রাউজার", f: "videos/04-hidden-video.mp4" },
-  { t: "একসঙ্গে অনেক ফাইল নামান", c: "ডাউনলোড", f: "videos/05-batch.mp4" },
-  { t: "প্লেলিস্ট থেকে ভিডিও বেছে নিন", c: "ডাউনলোড", f: "videos/06-playlist.mp4" },
-  { t: "এক পেজের ডাউনলোডযোগ্য লিংক দেখুন", c: "ডাউনলোড", f: "videos/07-site-grabber.mp4" },
-  { t: "টরেন্ট ফাইল নামান", c: "ডাউনলোড", f: "videos/08-torrent.mp4" },
-  { t: "ভিডিও বা অডিও MP3 করুন", c: "ফাইল গুছানো", f: "videos/09-mp3.mp4" },
-  { t: "অসম্পূর্ণ ডাউনলোড ঠিক করার চেষ্টা", c: "ফাইল গুছানো", f: "videos/10-repair.mp4" },
-  { t: "নিজের মতো ডাউনলোড সেট করুন", c: "সেটিংস", f: "videos/11-proxy.mp4" },
-  { t: "নির্দিষ্ট সময়ে ডাউনলোড চালান", c: "সেটিংস", f: "videos/12-scheduler.mp4" }
+  { t: "লিংক পেস্ট করে ডাউনলোড শুরু", c: "শুরু করুন", f: "videos/01-paste-link.mp4" },
+  { t: "ভিডিওর কোয়ালিটি বেছে নেওয়া", c: "শুরু করুন", f: "videos/02-video-quality.mp4" },
+  { t: "ব্রাউজার এক্সটেনশন ইনস্টল", c: "এক্সটেনশন", f: "videos/03-install-extension.mp4" },
+  { t: "Hidden/Streaming ভিডিও নামানো", c: "এক্সটেনশন", f: "videos/04-hidden-video.mp4" },
+  { t: "ব্যাচ ডাউনলোড", c: "ডাউনলোড", f: "videos/05-batch.mp4" },
+  { t: "প্লেলিস্ট ডাউনলোড", c: "ডাউনলোড", f: "videos/06-playlist.mp4" },
+  { t: "Site Grabber ব্যবহার", c: "ডাউনলোড", f: "videos/07-site-grabber.mp4" },
+  { t: "টরেন্ট সার্চ ও ডাউনলোড", c: "ডাউনলোড", f: "videos/08-torrent.mp4" },
+  { t: "MP3 কনভার্ট", c: "টুলস", f: "videos/09-mp3.mp4" },
+  { t: "নষ্ট অংশ Repair", c: "টুলস", f: "videos/10-repair.mp4" },
+  { t: "Proxy সেটআপ", c: "সেটিংস", f: "videos/11-proxy.mp4" },
+  { t: "Scheduler চালু করা", c: "সেটিংস", f: "videos/12-scheduler.mp4" }
 ];
 
 const FEATS = [
-  { n: "ডাউনলোড", e: "⚡", t: "ডাউনলোডের ওপর থাকুক আপনার নিয়ন্ত্রণ", i: [
-    ["আরও ভালো ডাউনলোড অভিজ্ঞতা", "সমর্থিত ফাইলে একাধিক সংযোগ ব্যবহার করে ডাউনলোডের কাজ এগিয়ে নিতে সাহায্য করে। গতি ইন্টারনেট ও ওয়েবসাইটের ওপরও নির্ভর করে।"],
-    ["থামান, আবার চালান", "মাঝপথে ডাউনলোড থামিয়ে পরে আবার শুরু করুন—বারবার শুরু থেকে করতে হয় না, যদি উৎসটি চালিয়ে যাওয়া সমর্থন করে।"],
-    ["নিজের ইন্টারনেটের জন্য গতি ঠিক করুন", "ডাউনলোডের গতি সীমিত রেখে একই সময়ে ব্রাউজিং, কল বা অন্য কাজ চালিয়ে যান।"],
-    ["কতটা এগিয়েছে সহজে দেখুন", "প্রতিটি ফাইলের অগ্রগতি এক নজরে বুঝুন, কোনটি চলছে আর কোনটি শেষ হয়েছে তা সহজে চিনুন।"],
-    ["ভিডিওর মান বেছে নিন", "সমর্থিত ভিডিওর ক্ষেত্রে আপনার প্রয়োজন অনুযায়ী উপলভ্য ছবির মান ও অডিও বেছে নিন।"],
-    ["অনলাইনে চালানো ভিডিও", "কিছু সমর্থিত ওয়েবসাইটের ভিডিও নামানোর সুবিধা পান—সব সাইটে একই ফলের নিশ্চয়তা নেই।"]] },
-  { n: "একাধিক লিংক", e: "🔗", t: "একসঙ্গে অনেক কাজ, কম ঝামেলা", i: [
-    ["লিংক পেস্ট করলেই শুরু", "কপি করা লিংক সহজে যোগ করুন, আলাদা করে সব তথ্য লিখতে হয় না।"],
-    ["একসঙ্গে অনেক ফাইল", "একাধিক লিংক একবারে যোগ করুন; আলাদা আলাদা করে প্রতিটি ফাইল শুরু করার সময় বাঁচান।"],
-    ["প্লেলিস্ট থেকে পছন্দ করুন", "সমর্থিত প্লেলিস্টে থাকা আইটেমগুলো দেখে আপনার দরকারি ভিডিওগুলো বেছে নিন।"],
-    ["এক পেজের ফাইল এক জায়গায়", "একটি ওয়েবপেজে পাওয়া ডাউনলোডযোগ্য লিংকগুলো একসঙ্গে দেখে বেছে নিতে পারবেন।"],
-    ["টরেন্ট ডাউনলোড", "সমর্থিত টরেন্ট লিংক দিয়ে ডাউনলোড পরিচালনা করুন। কেবল আপনার ব্যবহারের অধিকার আছে এমন ফাইলই নামান।"],
-    ["কম বিরক্তি, পরিষ্কার কাজ", "পছন্দ অনুযায়ী অপ্রয়োজনীয় পপআপ কমিয়ে ডাউনলোডের কাজে মনোযোগ দিন।"]] },
-  { n: "ব্রাউজার", e: "🧩", t: "আপনার ব্রাউজার থেকেই কাজ শুরু করুন", i: [
-    ["৬টি জনপ্রিয় ব্রাউজার", "Chrome, Edge, Firefox, Brave, Opera ও Vivaldi-তে ব্যবহার করুন।"],
-    ["ব্রাউজারের ডাউনলোড অ্যাপে আনুন", "সমর্থিত ডাউনলোডগুলো সরাসরি VnA-তে পাঠিয়ে এক জায়গায় সামলান।"],
-    ["ভিডিওর পাশে সুবিধাজনক বাটন", "সমর্থিত ভিডিওতে ছোট ডাউনলোড বাটন দেখলে সেখান থেকেই কাজ শুরু করুন।"],
-    ["রাইট-ক্লিক করে সহজে যোগ করুন", "পেজ বা লিংকে রাইট-ক্লিক করে উপলভ্য ডাউনলোডের কাজ বেছে নিন।"],
-    ["লগইন করা সাইটেও চেষ্টা করুন", "আপনি যে সাইটে লগইন করেছেন, সেখানে অনুমতি থাকলে সমর্থিত ফাইল নামাতে পারবেন।"],
-    ["যখন দরকার চালু বা বন্ধ", "এক ক্লিকে ব্রাউজারের সঙ্গে যুক্ত সুবিধাটি চালু বা বন্ধ করুন।"]] },
-  { n: "ফাইল গুছিয়ে রাখা", e: "🗂️", t: "ডাউনলোডের পরেও সব কিছু গোছানো", i: [
-    ["ফাইলের ধরন অনুযায়ী সাজান", "ভিডিও, গান, ছবি, সফটওয়্যার ও সংরক্ষিত ফাইল সহজে খুঁজে পাওয়ার মতো করে রাখুন।"],
-    ["আবার চেষ্টা করার সুবিধা", "কোনো ডাউনলোডের লিংক কাজ করা বন্ধ করলে নতুন করে চেষ্টা করার সুযোগ নিন, যদি ওয়েবসাইট অনুমতি দেয়।"],
-    ["অসম্পূর্ণ ফাইল ঠিক করার চেষ্টা", "ডাউনলোডে সমস্যা হলে বাকি অংশ পুনরায় পরীক্ষা বা ঠিক করার সুবিধা ব্যবহার করুন।"],
-    ["ভিডিও থেকে MP3", "সমর্থিত ভিডিও বা অডিও ফাইলকে MP3 হিসেবে সংরক্ষণ করুন।"],
-    ["ফাইল পরীক্ষা করুন", "ফাইল ঠিকমতো নামানো হয়েছে কি না যাচাই করতে এবং Windows-এর নিরাপত্তা পরীক্ষা চালাতে সাহায্য নিন।"],
-    ["নিজের ব্যবহার বুঝুন", "কতটা ডাউনলোড করেছেন ও কোন ধরনের ফাইল বেশি ব্যবহার করেন, তা এক নজরে দেখুন।"]] },
-  { n: "নিজের পছন্দ", e: "⚙️", t: "আপনার কাজের ধরন অনুযায়ী ব্যবহার করুন", i: [
-    ["সময় ঠিক করে রাখুন", "সুবিধামতো সময়ে ডাউনলোড শুরু করার ব্যবস্থা করুন।"],
-    ["একসঙ্গে কত কাজ চলবে ঠিক করুন", "পিসি ও ইন্টারনেটের ব্যবহার অনুযায়ী একসঙ্গে চলা ডাউনলোডের সংখ্যা সামলান।"],
-    ["পছন্দের চেহারা", "ডার্ক, লাইট ও স্বচ্ছ ধরনের চেহারা থেকে বেছে নিন।"],
-    ["নিজের ভাষায় ব্যবহার", "বাংলা, English বা हिंदी ভাষায় অ্যাপ ব্যবহার করুন; সমস্যার বার্তাও সহজভাবে বোঝার চেষ্টা করুন।"],
-    ["নতুন সংস্করণের খবর", "নতুন আপডেট পাওয়া গেলে তার খবর ও পরিবর্তনগুলো দেখুন।"],
-    ["ডাউনলোড শেষ হলে জানুন", "ফাইল নামানো শেষ হলে নোটিফিকেশন বা শব্দের মাধ্যমে জানতে পারবেন।"]] }
+  { n: "ডাউনলোড", e: "⚡", t: "আরও দ্রুত, আরও নিয়ন্ত্রণে", i: [
+    ["মাল্টি-কানেকশন", "একটা ফাইল একসাথে অনেক অংশে নামে। ২ থেকে ৩২ কানেকশন বেছে নেওয়া যায়, অটো মোডও আছে।"],
+    ["Pause, Resume ও Stop", "যখন খুশি থামান, আবার চালান।"],
+    ["স্পিড লিমিট", "ইন্টারনেটের বাকি কাজের জন্য স্পিড সীমা দিন।"],
+    ["লাইভ চাংক ম্যাপ", "ফাইলের কোন অংশ কতটা নামল ছবির মতো দেখুন।"],
+    ["ভিডিও কোয়ালিটি", "পছন্দমতো কোয়ালিটি বেছে নিন, ভিডিও ও অডিও আলাদাও নামানো যায়।"],
+    ["Streaming ভিডিও", "HLS ও DASH স্ট্রিমও সাপোর্ট করে।"]] },
+  { n: "লিংক যোগ", e: "🔗", t: "লিংক দেওয়ার সহজ উপায়", i: [
+    ["ক্লিপবোর্ড মনিটর", "লিংক কপি করলেই অ্যাপ ধরে ফেলে।"],
+    ["Batch Download", "অনেক লিংক একসাথে যোগ করুন।"],
+    ["Playlist Download", "পুরো প্লেলিস্ট থেকে পছন্দের আইটেম বেছে নামান।"],
+    ["Site Grabber", "একটা পেজের সব ডাউনলোডযোগ্য ফাইল খুঁজে ক্যাটাগরি অনুযায়ী দেখায়।"],
+    ["Torrent", "নাম লিখে সার্চ করুন, magnet লিংকেও কাজ করে।"],
+    ["Silent Mode", "পপআপ ছাড়া শুধু নোটিফিকেশন।"]] },
+  { n: "এক্সটেনশন", e: "🧩", t: "ব্রাউজারেই ডাউনলোড", i: [
+    ["৬টি ব্রাউজার", "Chrome, Edge, Firefox, Brave, Opera, Vivaldi। অন্য ব্রাউজারও যোগ করা যায়।"],
+    ["অটো ক্যাচ", "ব্রাউজারের ডাউনলোড নিজে অ্যাপে চলে আসে।"],
+    ["ভিডিওর উপর বাটন", "ভিডিওর কোণায় ছোট ডাউনলোড বাটন আসে।"],
+    ["ডান-ক্লিক মেনু", "Hidden/Streaming ভিডিও ও সব লিংক ডাউনলোডের অপশন।"],
+    ["লগইন সাইট", "লগইন লাগে এমন সাইটের ফাইলও নামে।"],
+    ["ON/OFF", "এক ক্লিকে এক্সটেনশন চালু বা বন্ধ।"]] },
+  { n: "টুলস", e: "🛠️", t: "ডাউনলোডের পরেও কাজে লাগে", i: [
+    ["ক্যাটাগরি সাজানো", "Video, Music, Pictures, Programs, Compressed ফোল্ডারে ফাইল নিজে সাজায়।"],
+    ["Refresh Download Address", "লিংকের মেয়াদ শেষ হলে নতুন লিংকে চালিয়ে নেয়।"],
+    ["Repair ও Re-check", "নষ্ট অংশ ঠিক করে ডাউনলোড সম্পূর্ণ করে।"],
+    ["MP3 কনভার্ট", "ভিডিও বা অডিও ফাইল MP3 বানান।"],
+    ["Checksum ও স্ক্যান", "SHA-256 যাচাই ও Windows Defender স্ক্যান।"],
+    ["Analytics", "কত GB নামালেন, কোন ধরনের ফাইল বেশি, চার্টে দেখুন।"]] },
+  { n: "সেটিংস", e: "⚙️", t: "নিজের মতো করে সাজান", i: [
+    ["Scheduler", "নির্দিষ্ট সময়ে কিউ শুরু, একসাথে কয়টা চলবে তাও ঠিক করুন।"],
+    ["Global Proxy", "SOCKS5 সহ প্রক্সি ও Test Proxy বাটন।"],
+    ["থিম", "Dark, Light ও Glass।"],
+    ["তিন ভাষা", "বাংলা, English ও हिंदी, এরর মেসেজও সহজ ভাষায়।"],
+    ["অটো আপডেট", "নতুন Version এলে চেঞ্জলগসহ জানায়।"],
+    ["নোটিফিকেশন", "ডাউনলোড শেষে ডায়ালগ ও সাউন্ড।"]] }
 ];
-
+const PATH = "<code>C:\\Program Files\\VnA Download Manager</code>";
+const S_DL = { t: "ফাইলটি নামান", d: "এই সাইটের ডাউনলোড বাটন থেকে নামান। ব্রাউজার <b>Keep</b> বা <b>Keep anyway</b> জিজ্ঞেস করলে সেটা চাপুন।" };
+const S_RT = { t: "Windows-এর সুরক্ষা সাময়িক বন্ধ করুন", d: "Start চেপে <b>Windows Security</b> লিখে খুলুন → <b>Virus &amp; threat protection</b> → <b>Manage settings</b> → <b>Real-time protection</b> বাটনটি <b>Off</b> করুন, তারপর Yes চাপুন।" };
+const S_SS = { t: "SmartScreen বন্ধ করুন", d: "Windows Security → <b>App &amp; browser control</b> → <b>Reputation-based protection settings</b> → <b>Check apps and files</b> আর <b>SmartScreen for Microsoft Edge</b> দুটোই <b>Off</b> করুন।" };
+const S_AV = { t: "অন্য অ্যান্টিভাইরাস থাকলে সেটাও বন্ধ করুন", d: "Avast, Kaspersky, Bitdefender, Norton, Quick Heal ইত্যাদি থাকলে তার সুরক্ষাও সাময়িক বন্ধ করুন। ঘড়ির পাশের ছোট আইকনে ডান-ক্লিক করলে সাধারণত <b>Pause</b> বা <b>Disable</b> অপশন পাবেন। একটা অ্যান্টিভাইরাসও চালু থাকলে সেটা আটকে দিতে পারে।" };
+const S_RUN = { t: "ইনস্টল শুরু করুন", d: "সেটআপ ফাইলে ডান-ক্লিক করে <b>Run as administrator</b> চাপুন। &ldquo;Windows protected your PC&rdquo; এলে <b>More info</b> → <b>Run anyway</b> চাপুন। তারপর Next দিয়ে ইনস্টল করুন।" };
+const S_WAIT = { k: "warn", t: "শেষ পেজে থামুন, Finish চাপবেন না", d: "ইনস্টল শেষে &ldquo;Completing the Setup&rdquo; লেখা পেজ আসবে। <b>Finish চাপবেন না</b> আর অ্যাপও খুলবেন না। উইন্ডোটা যেমন আছে তেমনি খোলা রেখে দিন। Finish চাপলে অ্যাপ চালু হয়, আর তখনই অ্যান্টিভাইরাস ভুল করে ফাইল সরিয়ে ফেলতে পারে।" };
+const S_EX = { t: "অ্যাপের ফোল্ডার &ldquo;অনুমোদিত তালিকায়&rdquo; যোগ করুন", d: "Windows Security → Virus &amp; threat protection → Manage settings → একদম নিচে <b>Exclusions</b> → <b>Add or remove exclusions</b> → <b>+ Add an exclusion</b> → <b>Folder</b> চাপুন। তারপর এই ফোল্ডারটি বেছে নিন: " + PATH + "। অন্য অ্যান্টিভাইরাস থাকলে সেখানেও একই ফোল্ডার যোগ করুন (Exceptions বা Trusted লেখা অপশনে)।" };
+const S_FIN = { k: "ok", t: "এবার Finish চাপুন", d: "ইনস্টলার উইন্ডোতে ফিরে <b>Finish</b> চাপুন। অ্যাপ খুললে ব্রাউজারে এক্সটেনশন চালুর মেসেজ এলে <b>Allow</b> করুন। ব্যস, শেষ!" };
+const OS = [
+  { n: "Windows 10", s: [S_DL, S_RT, S_AV, S_RUN, S_WAIT, S_EX,
+    { k: "ok", t: "সুরক্ষা আবার চালু করুন", d: "<b>Real-time protection</b> আবার <b>On</b> করুন, আর অন্য অ্যান্টিভাইরাস থাকলে সেটাও চালু করুন। ফোল্ডার অনুমোদিত তালিকায় থাকায় আর সমস্যা হবে না।" }, S_FIN] },
+  { n: "Windows 11", s: [S_DL, S_RT, S_SS, S_AV, S_RUN, S_WAIT, S_EX,
+    { k: "ok", t: "সব সুরক্ষা আবার চালু করুন", d: "<b>Real-time protection</b>, <b>Check apps and files</b> আর <b>SmartScreen for Microsoft Edge</b> আবার <b>On</b> করুন। অন্য অ্যান্টিভাইরাস থাকলে সেটাও চালু করুন।" }, S_FIN] }
+];
+const MORE = [
+  ["ইনস্টলার &ldquo;Smart App Control&rdquo; লিখে আটকে দিলে (Windows 11)", "Windows Security → App &amp; browser control → <b>Smart App Control settings</b> → <b>Off</b> করুন। সাবধান: অনেক Windows 11-এ এটা একবার বন্ধ করলে আবার চালু করতে Windows রিসেট লাগে। তাই &ldquo;Run anyway&rdquo; দিয়ে কাজ না হলেই শুধু এটা করুন।"],
+  ["ইনস্টলের পর অ্যাপ ঠিকমতো চলছে না বা &ldquo;App Offline&rdquo; দেখাচ্ছে", "অ্যান্টিভাইরাস অ্যাপের কোনো ফাইল সরিয়ে ফেলেছে। Windows Security → Virus &amp; threat protection → <b>Protection history</b> খুলুন। VnA Download Manager-এর ফাইল পেলে সেটা খুলে <b>Actions → Restore</b> (বা <b>Allow on device</b>) চাপুন। তারপর অ্যাপের Settings থেকে <b>Repair Extension</b> চাপুন।"],
+  ["ইনস্টলের সময়ই ফাইল মুছে গেলে বা ইনস্টল আটকে গেলে", "ফোল্ডারটি অনুমোদিত তালিকায় যোগ করুন, সুরক্ষা বন্ধ আছে কিনা দেখে নিন, তারপর সেটআপ আবার চালান। এরপরেও না হলে আমাদের Telegram বা ফেসবুক পেজে জানান।"]
+];
+const osTabs = document.getElementById("osTabs"), isteps = document.getElementById("isteps");
+function showOS(k) {
+  osTabs.innerHTML = "";
+  OS.forEach((o, j) => {
+    const b = document.createElement("button");
+    b.className = "tab"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", j === k);
+    b.textContent = o.n; b.onclick = () => showOS(j); osTabs.appendChild(b);
+  });
+  isteps.innerHTML = "";
+  OS[k].s.forEach((x, n) => {
+    const li = document.createElement("li");
+    if (x.k) li.className = x.k;
+    li.style.animationDelay = n * 40 + "ms";
+    li.innerHTML = '<b class="t">' + x.t + '</b><span>' + x.d + '</span>';
+    isteps.appendChild(li);
+  });
+}
+showOS(0);
+const more = document.getElementById("more");
+MORE.forEach(([q, a]) => { const d = document.createElement("details"); d.innerHTML = "<summary>" + q + "</summary><p>" + a + "</p>"; more.appendChild(d); });
+(async () => {
+  try {
+    const u = navigator.userAgentData;
+    if (u && u.platform === "Windows") {
+      const h = await u.getHighEntropyValues(["platformVersion"]);
+      if (parseInt(h.platformVersion) >= 13) showOS(1);
+    }
+  } catch (e) {}
+})();
 const pre = document.getElementById("pre");
 let ack = false;
 document.querySelectorAll('[data-link="download"]').forEach(a => a.addEventListener("click", e => {
@@ -739,9 +667,7 @@ function drawVideos() {
     b.innerHTML = '<div class="th"><video muted playsinline preload="none"></video>' + play + '</div><div class="in"><small></small><span></span></div>';
     b.querySelector("small").textContent = v.c;
     b.querySelector("span").textContent = v.t;
-    const vd = b.querySelector("video");
-    if (v.youtube) { vd.replaceWith(Object.assign(document.createElement("img"), { src: "https://img.youtube.com/vi/" + v.youtube + "/hqdefault.jpg", alt: v.t, loading: "lazy" })); }
-    else { vd.dataset.src = v.f; lazy.observe(vd); }
+    const vd = b.querySelector("video"); vd.dataset.src = v.f; lazy.observe(vd);
     b.onclick = () => openVid(v);
     grid.appendChild(b);
   });
@@ -751,17 +677,8 @@ q.addEventListener("input", drawVideos);
 const dlg = document.getElementById("dlg"), dv = document.getElementById("dv");
 function openVid(v) {
   document.getElementById("dt").textContent = v.t;
-  let el;
-  if (v.youtube) {
-    el = document.createElement("iframe");
-    el.src = "https://www.youtube-nocookie.com/embed/" + v.youtube + "?autoplay=1";
-    el.title = v.t; el.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share";
-    el.allowFullscreen = true;
-    el.style.cssText = "width:100%;aspect-ratio:16/9;border:0;display:block";
-  } else {
-    el = document.createElement("video");
-    el.controls = true; el.autoplay = true; el.playsInline = true; el.src = v.f;
-  }
+  const el = document.createElement("video");
+  el.controls = true; el.autoplay = true; el.playsInline = true; el.src = v.f;
   dv.innerHTML = ""; dv.appendChild(el); dlg.showModal();
 }
 dlg.addEventListener("close", () => { dv.innerHTML = ""; });
@@ -807,10 +724,10 @@ const spy = new IntersectionObserver(es => es.forEach(e => {
 }), { rootMargin: "-45% 0px -50% 0px" });
 navLinks.forEach(a => { const t = document.querySelector(a.getAttribute("href")); if (t) spy.observe(t); });
 
-const yearNode = document.getElementById("year"); if (yearNode) yearNode.textContent = new Date().getFullYear();
 document.documentElement.classList.add("js");
 const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("vis"); rv.unobserve(e.target); } }), { threshold: .08 });
 document.querySelectorAll(".rv").forEach(el => rv.observe(el));
 </script>
+
 </body>
 </html>

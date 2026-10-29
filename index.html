@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VnA Download Manager – দ্রুত, গোছানো ডাউনলোড ম্যানেজার</title>
-<meta name="description" content="মাল্টি-কানেকশন ডাউনলোড, ব্রাউজার এক্সটেনশন, ব্যাচ, প্লেলিস্ট, সাইট গ্র্যাবার ও টরেন্ট সার্চ। বাংলা, English ও हिंदी। ৩ দিন ফ্রি ট্রায়াল।">
+<meta name="description" content="মাল্টি-কানেকশন ডাউনলোড, ব্রাউজার এক্সটেনশন, ব্যাচ, প্লেলিস্ট, সাইট গ্র্যাবার ও টরেন্ট সার্চ। বাংলা, English ও हिंदी। ৭ দিন ফ্রি ট্রায়াল।">
 <meta property="og:title" content="VnA Download Manager">
 <meta property="og:description" content="দ্রুত, গোছানো ও ঝামেলাহীন ডাউনলোড ম্যানেজার (Windows)">
 <meta property="og:type" content="website">
@@ -195,6 +195,8 @@ code{background:var(--s3);border:1px solid var(--ln);border-radius:7px;padding:1
 .new li{padding:15px 18px 15px 52px;position:relative;background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;transition:.25s}
 .new li:hover{border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.05)}
 .new li:before{content:"";position:absolute;left:19px;top:23px;width:13px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
+.clh{font-size:19px;margin:26px 0 12px;color:var(--cy)}
+.clh:first-child{margin-top:0}
 
 .tools{margin-bottom:16px}
 .tools input{width:100%;max-width:480px;padding:14px 20px;background:rgba(255,255,255,.04);border:1px solid var(--ln);border-radius:14px;color:var(--tx);font:inherit;transition:.2s}
@@ -209,8 +211,8 @@ code{background:var(--s3);border:1px solid var(--ln);border-radius:7px;padding:1
 .vid:hover{border-color:rgba(34,211,238,.5);transform:translateY(-5px);box-shadow:0 22px 46px -20px rgba(34,211,238,.4)}
 .th{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#102333,#0a1119);display:grid;place-items:center;overflow:hidden}
 .th:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(4,7,12,.55))}
-.th video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.vid:hover .th video{transform:scale(1.07)}
+.th video,.th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.vid:hover .th video,.vid:hover .th img{transform:scale(1.07)}
 .th svg{position:relative;z-index:1;width:54px;height:54px;padding:15px 13px 15px 17px;border-radius:50%;background:rgba(4,7,12,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);fill:#fff;transition:.25s}
 .vid:hover .th svg{background:var(--cy);fill:#03121a;transform:scale(1.12)}
 .in{padding:14px 18px 17px}
@@ -263,6 +265,7 @@ dialog::backdrop{background:rgba(2,4,8,.85);backdrop-filter:blur(6px)}
 .hd b{margin-right:auto;font-weight:500}
 .x{background:none;border:0;color:var(--mu);font-size:30px;cursor:pointer;line-height:1}.x:hover{color:var(--tx)}
 dialog video{display:block;width:100%;max-height:72vh;background:#000}
+dialog iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
 #pre{width:min(540px,94vw);padding:30px}
 #pre h3{font-size:25px;margin-bottom:10px}
 #pre p,#pre li{color:var(--mu);font-size:16px}
@@ -306,14 +309,14 @@ header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex
 <main id="top">
 <div class="w hero">
   <div>
-    <span class="badge"><i></i>Version 1.3.8 · Windows 64-bit</span>
+    <span class="badge"><i></i>Version <span data-ver></span> · Windows 64-bit</span>
     <h1>ডাউনলোড হোক <span class="gt">দ্রুত, গোছানো</span> আর ঝামেলাহীন</h1>
     <p class="sub">একটা ফাইলকে একসাথে অনেক অংশে নামিয়ে স্পিড বাড়ায়। ব্রাউজারের ডাউনলোড নিজে ধরে, ভিডিও, প্লেলিস্ট আর টরেন্টও নামায়।</p>
     <div class="cta" id="heroCta">
       <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
       <a class="btn l" href="#videos">▶ ভিডিও দেখুন</a>
     </div>
-    <div class="dlmeta"><span>৭ দিন পুরো ফিচারসহ ফ্রি ট্রায়াল</span><span>৩২ কানেকশনে দ্রুত ডাউনলোড</span><span>Chrome, Edge, Firefox সহ ৬ ব্রাউজার</span></div>
+    <div class="dlmeta"><span><span data-trial></span> দিন পুরো ফিচারসহ ফ্রি ট্রায়াল</span><span>৩২ কানেকশনে দ্রুত ডাউনলোড</span><span>Chrome, Edge, Firefox সহ ৬ ব্রাউজার</span></div>
     <p class="trust">ডাউনলোডের আগে <a href="#install">৩টি ছোট কাজ</a> দেখে নিন, তাহলে ইনস্টলে কোনো সমস্যা হবে না।</p>
   </div>
   <div class="stage">
@@ -366,7 +369,7 @@ header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex
   <div class="rv"><b>৩২</b><span>পর্যন্ত একসাথে কানেকশন</span></div>
   <div class="rv"><b>৬</b><span>ব্রাউজারে এক্সটেনশন</span></div>
   <div class="rv"><b>৩</b><span>ভাষা: বাংলা, English, हिंदी</span></div>
-  <div class="rv"><b>৩ দিন</b><span>ফ্রি ট্রায়াল</span></div>
+  <div class="rv"><b><span data-trial></span> দিন</b><span>ফ্রি ট্রায়াল</span></div>
 </div></div>
 
 <section><div class="w rv">
@@ -390,13 +393,9 @@ header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex
 
 <section id="new" class="sec"><div class="w rv">
   <span class="eyebrow">আপডেট</span>
-  <h2>Version 1.3.7-এ <span class="gt">নতুন কী</span></h2>
+  <h2>Version <span data-ver></span>-এ <span class="gt">নতুন কী</span></h2>
   <p class="lead">সবচেয়ে সাম্প্রতিক আপডেটে যা যোগ হয়েছে।</p>
-  <ul class="new">
-    <li>টরেন্ট সার্চ</li><li>SOCKS5 সহ Global Proxy ও Test Proxy</li><li>Analytics Dashboard</li>
-    <li>আরও ভালো Batch, Playlist ও Site Grabber</li><li>বাংলা, English ও हिंदी-তে সহজ এরর মেসেজ</li><li>MP3 কনভার্ট ও নষ্ট অংশ Repair</li>
-    <li>সফটওয়্যার আপডেট চেক অপশন</li><li>বাগ ফিক্স ও উন্নতি</li>
-  </ul>
+  <div id="clog"></div>
 </div></section>
 
 <section id="videos" class="sec"><div class="w rv">
@@ -443,17 +442,17 @@ header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex
   <details><summary>ইনস্টল বা আপডেটে পারমিশন এরর এলে?</summary><p>আমাদের Telegram চ্যানেল থেকে Setup ফাইল নামিয়ে নতুন করে ইনস্টল করুন।</p></details>
   <details><summary>অ্যাপ বন্ধ থাকলে ব্রাউজারের ডাউনলোড কী হবে?</summary><p>এক্সটেনশন তখন ব্রাউজারের নিজস্ব ডাউনলোড আবার চালু করে দেয়, কিছু হারাবে না।</p></details>
   <details><summary>লিংকের মেয়াদ শেষ হয়ে গেলে?</summary><p>ডাউনলোডে রাইট-ক্লিক করে Refresh Download Address চাপুন। পেজ খুলে ভিডিও চালালে অ্যাপ নতুন লিংক ধরে বাকিটা চালিয়ে নেয়।</p></details>
-  <details><summary>ফ্রি ট্রায়াল কত দিনের?</summary><p>৩ দিনের। এরপর Premium Key দিয়ে অ্যাপ Activate করতে হয়।</p></details>
+  <details><summary>ফ্রি ট্রায়াল কত দিনের?</summary><p><span data-trial></span> দিনের। এরপর Premium Key দিয়ে অ্যাপ Activate করতে হয়।</p></details>
   <details><summary>সমস্যা হলে কোথায় জানাব?</summary><p>নিচের Telegram, ফেসবুক পেজ বা YouTube চ্যানেলে জানান।</p></details>
 </div></section>
 
 <section class="end"><div class="w rv">
   <div class="gl"><img src="logo.png" alt="" width="76" height="76" onerror="this.style.display='none'"></div>
   <h2>আজই <span class="gt">চেষ্টা করুন</span></h2>
-  <p>৩ দিন পুরো ফিচারসহ ফ্রি ট্রায়াল। পছন্দ হলে Premium Key দিয়ে চালিয়ে যান।</p>
+  <p><span data-trial></span> দিন পুরো ফিচারসহ ফ্রি ট্রায়াল। পছন্দ হলে Premium Key দিয়ে চালিয়ে যান।</p>
   <ul class="ticks"><li>মাল্টি-কানেকশনে দ্রুত ডাউনলোড</li><li>ব্রাউজার, ভিডিও, প্লেলিস্ট ও টরেন্ট</li><li>বাংলা, English ও हिंदी</li></ul>
   <a class="btn p l go" data-link="download" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Windows-এর জন্য ডাউনলোড</a>
-  <small>Version 1.3.7 · Windows 64-bit</small>
+  <small>Version <span data-ver></span> · Windows 64-bit</small>
 </div></section>
 </main>
 
@@ -483,69 +482,35 @@ header .btn.p{display:none}.topbar span{display:none}.topbar{font-size:14px;flex
   <div id="dv"></div>
 </dialog>
 
+<script src="config.js"></script>
 <script>
-const LINKS = {
-  download: "https://github.com/nabilvai665-sys/vna-website/releases/download/v1.3.8/VnADownloadManager_Setup_v1.3.9_64bit.exe",
-  telegram: "https://t.me/vnadownloadmanager",
-  facebook: "https://www.facebook.com/profile.php?id=61594359344153",
-  youtube: "https://www.youtube.com/@vnadownloadmanager",
-  chrome: "https://chromewebstore.google.com/detail/vna-download-manager/cagpaeglpolpaaldpgmfplimncfhjddi",
-  edge: "https://microsoftedge.microsoft.com/addons/detail/vna-download-manager/hgklihmfldpcnaeagfkafigndlgbldpd",
-  firefox: "https://addons.mozilla.org/en-US/firefox/addon/vna-download-manager/"
-};
-const VIDEOS = [
-  { t: "Windows 10 ও Windows 11-এ VnA ইনস্টল করার সম্পূর্ণ গাইড", c: "ইনস্টলেশন", youtube: "CV7h-UPExnY" },
-  { t: "লিংক পেস্ট করে ডাউনলোড শুরু", c: "শুরু করুন", f: "videos/01-paste-link.mp4" },
-  { t: "ভিডিওর কোয়ালিটি বেছে নেওয়া", c: "শুরু করুন", f: "videos/02-video-quality.mp4" },
-  { t: "ব্রাউজার এক্সটেনশন ইনস্টল", c: "এক্সটেনশন", f: "videos/03-install-extension.mp4" },
-  { t: "Hidden/Streaming ভিডিও নামানো", c: "এক্সটেনশন", f: "videos/04-hidden-video.mp4" },
-  { t: "ব্যাচ ডাউনলোড", c: "ডাউনলোড", f: "videos/05-batch.mp4" },
-  { t: "প্লেলিস্ট ডাউনলোড", c: "ডাউনলোড", f: "videos/06-playlist.mp4" },
-  { t: "Site Grabber ব্যবহার", c: "ডাউনলোড", f: "videos/07-site-grabber.mp4" },
-  { t: "টরেন্ট সার্চ ও ডাউনলোড", c: "ডাউনলোড", f: "videos/08-torrent.mp4" },
-  { t: "MP3 কনভার্ট", c: "টুলস", f: "videos/09-mp3.mp4" },
-  { t: "নষ্ট অংশ Repair", c: "টুলস", f: "videos/10-repair.mp4" },
-  { t: "Proxy সেটআপ", c: "সেটিংস", f: "videos/11-proxy.mp4" },
-  { t: "Scheduler চালু করা", c: "সেটিংস", f: "videos/12-scheduler.mp4" }
-];
+const LINKS = VNA.links;
+const VIDEOS = VNA.videos;
+const FEATS = VNA.features;
 
-const FEATS = [
-  { n: "ডাউনলোড", e: "⚡", t: "আরও দ্রুত, আরও নিয়ন্ত্রণে", i: [
-    ["মাল্টি-কানেকশন", "একটা ফাইল একসাথে অনেক অংশে নামে। ২ থেকে ৩২ কানেকশন বেছে নেওয়া যায়, অটো মোডও আছে।"],
-    ["Pause, Resume ও Stop", "যখন খুশি থামান, আবার চালান।"],
-    ["স্পিড লিমিট", "ইন্টারনেটের বাকি কাজের জন্য স্পিড সীমা দিন।"],
-    ["লাইভ চাংক ম্যাপ", "ফাইলের কোন অংশ কতটা নামল ছবির মতো দেখুন।"],
-    ["ভিডিও কোয়ালিটি", "পছন্দমতো কোয়ালিটি বেছে নিন, ভিডিও ও অডিও আলাদাও নামানো যায়।"],
-    ["Streaming ভিডিও", "HLS ও DASH স্ট্রিমও সাপোর্ট করে।"]] },
-  { n: "লিংক যোগ", e: "🔗", t: "লিংক দেওয়ার সহজ উপায়", i: [
-    ["ক্লিপবোর্ড মনিটর", "লিংক কপি করলেই অ্যাপ ধরে ফেলে।"],
-    ["Batch Download", "অনেক লিংক একসাথে যোগ করুন।"],
-    ["Playlist Download", "পুরো প্লেলিস্ট থেকে পছন্দের আইটেম বেছে নামান।"],
-    ["Site Grabber", "একটা পেজের সব ডাউনলোডযোগ্য ফাইল খুঁজে ক্যাটাগরি অনুযায়ী দেখায়।"],
-    ["Torrent", "নাম লিখে সার্চ করুন, magnet লিংকেও কাজ করে।"],
-    ["Silent Mode", "পপআপ ছাড়া শুধু নোটিফিকেশন।"]] },
-  { n: "এক্সটেনশন", e: "🧩", t: "ব্রাউজারেই ডাউনলোড", i: [
-    ["৬টি ব্রাউজার", "Chrome, Edge, Firefox, Brave, Opera, Vivaldi। অন্য ব্রাউজারও যোগ করা যায়।"],
-    ["অটো ক্যাচ", "ব্রাউজারের ডাউনলোড নিজে অ্যাপে চলে আসে।"],
-    ["ভিডিওর উপর বাটন", "ভিডিওর কোণায় ছোট ডাউনলোড বাটন আসে।"],
-    ["ডান-ক্লিক মেনু", "Hidden/Streaming ভিডিও ও সব লিংক ডাউনলোডের অপশন।"],
-    ["লগইন সাইট", "লগইন লাগে এমন সাইটের ফাইলও নামে।"],
-    ["ON/OFF", "এক ক্লিকে এক্সটেনশন চালু বা বন্ধ।"]] },
-  { n: "টুলস", e: "🛠️", t: "ডাউনলোডের পরেও কাজে লাগে", i: [
-    ["ক্যাটাগরি সাজানো", "Video, Music, Pictures, Programs, Compressed ফোল্ডারে ফাইল নিজে সাজায়।"],
-    ["Refresh Download Address", "লিংকের মেয়াদ শেষ হলে নতুন লিংকে চালিয়ে নেয়।"],
-    ["Repair ও Re-check", "নষ্ট অংশ ঠিক করে ডাউনলোড সম্পূর্ণ করে।"],
-    ["MP3 কনভার্ট", "ভিডিও বা অডিও ফাইল MP3 বানান।"],
-    ["Checksum ও স্ক্যান", "SHA-256 যাচাই ও Windows Defender স্ক্যান।"],
-    ["Analytics", "কত GB নামালেন, কোন ধরনের ফাইল বেশি, চার্টে দেখুন।"]] },
-  { n: "সেটিংস", e: "⚙️", t: "নিজের মতো করে সাজান", i: [
-    ["Scheduler", "নির্দিষ্ট সময়ে কিউ শুরু, একসাথে কয়টা চলবে তাও ঠিক করুন।"],
-    ["Global Proxy", "SOCKS5 সহ প্রক্সি ও Test Proxy বাটন।"],
-    ["থিম", "Dark, Light ও Glass।"],
-    ["তিন ভাষা", "বাংলা, English ও हिंदी, এরর মেসেজও সহজ ভাষায়।"],
-    ["অটো আপডেট", "নতুন Version এলে চেঞ্জলগসহ জানায়।"],
-    ["নোটিফিকেশন", "ডাউনলোড শেষে ডায়ালগ ও সাউন্ড।"]] }
-];
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+document.querySelectorAll("[data-ver]").forEach(e => { e.textContent = VNA.version; });
+document.querySelectorAll("[data-trial]").forEach(e => { e.textContent = bn(VNA.trialDays); });
+
+const LABELS = { NEW: "নতুন", FASTER: "আরও দ্রুত", IMPROVED: "উন্নতি", FIXED: "ফিক্স", PRIVACY: "প্রাইভেসি" };
+const clog = document.getElementById("clog");
+let ul = null;
+VNA.changelog.split("\n").map(s => s.trim()).filter(Boolean).forEach(line => {
+  const m = line.match(/^\d+\.\s*(.*)$/);
+  if (m) {
+    if (!ul) { ul = document.createElement("ul"); ul.className = "new"; clog.appendChild(ul); }
+    const li = document.createElement("li");
+    li.textContent = m[1];
+    ul.appendChild(li);
+  } else {
+    const h = document.createElement("h3");
+    h.className = "clh";
+    h.textContent = LABELS[line] || line;
+    clog.appendChild(h);
+    ul = null;
+  }
+});
+
 const PATH = "<code>C:\\Program Files\\VnA Download Manager</code>";
 const S_DL = { t: "ফাইলটি নামান", d: "এই সাইটের ডাউনলোড বাটন থেকে নামান। ব্রাউজার <b>Keep</b> বা <b>Keep anyway</b> জিজ্ঞেস করলে সেটা চাপুন।" };
 const S_RT = { t: "Windows-এর সুরক্ষা সাময়িক বন্ধ করুন", d: "Start চেপে <b>Windows Security</b> লিখে খুলুন → <b>Virus &amp; threat protection</b> → <b>Manage settings</b> → <b>Real-time protection</b> বাটনটি <b>Off</b> করুন, তারপর Yes চাপুন।" };
@@ -641,6 +606,10 @@ const chips = document.getElementById("chips"), grid = document.getElementById("
 let cat = "সব";
 const cats = ["সব", ...new Set(VIDEOS.map(v => v.c))];
 const play = '<svg viewBox="0 0 24 24"><path d="M9 6v12l10-6z"/></svg>';
+const ytId = s => {
+  const m = String(s).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+  return m ? m[1] : s;
+};
 const lazy = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { const v = e.target; v.src = v.dataset.src + "#t=1"; v.preload = "metadata"; lazy.unobserve(v); }
 }), { rootMargin: "200px" });
@@ -661,10 +630,14 @@ function drawVideos() {
   list.forEach(v => {
     const b = document.createElement("button");
     b.className = "vid";
-    b.innerHTML = '<div class="th"><video muted playsinline preload="none"></video>' + play + '</div><div class="in"><small></small><span></span></div>';
+    const media = v.yt
+      ? '<img src="https://i.ytimg.com/vi/' + ytId(v.yt) + '/hqdefault.jpg" alt="" loading="lazy">'
+      : '<video muted playsinline preload="none"></video>';
+    b.innerHTML = '<div class="th">' + media + play + '</div><div class="in"><small></small><span></span></div>';
     b.querySelector("small").textContent = v.c;
     b.querySelector("span").textContent = v.t;
-    const vd = b.querySelector("video"); vd.dataset.src = v.f; lazy.observe(vd);
+    const vd = b.querySelector("video");
+    if (vd) { vd.dataset.src = v.f; lazy.observe(vd); }
     b.onclick = () => openVid(v);
     grid.appendChild(b);
   });
@@ -674,9 +647,18 @@ q.addEventListener("input", drawVideos);
 const dlg = document.getElementById("dlg"), dv = document.getElementById("dv");
 function openVid(v) {
   document.getElementById("dt").textContent = v.t;
-  const el = document.createElement("video");
-  el.controls = true; el.autoplay = true; el.playsInline = true; el.src = v.f;
-  dv.innerHTML = ""; dv.appendChild(el); dlg.showModal();
+  dv.innerHTML = "";
+  let el;
+  if (v.yt) {
+    el = document.createElement("iframe");
+    el.src = "https://www.youtube.com/embed/" + ytId(v.yt) + "?autoplay=1&rel=0";
+    el.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    el.allowFullscreen = true;
+  } else {
+    el = document.createElement("video");
+    el.controls = true; el.autoplay = true; el.playsInline = true; el.src = v.f;
+  }
+  dv.appendChild(el); dlg.showModal();
 }
 dlg.addEventListener("close", () => { dv.innerHTML = ""; });
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
